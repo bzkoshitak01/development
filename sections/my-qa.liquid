@@ -1,0 +1,32 @@
+<div class="sub_contents">
+    {% for link in linklists.use-faq.links %}
+    {% for sub_link in link.links %}
+    {% if sub_link.active %}
+    <p class="stit">
+        {{ 'top_qa_icon_a76eed36-9e8c-40a2-a390-dafff88efb98.png?v=1646967149.png' | file_img_url: 'medium' | img_tag }}
+        {{ link.title }}
+    </p>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+
+    {% for link in linklists.product-faq.links %}
+    {% for sub_link in link.links %}
+    {% if sub_link.active %}
+    <p class="stit">
+        {{ 'top_qa_icon_a76eed36-9e8c-40a2-a390-dafff88efb98.png?v=1646967149.png' | file_img_url: 'medium' | img_tag }}
+        {{ link.title }}
+    </p>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+
+    <h1 class="qa_tit">{{ article.title }}</h1>
+    <div class="qa_txt">
+        {{ article.content }}
+    </div>
+
+    <div class="go_top_btn">
+        <a href="{{ pages['my-qa-all'].url }}">よくある質問TOPへ戻る</a>
+    </div>
+</div>

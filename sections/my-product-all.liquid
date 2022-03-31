@@ -1,0 +1,25 @@
+<div class="page_mainbox">
+	<section class="contets">
+		<h1 class="ptit">商品カテゴリ・サービス一覧</h1>
+		<ul class="prodact_list">
+        {% for link in linklists.cat-menu.links %}
+            <li>
+                <a href="{{ link.url }}" class="prodact_list_img">
+                    <img class="un_featuredImg" src="{{ link.object.featured_image | img_url: 'large' }}" alt="{{ link.title }}">
+                    <p class="prodact_list_name">{{ link.title }}</p>
+                    <img class="un_subImg" src="{{ 'prodact_list_arrow.png' | file_img_url }}">
+                </a>
+                <ul class="prodavr_list_list">
+                {% for sub_link in link.links %}
+                    <li><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+                {% endfor %}
+				</ul>
+			</li>
+        {% endfor %}
+			<li class="prodact_list_info">
+			  <a href="{{ collections['ordermade'].url}}">オーダーメイドでの<br>ご検討の方はコチラ</a>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			</li>
+		</ul>
+	</section>
+</div>

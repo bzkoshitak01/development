@@ -1,0 +1,93 @@
+<section id="top_showcase">
+    <h2 class="stit">
+        {{ 'top_showcase_icon_b1925770-35d5-47ea-b036-d1da2bd9b867.png' | file_img_url | img_tag: 'images' }}
+        <span class="pcon">
+            オーダーメイド品・取り付け工事の施工事例
+        </span>
+        <a class="el_moreLink" href="{{ shop.secure_url }}{{ blogs['case'].url }}">
+            {{ 'foot_btn_ind.png' | file_img_url | img_tag }}
+            施工事例一覧へ
+        </a>
+        <span class="spon">オーダーメイド品の施工・加工事例</span>
+    </h2>
+    <ul class="showcase_slide">
+    {% for article in blogs['case'].articles limit:5 %}
+        <li>
+            <a href="{{ article.url }}" class="img_link">
+                <div class="bl_card_imgWrapper">
+                {% if article.image %}
+                    {{ article.image | img_url: 'medium' | img_tag }}
+                {% endif %}
+                </div>
+            </a>
+            <p class="name"><a href="{{ article.url }}">{{ article.title }}</a></p>
+            {% for tag in article.tags %}
+            <div class="type">{{ tag }}</div>
+            {% endfor %}
+            <table>
+                <tr>
+                    <th>業種:</th>
+                    <td>{{ article.metafields.global.case-type }}</td>
+                </tr>
+                <tr>
+                    <th>商品:</th>
+                    <td>{{ article.metafields.global.case-product }}</td>
+                </tr>
+                <tr>
+                    <th>素材: </th>
+                    <td>{{ article.metafields.global.case-material }}</td>
+                </tr>
+            </table>
+            <a href="{{ article.url }}" class="btn">詳しく見る </a>
+        </li>
+    {% endfor %}
+    </ul>
+    <div class="more_btn spon"><a href="{{ shop.secure_url }}{{ blogs['case'].url }}">施工・加工事例一覧へ</a></div>
+</section>
+
+{% schema %}
+    {
+        "name": "取り付け工事の施工事例",
+        "settings": [],
+        "blocks": [
+            {
+                "type": "case",
+                "name": "case",
+                "limit": 5,
+                "settings":[
+                    {
+                        "type": "article",
+                        "id": "case_article",
+                        "label": "記事"
+                    },
+                    {
+                        "type": "text",
+                        "id": "case_type",
+                        "label": "業種"
+                    },
+                    {
+                        "type": "product",
+                        "id": "case_product",
+                        "label": "商品を選択する"
+                    },
+                    {
+                        "type": "text",
+                        "id": "case_material",
+                        "label": "素材"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+            "name": "取り付け工事の施工事例"
+            }
+        ]
+    }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

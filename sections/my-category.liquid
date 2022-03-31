@@ -1,0 +1,86 @@
+<section id="top_category">
+    <h2 class="stit">{{ 'top_category_icon_707e2762-e70f-48b3-93d5-afc49d35d3c1.png' | file_img_url | img_tag }}人気のカテゴリから探す</h2>
+    <ul>
+    {%- for block in section.blocks -%}
+    {%- case block.type -%}
+    {%- when 'upper' -%}
+        <li><a href="{{ block.settings.upper_collection.url }}">
+            <div class="un_circle">
+                <div class="un_circle_inner">
+                    {{ block.settings.upper_collection.featured_image | img_url: 'medium' | img_tag: block.settings.upper_collection.title }}
+                </div>
+            </div>
+                {{ block.settings.upper_collection.title }}
+            </a>
+        </li>
+    {%- endcase -%}
+    {% endfor %}
+    </ul>
+
+    <div class="grad-wrap">
+        <input id="trigger1" class="grad-trigger spon" type="checkbox" style="display: none;">
+        <label class="grad-btn" for="trigger1"></label>
+        <div class="grad-item">
+            <ul>
+            {%- for block in section.blocks -%}
+            {%- case block.type -%}
+            {%- when 'lower' -%}
+                <li><a href="{{ block.settings.lower_collection.url }}">
+                    <div class="un_circle">
+                        <div class="un_circle_inner">
+                            {{ block.settings.lower_collection.featured_image | img_url: 'medium' | img_tag: block.settings.lower_collection.title }}
+                        </div>
+                    </div>
+                    {{ block.settings.lower_collection.title }}
+                    </a>
+                </li>
+            {%- endcase -%}
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+
+{
+    "name": "カテゴリ",
+    "blocks": [
+        {
+            "type": "upper",
+            "name": "upper",
+            "limit": 6,
+            "settings":[
+                {
+                    "type": "collection",
+                    "id": "upper_collection",
+                    "label": "コレクション"
+                }
+            ]
+        },
+        {
+            "type": "lower",
+            "name": "lower",
+            "limit": 6,
+            "settings":[
+                {
+                    "type": "collection",
+                    "id": "lower_collection",
+                    "label": "コレクション"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "カテゴリ"
+        }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

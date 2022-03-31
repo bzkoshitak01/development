@@ -1,0 +1,43 @@
+<section id="top_tips">
+    <h2 class="stit">
+        {{ 'top_tips_icon_46b50bb6-c7db-46ff-9c23-4f25423950b5.png' | file_img_url | img_tag: 'images' }}
+        <span class="pcon">
+            トラック用品に関するお役立ち情報
+        </span>
+        <a class="el_moreLink" href="{{ shop.secure_url }}{{ blogs['tips'].url }}">
+            {{ 'foot_btn_ind.png' | file_img_url | img_tag }}
+            お役立ち情報一覧へ
+        </a>
+        <span class="spon">オーダーメイド品の施工・加工事例</span>        
+    </h2>
+    <ul>
+    {% for article in blogs['tips'].articles limit:5 %}
+        <li>
+            <a href="{{ article.url }}" class="img_box">
+                <div class="bl_card_imgWrapper bl_card_imgWrapper__tips">
+                    {{ article | img_url: 'medium' | img_tag }}
+                </div>
+            </a>
+            <p class="txt"><a href="{{ article.url }}">{{ article.title }}</a></p>
+            <ul>
+            {% for tag in article.tags %}
+                <li><a href="{{ shop.secure_url }}{{ blogs['tips'].url }}/tagged/{{ tag }}">{{ tag }}</a></li>
+            {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+    <div class="more_btn spon"><a href="{{ shop.secure_url }}{{ blogs['tips'].url }}">お役立ち情報一覧へ</a></div>
+</section>
+
+{% schema %}
+    {
+        "name": "お役立ち情報",
+        "settings": [],
+        "presets": [
+            {
+            "name": "お役立ち情報"
+            }
+        ]
+    }
+{% endschema %}

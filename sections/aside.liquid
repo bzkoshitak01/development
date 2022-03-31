@@ -1,0 +1,98 @@
+<div class="sidebar">
+    <nav>
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'banner' -%}
+        <a href="{{ block.settings.banner_url }}">
+            {{ block.settings.banner_img | img_url: 'grande' | img_tag: banner_alt }}
+        </a>
+
+        {%- when 'cat-menu' -%}
+        <h3>カテゴリから探す</h3>
+        {% for link in linklists.cat-menu.links %}
+        <dl>
+            <dt>
+                <a href="{{ link.url }}">
+                    {{ link.object.featured_image | img_url: 'thumb' | img_tag: link.title }}{{ link.title }}
+                </a>
+            </dt>
+            {% for sub_link in link.links %}
+            <dd><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></dd>
+            {% endfor %}
+        </dl>
+        {% endfor %}
+
+
+        {%- when 'flexible-menu' -%}
+        <ul class="sidebar_btn">
+            <li>
+                <a href="{{ block.settings.flexible-menu_url }}">{{ block.settings.flexible-menu_title }}</a>
+            </li>
+        </ul>
+
+        {%- when 'page-menu' -%}
+        <h3>ご利用案内・会社概要</h3>
+        <ul class="sideber_info">
+        {% for link in linklists.sidebar-page-menu.links %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+        {% endfor %}
+        </ul>
+
+        {%- endcase -%}
+        {% endfor %}
+    </nav>
+</div>
+
+{% schema %}
+{
+"name": "サイドバー",
+"blocks": [
+    {
+        "type": "banner",
+        "name": "banner",
+        "settings":[
+            {
+                "type": "image_picker",
+                "id": "banner_img",
+                "label": "バナー画像を選択する"
+            },
+            {
+                "type": "url",
+                "id": "banner_url",
+                "label": "バナーURL"
+            },
+            {
+                "type": "text",
+                "id": "banner_alt",
+                "label": "バナーalt"
+            }
+        ]
+    },
+    {
+        "type": "cat-menu",
+        "name": "cat-menu"
+    },
+    {
+        "type": "page-menu",
+        "name": "page-menu"
+    },
+    {
+        "type": "flexible-menu",
+        "name": "flexible-menu",
+        "settings":[
+            {
+                "type": "text",
+                "id": "flexible-menu_title",
+                "label": "タイトル"
+            },
+            {
+                "type": "url",
+                "id": "flexible-menu_url",
+                "label": "URL"
+            }
+        ]
+
+    }
+]
+}
+{% endschema %}

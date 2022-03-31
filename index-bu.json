@@ -1,0 +1,309 @@
+{
+  "sections": {
+    "my-category": {
+      "type": "my-category",
+      "blocks": {
+        "ddfdb0e9-009b-4451-8d55-833b6061c70e": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "トラックシートカバー"
+          }
+        },
+        "b56c2d9a-e080-4b3a-97cc-26133538ddc3": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "トラックボード-緩衝材"
+          }
+        },
+        "4f6ddfd2-f916-4bf4-ac1e-b1c9998a6275": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "フック-リング"
+          }
+        },
+        "40508df0-e8db-4367-b838-99be46b69bfc": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "やぐら-ウマ-オーダー製作"
+          }
+        },
+        "f4f0e041-9843-4fcc-acf3-4bed21f02070": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "アルミステップ"
+          }
+        },
+        "cc0c654d-cd04-4ee2-9836-c5f124125ca7": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "スリング-ベルト"
+          }
+        },
+        "090acef3-a5e1-4744-acc8-28a0db5adfd3": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "パレット"
+          }
+        },
+        "507934e6-dab0-4bc4-97f9-bdfaef4ddfc6": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "ブルーシート"
+          }
+        },
+        "10b70f1d-b66e-44aa-b03e-e524346a7e88": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "アオリシート-コボレーン"
+          }
+        },
+        "b802274e-932d-4f46-af7b-bd5461edca25": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "ウレタン-スポンジ"
+          }
+        },
+        "faf857d1-bff5-4c28-a1a9-ef1cd4abe294": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "シャックル"
+          }
+        },
+        "e41c0c46-ceae-4b18-98cd-687e1e2209c6": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "チェーン"
+          }
+        }
+      },
+      "block_order": [
+        "ddfdb0e9-009b-4451-8d55-833b6061c70e",
+        "b56c2d9a-e080-4b3a-97cc-26133538ddc3",
+        "4f6ddfd2-f916-4bf4-ac1e-b1c9998a6275",
+        "40508df0-e8db-4367-b838-99be46b69bfc",
+        "f4f0e041-9843-4fcc-acf3-4bed21f02070",
+        "cc0c654d-cd04-4ee2-9836-c5f124125ca7",
+        "090acef3-a5e1-4744-acc8-28a0db5adfd3",
+        "507934e6-dab0-4bc4-97f9-bdfaef4ddfc6",
+        "10b70f1d-b66e-44aa-b03e-e524346a7e88",
+        "b802274e-932d-4f46-af7b-bd5461edca25",
+        "faf857d1-bff5-4c28-a1a9-ef1cd4abe294",
+        "e41c0c46-ceae-4b18-98cd-687e1e2209c6"
+      ],
+      "settings": {}
+    },
+    "16458634598f3940f9": {
+      "type": "my-ranking",
+      "settings": {}
+    },
+    "164586562106189c2a": {
+      "type": "my_pickup",
+      "blocks": {
+        "aa36001a-b6d0-4d77-80ab-7058d3465a76": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "アイテム-01"
+          }
+        },
+        "9e68d62a-78f9-4bbd-bd5a-2cf8090c63ac": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "アイテム-10"
+          }
+        },
+        "aa19608e-692f-4e95-9d4d-aaa2821a8eb0": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "アイテム-19"
+          }
+        },
+        "97014611-71b9-4824-b4eb-5e30c97c7f29": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "アイテム-02"
+          }
+        },
+        "378f0cf8-6f34-4a8a-b271-f63f3cee314c": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "アイテム-11"
+          }
+        },
+        "9486ce9f-e686-458e-8891-fbe85440640a": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "アイテム-20"
+          }
+        },
+        "c03d77e2-3f34-4f99-ba03-2df060ae2048": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "アイテム-03"
+          }
+        },
+        "5d890b00-7d5d-4f24-99c6-51f424c61399": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "アイテム-12"
+          }
+        }
+      },
+      "block_order": [
+        "aa36001a-b6d0-4d77-80ab-7058d3465a76",
+        "9e68d62a-78f9-4bbd-bd5a-2cf8090c63ac",
+        "aa19608e-692f-4e95-9d4d-aaa2821a8eb0",
+        "97014611-71b9-4824-b4eb-5e30c97c7f29",
+        "378f0cf8-6f34-4a8a-b271-f63f3cee314c",
+        "9486ce9f-e686-458e-8891-fbe85440640a",
+        "c03d77e2-3f34-4f99-ba03-2df060ae2048",
+        "5d890b00-7d5d-4f24-99c6-51f424c61399"
+      ],
+      "settings": {}
+    },
+    "1645867784e63dc902": {
+      "type": "my-ordermade",
+      "settings": {}
+    },
+    "1645867809a5bece42": {
+      "type": "my-banner",
+      "blocks": {
+        "8da5f2cd-2861-46a3-8203-729904a12b7b": {
+          "type": "banner",
+          "settings": {
+            "banner_img": "shopify:\/\/shop_images\/top_bnr1.png",
+            "banner_url": "",
+            "banner_alt": "オーダーメイド商品特集"
+          }
+        },
+        "28af7ec2-ab2c-4946-97ac-1ef6881d7714": {
+          "type": "banner",
+          "settings": {
+            "banner_img": "shopify:\/\/shop_images\/top_bnr2.png",
+            "banner_url": "",
+            "banner_alt": "グループ会社累計取引社数 30,000件突破しました！！"
+          }
+        }
+      },
+      "block_order": [
+        "8da5f2cd-2861-46a3-8203-729904a12b7b",
+        "28af7ec2-ab2c-4946-97ac-1ef6881d7714"
+      ],
+      "settings": {}
+    },
+    "164588925028d8a341": {
+      "type": "my-case",
+      "blocks": {
+        "c78ef4d6-5ff9-431b-a022-2d896d109ac7": {
+          "type": "case",
+          "settings": {
+            "case_article": "case\/01",
+            "case_type": "土建業",
+            "case_product": "アイテム-01",
+            "case_material": "トラックシート"
+          }
+        },
+        "fea8b830-0fec-435b-9f78-e00aff3586eb": {
+          "type": "case",
+          "settings": {
+            "case_article": "case\/02",
+            "case_type": "土建業",
+            "case_product": "アイテム-02",
+            "case_material": "トラックシート"
+          }
+        },
+        "3546a7d0-da64-4995-9e41-04ef5d9abd9f": {
+          "type": "case",
+          "settings": {
+            "case_article": "case\/03",
+            "case_type": "土建業",
+            "case_product": "アイテム-03",
+            "case_material": "トラックシート"
+          }
+        },
+        "74b9dde4-e9f7-4a73-a0bc-8138b1651e7d": {
+          "type": "case",
+          "settings": {
+            "case_article": "case\/04",
+            "case_type": "土建業",
+            "case_product": "アイテム-04",
+            "case_material": "トラックシート"
+          }
+        },
+        "8c687627-c929-4e72-82e4-34dbdfbafba6": {
+          "type": "case",
+          "settings": {
+            "case_article": "case\/05",
+            "case_type": "土建業",
+            "case_product": "アイテム-05",
+            "case_material": "トラックシート"
+          }
+        }
+      },
+      "block_order": [
+        "c78ef4d6-5ff9-431b-a022-2d896d109ac7",
+        "fea8b830-0fec-435b-9f78-e00aff3586eb",
+        "3546a7d0-da64-4995-9e41-04ef5d9abd9f",
+        "74b9dde4-e9f7-4a73-a0bc-8138b1651e7d",
+        "8c687627-c929-4e72-82e4-34dbdfbafba6"
+      ],
+      "settings": {}
+    },
+    "1645889254e081052a": {
+      "type": "my-tips",
+      "blocks": {
+        "7426632b-d5a5-4954-a43d-62d3b42e4cb5": {
+          "type": "tips",
+          "settings": {
+            "tips_article": "tips\/01"
+          }
+        },
+        "462a1cf2-4453-4e7a-8bc7-933389817ccc": {
+          "type": "tips",
+          "settings": {
+            "tips_article": "tips\/02"
+          }
+        },
+        "9164ba82-8a76-4a14-b155-2f6c81201eae": {
+          "type": "tips",
+          "settings": {
+            "tips_article": "tips\/03"
+          }
+        },
+        "852c6370-9092-48bb-abaa-51262d325b15": {
+          "type": "tips",
+          "settings": {
+            "tips_article": "tips\/04"
+          }
+        },
+        "542850b4-f82d-454d-b5cd-be5d02eb49e8": {
+          "type": "tips",
+          "settings": {
+            "tips_article": "tips\/05"
+          }
+        }
+      },
+      "block_order": [
+        "7426632b-d5a5-4954-a43d-62d3b42e4cb5",
+        "462a1cf2-4453-4e7a-8bc7-933389817ccc",
+        "9164ba82-8a76-4a14-b155-2f6c81201eae",
+        "852c6370-9092-48bb-abaa-51262d325b15",
+        "542850b4-f82d-454d-b5cd-be5d02eb49e8"
+      ],
+      "settings": {}
+    },
+    "1645891113159559c4": {
+      "type": "my-info",
+      "settings": {}
+    }
+  },
+  "order": [
+    "my-category",
+    "16458634598f3940f9",
+    "164586562106189c2a",
+    "1645867784e63dc902",
+    "1645867809a5bece42",
+    "164588925028d8a341",
+    "1645889254e081052a",
+    "1645891113159559c4"
+  ]
+}

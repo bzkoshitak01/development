@@ -1,0 +1,216 @@
+{
+  "sections": {
+    "1648428177054295eb": {
+      "type": "my-category",
+      "blocks": {
+        "1f14ea1e-e7f9-4cc9-a682-a1f4a7849b43": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "aorishirt-cobolene"
+          }
+        },
+        "245ff3e4-dfac-420e-ae2a-c3e7726e7f11": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "aluminum-step"
+          }
+        },
+        "32b35c96-9457-4844-bd22-e534537c0ff7": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "sling-belt"
+          }
+        },
+        "73de44ec-71ad-471e-b75e-c2e508bf24c2": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "chain"
+          }
+        },
+        "4ef2a609-129e-4122-b18f-dface813e73e": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "hook-ring"
+          }
+        },
+        "5fdcd819-06ec-4aff-93cc-eea2132ee036": {
+          "type": "upper",
+          "settings": {
+            "upper_collection": "blue-shirt-cover"
+          }
+        },
+        "31c9937a-08c3-4a32-aaa7-0c2f2c1c3c4b": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "lever-hoist"
+          }
+        },
+        "b4cb9c3a-6ae5-4af9-9a6a-5f1073838cfa": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "trackshirt-small-or-mid"
+          }
+        },
+        "6bb6be5b-69cb-4ce3-99e0-33d414fab73d": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "wire-mokko"
+          }
+        },
+        "5271d216-a3b0-4d49-9b64-24f388df4dbf": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "plastic-palette"
+          }
+        },
+        "13113077-27bc-4c4f-bd3b-75aa01d0babc": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "drum-mat"
+          }
+        },
+        "011425fe-bc05-4bf5-814a-a0e0f64aabd0": {
+          "type": "lower",
+          "settings": {
+            "lower_collection": "tray-storage-bag"
+          }
+        }
+      },
+      "block_order": [
+        "1f14ea1e-e7f9-4cc9-a682-a1f4a7849b43",
+        "245ff3e4-dfac-420e-ae2a-c3e7726e7f11",
+        "32b35c96-9457-4844-bd22-e534537c0ff7",
+        "73de44ec-71ad-471e-b75e-c2e508bf24c2",
+        "4ef2a609-129e-4122-b18f-dface813e73e",
+        "5fdcd819-06ec-4aff-93cc-eea2132ee036",
+        "31c9937a-08c3-4a32-aaa7-0c2f2c1c3c4b",
+        "b4cb9c3a-6ae5-4af9-9a6a-5f1073838cfa",
+        "6bb6be5b-69cb-4ce3-99e0-33d414fab73d",
+        "5271d216-a3b0-4d49-9b64-24f388df4dbf",
+        "13113077-27bc-4c4f-bd3b-75aa01d0babc",
+        "011425fe-bc05-4bf5-814a-a0e0f64aabd0"
+      ],
+      "settings": {}
+    },
+    "1648428579a5ed8580": {
+      "type": "my-ranking",
+      "settings": {}
+    },
+    "16484286153e6e102b": {
+      "type": "my_pickup",
+      "blocks": {
+        "58353960-0e88-4430-9a24-836f72827318": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "item-01"
+          }
+        },
+        "844c4c90-3bf5-4948-9ff8-e779753e2748": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "item-02"
+          }
+        },
+        "073ae80c-dedd-4bb7-a8c0-530a45e08bc8": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "item-10"
+          }
+        },
+        "c2dce78e-1bf4-45fa-a6bb-5f2a3a6b4682": {
+          "type": "upper",
+          "settings": {
+            "upper_product": "item-03"
+          }
+        },
+        "e745bd87-b153-4c6e-b45b-98fc8f2ffb1f": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "item-04"
+          }
+        },
+        "5bb3a95e-9a10-40e1-8def-af24b4be4c61": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "item-05"
+          }
+        },
+        "6528103a-3049-4c8e-8e60-72defcfcd05f": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "item-06"
+          }
+        },
+        "9b573215-3e73-44b3-a2a8-f2c320a36058": {
+          "type": "lower",
+          "settings": {
+            "lower_product": "item-07"
+          }
+        }
+      },
+      "block_order": [
+        "58353960-0e88-4430-9a24-836f72827318",
+        "844c4c90-3bf5-4948-9ff8-e779753e2748",
+        "073ae80c-dedd-4bb7-a8c0-530a45e08bc8",
+        "c2dce78e-1bf4-45fa-a6bb-5f2a3a6b4682",
+        "e745bd87-b153-4c6e-b45b-98fc8f2ffb1f",
+        "5bb3a95e-9a10-40e1-8def-af24b4be4c61",
+        "6528103a-3049-4c8e-8e60-72defcfcd05f",
+        "9b573215-3e73-44b3-a2a8-f2c320a36058"
+      ],
+      "settings": {}
+    },
+    "16484286208e2c91d3": {
+      "type": "my-ordermade",
+      "settings": {}
+    },
+    "164842867552cae49f": {
+      "type": "my-banner",
+      "blocks": {
+        "4e97bc6c-38e2-453e-8e49-cd8a06bd08eb": {
+          "type": "banner",
+          "settings": {
+            "banner_img": "shopify:\/\/shop_images\/top_bnr1.png",
+            "banner_url": "",
+            "banner_alt": ""
+          }
+        },
+        "7d1e4ec8-ac1f-40af-a1ea-70bf1fc6dfe5": {
+          "type": "banner",
+          "settings": {
+            "banner_img": "shopify:\/\/shop_images\/top_bnr2.png",
+            "banner_url": "",
+            "banner_alt": ""
+          }
+        }
+      },
+      "block_order": [
+        "4e97bc6c-38e2-453e-8e49-cd8a06bd08eb",
+        "7d1e4ec8-ac1f-40af-a1ea-70bf1fc6dfe5"
+      ],
+      "settings": {}
+    },
+    "1648529401b419dd3b": {
+      "type": "my-case",
+      "settings": {}
+    },
+    "16484286955f4f373f": {
+      "type": "my-tips",
+      "settings": {}
+    },
+    "16484287071d1f9702": {
+      "type": "my-info",
+      "settings": {}
+    }
+  },
+  "order": [
+    "1648428177054295eb",
+    "1648428579a5ed8580",
+    "16484286153e6e102b",
+    "16484286208e2c91d3",
+    "164842867552cae49f",
+    "1648529401b419dd3b",
+    "16484286955f4f373f",
+    "16484287071d1f9702"
+  ]
+}

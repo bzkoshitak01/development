@@ -1,0 +1,86 @@
+{{ 'jquery.tmpl.min.js' | asset_url | script_tag }}
+{{ 'jquery.products.js' | asset_url | script_tag }}
+
+<div class="clearfix"></div>
+
+    <ul id="recently-viewed-products" class="collection clearfix history_slider" >
+    </ul>
+        {% raw %}
+        <script id="recently-viewed-product-template"  type="text/x-jquery-tmpl">
+        <li id="product-${handle}" class="products js_histSliderItem js_none" itemscope itemtype="http://schema.org/Product">
+            <a href="${url}">
+                <img src="${Shopify.Products.resizeImage(featured_image, "medium")}" />
+                <p class="h4 grid-view-item__title product-card__title">${title}</p>
+            </a>
+        </li>
+        </script>
+        {% endraw %}
+
+<script>
+    Shopify.Products.showRecentlyViewed( { howManyToShow:20 } );
+
+    const slideNum = Shopify.Products.showRecentlyViewed( { howManyToShow:20 } );
+    console.log(Shopify.Products.showRecentlyViewed( { howManyToShow:20 } ));
+    const histSliderList = document.getElementById('recently-viewed-products');
+    let intervalId = setInterval(function(){
+        let histSliderItemId = [];
+        let histSliderItem = histSliderList.querySelectorAll(':scope > .js_histSliderItem');
+        for(let i=0; i<histSliderItem.length; i++){
+            histSliderItemId.push(histSliderItem[i].id);
+        }
+        let idxCount = 0;
+        histSliderItemId.forEach(function(){
+            console.log(histSliderItemId.indexOf(histSliderItemId[idxCount]));
+            if(!(histSliderItemId.indexOf(histSliderItemId[idxCount])===idxCount)){
+                histSliderItem[idxCount].remove();
+            }
+            idxCount=idxCount+1;
+        })
+        histSliderItemId = Array.from(new Set(histSliderItemId))
+        console.log(histSliderItem);
+        if(histSliderItemId.length == slideNum || histSliderItem.length == 20){
+            historySliderMaker();
+            for(let i=0; i<histSliderItem.length; i++){
+                histSliderItem[i].classList.remove('js_hidden');
+            }
+            clearInterval(intervalId);
+        }
+    },1000)
+
+    {% assign prev-arrow = 'slider_arrow_left.png' | file_img_url: 'small' | img_tag %}
+    {% assign prev-div = '<div class="slide-arrow prev-arrow">' | append: prev-arrow | append: '</div>' %}
+    {% assign next-arrow = 'slider_arrow_right.png' | file_img_url: 'small' | img_tag %}
+    {% assign next-div = '<div class="slide-arrow next-arrow">' | append: next-arrow | append: '</div>' %}
+
+    function historySliderMaker() {
+        $('.history_slider').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            responsive: [
+                {
+                    breakpoint: 599, 
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    },
+                },                 
+                {
+                    breakpoint: 1024, 
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                    },
+                },
+                {
+                    breakpoint: 1480, 
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 4,
+                    },
+                },                    
+            ],
+            prevArrow: '<div class="slide-arrow prev-arrow"><img src="{{ "slider_arrow_left.png" | file_img_url }}"></div>',
+            nextArrow: '<div class="slide-arrow next-arrow"><img src="{{ "slider_arrow_right.png" | file_img_url }}"></div>'
+        });
+    }
+	</script> 

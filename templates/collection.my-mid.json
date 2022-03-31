@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "my-mid",
+      "settings": {
+        "products_per_page": 8
+      }
+    }
+  },
+  "order": [
+    "product-grid"
+  ]
+}

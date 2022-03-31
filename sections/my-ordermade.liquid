@@ -1,0 +1,36 @@
+<section id="top_order">
+    <h2>{{ 'top_order_icon_6a3be947-ee23-4370-9b3b-3a8206f0f68a.png' | file_img_url | img_tag: 'images' }}オーダーメイド可能製品一覧</h2>
+    <div class="order_bg">
+        <ul class="order_slider">
+        {% for product in collections['ordermade'].products %}
+            <li>
+                <a href="{{ product.url }}">
+                    <div class="bl_card_imgWrapper">
+                        {{ product.featured_image | img_url: 'medium' | img_tag: product.title }}
+                    </div>
+                    <p class="txt">{{ product.title }}</p>
+                    <p class="price">{{ product.price | money_without_currency }}円(税込）〜</p>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "オーダーメイド可能製品一覧",
+    "settings": [],
+    "presets": [
+        {
+        "name": "オーダーメイド可能製品一覧"
+        }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

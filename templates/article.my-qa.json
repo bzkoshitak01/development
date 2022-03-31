@@ -1,0 +1,11 @@
+{
+    "sections": {
+      "main": {
+        "type": "my-qa",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }

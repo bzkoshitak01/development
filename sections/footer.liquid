@@ -1,0 +1,483 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'disclosure.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'disclosure.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .footer {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+  }
+
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .footer {
+      margin-top: {{ section.settings.margin_top }}px;
+    }
+
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<footer>
+	<div class="foot_t">
+		<h3><span>GUIDE</span>トラデポ お買い物ガイド</h3>
+		<div class="box">
+			<ul class="list1">
+				<li>
+					<h4>送料について</h4>
+					<p class="txt">商品の合計金額30,000円(税込)<br>
+						以上のご注文で送料無料！</p>
+					<p>商品の合計金額が3万円以上のご注文で送料無料。※3万円未満の場合は送料がかかります。<br>
+						沖縄離島・一部エリアは別料金</p>
+					{{ 'foot_img1.png' | file_img_url: 'large' | img_tag: 'images' }}
+                    <a href="{{ pages['送料について'].url }}">詳しくはこちら</a> </li>
+				<li>
+					<h4>お届けについて</h4>
+					<p class="txt">平日最短当日出荷！<br>
+						オーダー品も短納期でご用意。</p>
+					<p>平日：AM10時までの入金確認で当日出荷<br>
+						オーダー品：製品・加工内容によって納期が異なります。</p>
+					{{ 'foot_img2.png' | file_img_url: 'large' | img_tag: 'images' }}
+                    <a href="{{ pages['引き渡し-お届けについて'].url }}">詳しくはこちら</a> </li>
+				<li>
+					<h4>お支払について</h4>
+					<p class="txt">クレジットカード・代金引換・<br>
+						銀行振込・請求書払いに対応</p>
+					<p>オンラインでの決済はもちろん、銀行振り込みや代引きにも対応。法人・個人事業主の方は締め払い（後払い）にも対応。</p>
+					{{ 'foot_img3.png' | file_img_url: 'large' | img_tag: 'images' }}
+                    <a href="{{ pages['決済方法について'].url }}">詳しくはこちら</a> </li>
+				<li>
+					<h4>帳簿類について</h4>
+					<p class="txt">商品の合計金額30,000円(税込)<br>
+						以上のご注文で送料無料！</p>
+					<p>商品の合計金額が3万円以上のご注文で送料無料。※3万円未満の場合は送料がかかります。<br>
+						沖縄離島・一部エリアは別料金</p>
+					{{ 'foot_img4.png' | file_img_url: 'large' | img_tag: 'images' }}
+                    <a href="{{ pages['帳簿類について'].url }}">詳しくはこちら</a> </li>
+			</ul>
+			<div class="box2">
+				<h4>カスタマーサポート</h4>
+				<p class="txt">問い合わせフォーム・お電話・FAXに対応しております。お気軽にご相談ください。</p>
+				<ul class="list2">
+					<li>
+						<h5>{{ 'foot_box2_img1.png' | file_img_url | img_tag: 'images' }}お問い合わせフォーム</h5>
+						<p>見積り、問合せはフォームで24H受付中。<br>
+							担当よりご連絡させていただきます。</p>
+						<a href="{{ pages['contact'].url }}" class="btn">お問い合わせフォーム</a> </li>
+					<li>
+						<h5>{{ 'foot_box2_img2.png' | file_img_url | img_tag: 'images' }}FAX</h5>
+						<p>専用用紙に記入し 052-766-6960へ<br>
+							FAXをお送りください。</p>
+						<a href="{{ pages['fax注文用紙'].url }}" class="btn">FAX用紙ダウンロードへ</a> </li>
+					<li>
+						<h5>{{ 'foot_box2_img3.png' | file_img_url | img_tag: 'images' }}お電話</h5>
+						<div class="tel_text">通話料無料<span>（固定電話・携帯・PHS）</span></div>
+						<p class="tel">0120-441-723</p>
+						<p>【受付時間】平日9:00〜17:30</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="foot_b">
+		<div class="foot_b_l">
+			<h3>製品一覧</h3>
+			<div class="box1">
+
+            {%- assign i = 0 -%}
+            {%- assign d04loop = 0 -%}
+            {%- assign d02loop = 0 -%}
+            {% for link in linklists.cat-menu.links %}
+            {%- assign i = i | plus: 1 -%}
+            {%- assign d2 = i | modulo: 2 -%}
+            {%- assign d4 = i | modulo: 4 -%}
+            {%- assign d02 = i | minus: 1 | modulo: 2 -%}
+            {%- assign d04 = i | minus: 1 | modulo: 4 -%}
+            {%- assign size = linklists.cat-menu.links | size -%}
+
+            {% if d04 == 0 %}
+            {%- assign d04loop = d04loop | plus: 1 -%}
+            {%- assign dd04 = d04loop | modulo: 2 -%}
+                {% if dd04 != 0 %}
+                    {%- assign class04 = 'lb' -%}
+                {% elsif dd04 == 0 %}
+                    {%- assign class04 = 'rb' -%}
+                {% endif %}
+				<div class="{{ class04 }}">
+            {% endif %} 
+                {% if d02 == 0 %}
+                {%- assign d02loop = d02loop | plus: 1 -%}
+                {%- assign dd02 = d02loop | modulo: 2 -%}
+                    {% if dd02 != 0 %}
+                        {%- assign class02 = 'lb2' -%}
+                    {% elsif dd02 == 0 %}
+                        {%- assign class02 = 'rb2' -%}
+                    {% endif %}
+                    <div class="{{ class02 }}">
+                {% endif %}
+						<dl class="ac">
+							<dt class="ac-parent"><a href="{{ link.url }}" class="pcon">{{ link.title }}</a><span class="spon">{{ link.title }}</span></dt>
+							<dd class="ac-child">
+								<ul>
+                                {% for sub_link in link.links %}
+									<li><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+                                {% endfor %} 
+								</ul>
+							</dd>
+						</dl>
+                        {% if i == size %}
+                        <div class="foot_link"><a href="{{ collections['ordermade'].url}}">オーダー製作</a></div>
+                        {% endif %}
+                {% if d2 == 0 %}
+                    </div>
+                {% endif %}
+            {% if d4 == 0 %}   
+                </div>
+            {% endif %}    
+            {% endfor %}
+			</div>
+			<div class="box2">
+				<div>
+					<h3>ご利用案内</h3>
+					<ul>
+                    {%- for link in linklists.footer-guide.links -%}
+						<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {%- endfor -%}
+					</ul>
+				</div>
+				<div>
+					<h3>ご注文・問合せ</h3>
+					<ul>
+                    {%- for link in linklists.footer-contact.links -%}
+						<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {%- endfor -%}
+					</ul>
+				</div>
+				<div>
+					<h3>トラデポについて</h3>
+					<ul>
+                    {%- for link in linklists.footer-shop.links -%}
+						<li><a href="{{ link.url }}">{{ link.title }}</a></li>
+                    {%- endfor -%}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_b_r">
+			<div class="wrap">
+				<div class="box1">{{ 'foot_logo.png' | file_img_url: 'medium' | img_tag: 'トラデポ　トラック用品の激安専門店' }}
+					<p class="info">運営会社：株式会社チームライク<br>
+						本社：神奈川県海老名市中央2-9-50 海老名プライムタワー7F<br>
+						電話番号：0120-441-723<br>
+						FAX番号：052-766-6960</p>
+					<ul>
+						<li><a href="{{ pages['contact'].url }}">お問い合わせフォームへ</a></li>
+						<li><a href="{{ pages['fax注文用紙'].url }}">FAX用紙ダウンロードへ</a></li>
+					</ul>
+				</div>
+				<div class="box2"> <strong>トラデポとは…？</strong>
+					<p>トラデポは、トラック用品をお得な料金で注文できる通販サイトです。既成商品もちろん、オーダー品も工場直送の卸売価格！</p>
+					<p>施工・製造のプロが在籍しており、高品質・丁寧な説明で対応いたします。<br>
+						不明点はお気軽にご相談ください。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cr">Copyright(c) TORADEPO. All rights reserved.</div>
+</footer>
+
+
+{% javascript %}
+  class LocalizationForm extends HTMLElement {
+    constructor() {
+      super();
+      this.elements = {
+        input: this.querySelector('input[name="locale_code"], input[name="country_code"]'),
+        button: this.querySelector('button'),
+        panel: this.querySelector('ul'),
+      };
+      this.elements.button.addEventListener('click', this.openSelector.bind(this));
+      this.elements.button.addEventListener('focusout', this.closeSelector.bind(this));
+      this.addEventListener('keyup', this.onContainerKeyUp.bind(this));
+
+      this.querySelectorAll('a').forEach(item => item.addEventListener('click', this.onItemClick.bind(this)));
+    }
+
+    hidePanel() {
+      this.elements.button.setAttribute('aria-expanded', 'false');
+      this.elements.panel.setAttribute('hidden', true);
+    }
+
+    onContainerKeyUp(event) {
+      if (event.code.toUpperCase() !== 'ESCAPE') return;
+
+      this.hidePanel();
+      this.elements.button.focus();
+    }
+
+    onItemClick(event) {
+      event.preventDefault();
+      const form = this.querySelector('form');
+      this.elements.input.value = event.currentTarget.dataset.value;
+      if (form) form.submit();
+    }
+
+    openSelector() {
+      this.elements.button.focus();
+      this.elements.panel.toggleAttribute('hidden');
+      this.elements.button.setAttribute('aria-expanded', (this.elements.button.getAttribute('aria-expanded') === 'false').toString());
+    }
+
+    closeSelector(event) {
+      const shouldClose = event.relatedTarget && event.relatedTarget.nodeName === 'BUTTON';
+      if (event.relatedTarget === null || shouldClose) {
+        this.hidePanel();
+      }
+    }
+  }
+
+  customElements.define('localization-form', LocalizationForm);
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "t:sections.footer.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Quick links",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label",
+          "info": "t:sections.footer.blocks.link_list.settings.heading.info"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.footer.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.footer.blocks.text.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 200,
+          "step": 5,
+          "unit": "px",
+          "label": "Image width",
+          "default": 100
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": "Image alignment on large screen",
+          "options": [
+            {
+              "value": "",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "color_scheme",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.footer.settings.color_scheme.options__1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.footer.settings.color_scheme.options__2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.footer.settings.color_scheme.options__3.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.footer.settings.color_scheme.options__4.label"
+        },
+        {
+          "value": "inverse",
+          "label": "t:sections.footer.settings.color_scheme.options__5.label"
+        }
+      ],
+      "default": "background-1",
+      "label": "t:sections.footer.settings.color_scheme.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__1.content",
+      "info": "t:sections.footer.settings.header__1.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "Subscribe to our emails",
+      "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__2.content",
+      "info": "t:sections.footer.settings.header__2.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": false,
+      "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__3.content",
+      "info": "t:sections.footer.settings.header__4.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_country_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__5.content",
+      "info": "t:sections.footer.settings.header__6.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_language_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__7.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.payment_enable.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.footer.settings.margin_top.label",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 36
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      },
+      {
+        "type": "text"
+      }
+    ]
+  }
+}
+{% endschema %}

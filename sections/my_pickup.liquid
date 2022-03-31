@@ -1,0 +1,87 @@
+<section id="top_pickup">
+    <h2>{{ 'top_pickup_icon_74bb65a4-7d39-4efa-988b-2b2ddf95f06e.png' | file_img_url | img_tag: 'images' }}注目のピックアップアイテム<span>ー PICK UP ITEM ー</span></h2>
+    <ul>
+    {% for block in section.blocks %}
+    {%- case block.type -%}
+    {%- when 'upper' -%}
+        <li>
+            <a href="{{ block.settings.upper_product.url }}">
+                <div class="bl_card_imgWrapper">
+                    {{ block.settings.upper_product.featured_media | img_url | img_tag: block.settings.upper_product.title }}
+                </div>
+                <p class="txt">{{ block.settings.upper_product.title }}</p>
+                <p class="price"><span class="box">卸売価格</span><span>{{ block.settings.upper_product.price | money_without_currency }}円(税込）〜</span></p>
+            </a>
+        </li>
+    {%- endcase -%}
+    {% endfor %}
+    </ul>
+    <div class="grad-wrap">
+        <input id="trigger2" class="grad-trigger spon" type="checkbox" style="display: none;">
+        <label class="grad-btn" for="trigger2"></label>
+        <div class="grad-item">
+            <ul>
+            {% for block in section.blocks %}
+            {%- case block.type -%}
+            {%- when 'lower' -%}
+                <li>
+                    <a href="{{ block.settings.lower_product.url }}">
+                        <div class="bl_card_imgWrapper">
+                            {{ block.settings.lower_product.featured_image | img_url | img_tag: block.settings.lower_product.title }}
+                        </div>
+                        <p class="txt">{{ block.settings.lower_product.title }}</p>
+                        <p class="price"><span class="box">卸売価格</span><span>{{ block.settings.lower_product.price | money_without_currency }}円(税込）〜</span></p>
+                    </a>
+                </li>
+            {%- endcase -%}
+            {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+
+{% schema %}
+{
+    "name": "注目のピックアップアイテム",
+    "settings": [],
+    "blocks": [
+        {
+            "type": "upper",
+            "name": "upper",
+            "limit": 4,
+            "settings":[
+                {
+                    "type": "product",
+                    "id": "upper_product",
+                    "label": "商品を選択する"
+                }
+            ]
+        },
+        {
+            "type": "lower",
+            "name": "lower",
+            "limit": 4,
+            "settings":[
+                {
+                    "type": "product",
+                    "id": "lower_product",
+                    "label": "商品を選択する"
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "注目のピックアップアイテム"
+        }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

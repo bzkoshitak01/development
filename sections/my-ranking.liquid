@@ -1,0 +1,88 @@
+<section id="top_ranking">
+    <h2>{{ 'top_ranking_icon_a23665c1-b091-4771-9a21-213991bf73f2.png' | file_img_url | img_tag: 'images' }}売れ筋ランキング<span>ー BEST ranking ー</span></h2>
+    <div class="ranking_bg">
+        <ul class="rank_slider">
+            {%- assign i = 0 -%}
+            {% for product in collections['popular-ranking'].products limit:10 %}
+            {%- assign i = i | plus:1 -%}
+            {% if i == 1 %}
+                {%- assign class = 'r1st' -%}
+            {% elsif i == 2 %}
+                {%- assign class = 'r2st' -%}
+            {% elsif i == 3 %}  
+                {%- assign class = 'r3st' -%}
+            {% else %}
+                {%- assign class = '' -%}
+            {% endif %}
+            <li>
+                <a href="{{ product.url }}">
+                    <p class="{{ class }} rank">第<span>{{ i }}</span>位</p>
+                    <div class="bl_card_imgWrapper bl_card_imgWrapper__borderGray">
+                        {{ product.featured_image | img_url: 'medium' | img_tag: product.title }}
+                    </div>
+                    <p class="txt">{{ product.title }}</p>
+                    <p class="price">{{ product.price | money_without_currency }}円(税込）〜</p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</section>
+<script>
+    const rank = document.querySelectorAll('.rank');
+    const rankSlider = document.querySelector('.rank-slider');
+    
+    rankHightAdjuster();
+    window.addEventListener('resize',rankHightAdjuster)
+    function rankHightAdjuster() {
+        //for(let i=0; i<rank.length; i++){
+        //    console.log(getComputedStyle(rank[0]).height + 'px');
+        //    if(i>0){
+        //        rank[i].style.height = getComputedStyle(rank[0]).height;
+        //    }
+        //}
+        let intervalId1 = setInterval(function(){
+            if(rankSlider.querySelector('.slick-list')!=null){
+                //let intervalId2 = setInterval(function(){
+                //    for(let i=0; i<varItemHead.length; i++){
+                //        if(varItemHead[i].style.height != 
+                //            getComputedStyle(varItem[i]).height){
+                //            varItemHead[i].style.height = getComputedStyle(varItem[i]).height;
+                //        } 
+                //    }
+                //    for(let i=0; i<varItemHead.length; i++){
+                //        if(varItemHead[i].style.height != 
+                //            getComputedStyle(varItem[i]).height){
+                //            break;
+                //        }else if(i==varItemHead.length-1){
+                //            clearInterval(intervalId2);
+                //        }
+                //    }
+                //},200);
+                for(let i=0; i<rank.length; i++){
+                    rank[i].style.height = getComputedStyle(rank[0]).height;
+                }
+                clearInterval(intervalId1);
+            }
+        },200);
+    }
+</script>
+
+
+{% schema %}
+{
+    "name": "売れ筋ランキング",
+    "settings": [],
+    "presets": [
+        {
+        "name": "売れ筋ランキング"
+        }
+    ]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

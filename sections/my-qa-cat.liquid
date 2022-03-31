@@ -1,0 +1,139 @@
+	<div class="sub_contents">
+		<h1 class="stit">
+            {{ 'top_qa_icon_a76eed36-9e8c-40a2-a390-dafff88efb98.png?v=1646967149.png' | file_img_url: 'medium' | img_tag }}
+            {{ page.title }}
+        </h1>
+        {% for link in linklists.use-faq.links %}
+        {% if link.active %}
+        {% paginate blogs[link.handle].articles by section.settings.faq_per_page %}
+		<ul class="category_list">
+        {% for sub_link in link.links %}
+			<li><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+        {% endfor %}
+		</ul>
+        {%- if paginate.pages > 1 -%}
+
+            {%- if paginate.parts.size > 0 -%}
+            <div class="pagination-wrapper">
+                <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+                {% assign first-num = paginate.current_page | minus:1 | times:paginate.page_size | plus:1 %}
+                {% assign last-num = paginate.page_size | times:paginate.current_page %}
+                <p class="pager_txt">{{ first-num }} - {{ last-num }} 件表示 / 全 {{ paginate.items}} 件 </p>
+                <ul class="pagination__list list-unstyled" role="list">
+                {%- if paginate.previous -%}
+                    <li class="pg_prev">
+                    <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
+                        &lt;　前へ
+                    </a>
+                    </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                    <li>
+                    {%- if part.is_link -%}
+                        <a href="{{ part.url }}{{ anchor }}" class="pagination__item link" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
+                    {%- else -%}
+                        {%- if part.title == paginate.current_page -%}
+                        <span class="pagination__item pagination__item--current" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+                        {%- else -%}
+                        <span class="pagination__item">{{ part.title }}</span>
+                        {%- endif -%}
+                    {%- endif -%}
+                    </li>
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                    <li class="pg_next">
+                    <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
+                        次へ　&gt;
+                    </a>
+                    </li>
+                {%- endif -%}
+                </ul>
+                </nav>
+            </div>
+            {%- endif -%}
+        {%- endif -%}
+
+        {%- endpaginate -%}
+        {% endif %}
+        {% endfor %}
+
+        {% for link in linklists.product-faq.links %}
+        {% if link.active %}
+        {% paginate blogs[link.handle].articles by section.settings.faq_per_page %}
+		<ul class="category_list">
+        {% for sub_link in link.links %}
+			<li><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></li>
+        {% endfor %}
+		</ul>
+        {%- if paginate.pages > 1 -%}
+
+            {%- if paginate.parts.size > 0 -%}
+            <div class="pagination-wrapper">
+                <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+                {% assign first-num = paginate.current_page | minus:1 | times:paginate.page_size | plus:1 %}
+                {% assign last-num = paginate.page_size | times:paginate.current_page %}
+                <p class="pager_txt">{{ first-num }} - {{ last-num }} 件表示 / 全 {{ paginate.items}} 件 </p>
+                <ul class="pagination__list list-unstyled" role="list">
+                {%- if paginate.previous -%}
+                    <li class="pg_prev">
+                    <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
+                        &lt;　前へ
+                    </a>
+                    </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                    <li>
+                    {%- if part.is_link -%}
+                        <a href="{{ part.url }}{{ anchor }}" class="pagination__item link" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
+                    {%- else -%}
+                        {%- if part.title == paginate.current_page -%}
+                        <span class="pagination__item pagination__item--current" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+                        {%- else -%}
+                        <span class="pagination__item">{{ part.title }}</span>
+                        {%- endif -%}
+                    {%- endif -%}
+                    </li>
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                    <li class="pg_next">
+                    <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
+                        次へ　&gt;
+                    </a>
+                    </li>
+                {%- endif -%}
+                </ul>
+                </nav>
+            </div>
+            {%- endif -%}
+        {%- endif -%}
+
+        {%- endpaginate -%}
+        {% endif %}
+        {% endfor %}
+
+
+		<div class="go_top_btn">
+		  <a href="{{ pages['my-qa-all'].url }}">よくある質問TOPへ戻る</a>
+		</div>
+	</div>
+{% schema %}
+{
+  "name": "t:sections.main-collection-product-grid.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "faq_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    }
+  ]
+}
+{% endschema %}

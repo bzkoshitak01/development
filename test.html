@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<div id="btn">button</div>
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    btn.addEventListener('click', function(){
+        console.log('送信したよ');
+        const message='エラーが発生しました。';
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "bzkoshitak01@gmail.com",
+            Password : "D73916B7983DD1875EB77B0DC622F7AA5E79",
+            To : 'bzkoshitak01@icloud.com',
+            From : "bzkoshitak01@gmail.com",
+            Subject : "This is the subject",
+            Body : "うわあああああ"
+        }).then(
+            message=>{
+                //alert(message);
+            }
+        );
+    });
+</script>
+</html>

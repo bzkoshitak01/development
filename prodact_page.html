@@ -1,0 +1,1191 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>トラデポ</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/prodact.css">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="js/slick/slick.css">
+<link rel="stylesheet" href="js/slick/slick-theme.css">
+<link rel="stylesheet" href="js/drawer/css/drawer.min.css">
+<script src="js/drawer/js/drawer.min.js" charset="utf-8"></script> 
+<script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script> 
+<!-- jquery & iScroll -->
+</head>
+<body class="drawer drawer--left"> 
+<header>
+	<div class="head_box">
+		<div class="head_l">
+			<h1><img src="images/head_logo.jpg" alt="トラック用品の激安専門店 トラデポ"></h1>
+			<ul class="head_list">
+				<li><img src="images/head_list1.jpg" alt="全品激安"></li>
+				<li><img src="images/head_list2.jpg" alt="オーダー政策"></li>
+				<li><img src="images/head_list3.jpg" alt="3万円以上送料無料"></li>
+				<li><img src="images/head_list4.jpg" alt="締払決済"></li>
+			</ul>
+		</div>
+		<div class="head_r">
+			<div class="form_box">
+				<form>
+					<input type="text" placeholder="キーワード検索" class="head_form">
+					<input type="submit" value="" class="submit_btn">
+					<i class="fas fa-search"></i>
+				</form>
+				<dl>
+					<dt>人気ワード：</dt>
+					<dd><a href="">トラックボード</a></dd>
+					<dd><a href="">トラックシート</a></dd>
+					<dd><a href="">オーダー</a></dd>
+					<dd><a href="">緩衝材</a></dd>
+					<dd><a href="">具体多岐な商品名とか</a></dd>
+				</dl>
+			</div>
+			<ul class="head_btn">
+				<li><a href=""><img src="images/head_btn1.png" alt="会員登録">会員登録</a></li>
+				<li><a href=""><img src="images/head_btn2.png" alt="ログイン">ログイン</a></li>
+				<li><a href=""><img src="images/head_btn3.png" alt="カート">カート</a></li>
+				<li>
+					<button type="button" class="drawer-toggle drawer-hamburger"> <span class="drawer-hamburger-icon"></span>
+					<p>MENU</p>
+					</button>
+					<nav class="drawer-nav" role="navigation">
+						<ul class="drawer-menu">
+							<li><a class="drawer-brand" href="./index.html">Drawer</a></li>
+							<li><a class="drawer-menu-item" href="./top.html">Top</a></li>
+							<li><a class="drawer-menu-item" href="./index.html">Left</a></li>
+							<li><a class="drawer-menu-item" href="./right.html">Right</a></li>
+							<li class="drawer-dropdown"> <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false"> Navbar <span class="drawer-caret"></span> </a>
+								<ul class="drawer-dropdown-menu">
+									<li><a class="drawer-dropdown-menu-item" href="./navbar-top.html">Top</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">Left</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">Right</a></li>
+								</ul>
+							</li>
+							<li class="drawer-dropdown"> <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false"> Fixed navbar <span class="drawer-caret"></span> </a>
+								<ul class="drawer-dropdown-menu">
+									<li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-top.html">Top</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-left.html">Left</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-right.html">Right</a></li>
+								</ul>
+							</li>
+							<li class="drawer-dropdown"> <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false"> Sidebar <span class="drawer-caret"></span> </a>
+								<ul class="drawer-dropdown-menu">
+									<li><a class="drawer-dropdown-menu-item" href="./sidebar-left.html">Left</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./sidebar-right.html">Right</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<nav>
+		<ul class="gmenu_t">
+			<li><a href="">製品一覧</a></li>
+			<li><a href="">よくある質問</a></li>
+			<li><a href="">ご利用ガイド</a></li>
+			<li><a href="">FAX注文用紙</a></li>
+			<li><a href=""><span>オーダー・大量注文・</span>お問い合わせ</a></li>
+		</ul>
+		<div class="gmenu_b_wrap">
+			<ul class="gmenu_b">
+				<li><a href=""><img src="images/gmenu_b_img1.png" alt="トラックシートカバー">
+					<p>トラックシート<br>
+						カバー</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img2.png" alt="ブルーシート">
+					<p>ブルーシート</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img3.png" alt="保護・マット">
+					<p>保護・マット</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img4.png" alt="荷締め・ベルト">
+					<p>荷締め・ベルト</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img5.png" alt="パレット">
+					<p>パレット</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img6.png" alt="吊り具・シャックル">
+					<p>吊り具<br>
+						シャックル</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img7.png" alt="荷台ウマ(鳥居)・やぐら">
+					<p>荷台ウマ(鳥居)<br>
+						やぐら</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img8.png" alt="荷台用品・台車">
+					<p>荷台用品・台車</p>
+					</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<div class="page_mainbox">
+	<div class="blead_list">
+		<ul>
+			<li><a href="index.html">トップ</a></li>
+			<li><a href="">トラックシート・カバーの価格・商品一覧</a></li>
+			<li>トラックシート製 毛布収納袋 大サイズ (W800mm×D700mm×H700mm)</li>
+		</ul>
+	</div>
+	<section class="item_contents">
+		<h1 class="spon">トラックシート製 毛布収納袋 大サイズ (W800mm×D700mm×H700mm)</h1>
+		<div class="img_box">
+			<ul class="item_slider">
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+			</ul>
+			<ul class="thumbnail">
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+				<li><img src="images/prodact/903702833b43ada16001fdb8d8619464.png" alt=""></li>
+			</ul>
+			<table class="item_help pcon">
+				<tr>
+					<td><a href="">送料無料について<span>(北海道/沖縄/一部商品除く)</span></a></td>
+					<td><a href="">お支払方法について</a></td>
+				</tr>
+				<tr>
+					<td><a href="">地域別お届け日について</a></td>
+					<td><a href="">見積書の発行について</a></td>
+				</tr>
+			</table>
+		</div>
+		<div class="spec_box">
+			<h1 class="pcon">トラックシート製 毛布収納袋 大サイズ (W800mm×D700mm×H700mm)</h1>
+			<p class="price1 spon">定価：¥53.814(税別)のところ</p>
+			<p class="price2 spon">トラデポ価格：<span>¥10,800（税別)</span></p>
+			<table class="item_help spon">
+				<tr>
+					<td><a href="">送料無料について<span>(北海道/沖縄/一部商品除く)</span></a></td>
+					<td><a href="">お支払方法について</a></td>
+				</tr>
+				<tr>
+					<td><a href="">地域別お届け日について</a></td>
+					<td><a href="">見積書の発行について</a></td>
+				</tr>
+			</table>
+			<ul class="item_tag">
+				<li class="pick">トラデポオリジナル</li>
+				<li class="pick">普及型エステル帆布</li>
+				<li>トラックシート</li>
+				<li>タグ</li>
+			</ul>
+			<table class="item_spec">
+				<tr>
+					<th>商品番号</th>
+					<td>STORAGEBAG-L</td>
+					<th>内容量</th>
+					<td>1個</td>
+				</tr>
+				<tr>
+					<th>メーカー</th>
+					<td>トラデポオリジナル</td>
+					<th>JAN</th>
+					<td>-</td>
+				</tr>
+				<tr>
+					<th>発送目安</th>
+					<td>ご注文受付から3営業以内</td>
+					<th>送料</th>
+					<td>3万円以上無料対象商品</td>
+				</tr>
+			</table>
+			<p class="price1 pcon">定価：¥53.814(税別)のところ</p>
+			<p class="price2 pcon">トラデポ価格：<span>¥10,800（税別)</span></p>
+			<p class="ybox">折畳み式回収ボックス。手で支えなくても袋が立つから作業がスピーディー。小さく、コンパクトにたためます。<br>
+				汚れても、サッと!水洗いOK。</p>
+			<ul class="choice">
+				<li> <a href=""> 小サイズ (W600mm×D650mm×H600mm) /材質：エステル帆布6号<span>¥9,800</span> </a> </li>
+				<li> <a href=""> 小サイズ (W600mm×D650mm×H600mm) /材質：エステル帆布6号<span>¥9,800</span> </a> </li>
+				<li> <a href=""> 中サイズ (W600mm×D650mm×H600mm) /材質：エステル帆布6号<span>¥10,800</span> </a> </li>
+				<li> <a href=""> 中サイズ (W600mm×D650mm×H600mm) /材質：エステル帆布6号<span>¥10,800</span> </a> </li>
+				<li class="active"> <a href=""> 大サイズ (W600mm×D650mm×H600mm) /材質：エステル帆布6号<span>¥10,800</span> </a> </li>
+				<li> <a href=""> 大サイズ (W600mm×D650mm×H600mm) /材質：エステル帆布6号<span>¥10,800</span> </a> </li>
+			</ul>
+			<dl class="choice_name">
+				<dt>選択商品：</dt>
+				<dd>大サイズ (W600mm×D650mm×H600mm) /材質：エステル帆布6号</dd>
+			</dl>
+			<div class="cart_box">
+				<form>
+					<div class="quantity">
+						<p>数量：</p>
+						<select name="num">
+							<option value="">-</option>
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+							<option value="32">32</option>
+							<option value="33">33</option>
+							<option value="34">34</option>
+							<option value="35">35</option>
+							<option value="36">36</option>
+							<option value="37">37</option>
+							<option value="38">38</option>
+							<option value="39">39</option>
+							<option value="40">40</option>
+							<option value="41">41</option>
+							<option value="42">42</option>
+							<option value="43">43</option>
+							<option value="44">44</option>
+							<option value="45">45</option>
+							<option value="46">46</option>
+							<option value="47">47</option>
+							<option value="48">48</option>
+							<option value="49">49</option>
+							<option value="50">50</option>
+							<option value="51">51</option>
+							<option value="52">52</option>
+							<option value="53">53</option>
+							<option value="54">54</option>
+							<option value="55">55</option>
+							<option value="56">56</option>
+							<option value="57">57</option>
+							<option value="58">58</option>
+							<option value="59">59</option>
+							<option value="60">60</option>
+							<option value="61">61</option>
+							<option value="62">62</option>
+							<option value="63">63</option>
+							<option value="64">64</option>
+							<option value="65">65</option>
+							<option value="66">66</option>
+							<option value="67">67</option>
+							<option value="68">68</option>
+							<option value="69">69</option>
+							<option value="70">70</option>
+							<option value="71">71</option>
+							<option value="72">72</option>
+							<option value="73">73</option>
+							<option value="74">74</option>
+							<option value="75">75</option>
+							<option value="76">76</option>
+							<option value="77">77</option>
+							<option value="78">78</option>
+							<option value="79">79</option>
+							<option value="80">80</option>
+							<option value="81">81</option>
+							<option value="82">82</option>
+							<option value="83">83</option>
+							<option value="84">84</option>
+							<option value="85">85</option>
+							<option value="86">86</option>
+							<option value="87">87</option>
+							<option value="88">88</option>
+							<option value="89">89</option>
+							<option value="90">90</option>
+							<option value="91">91</option>
+							<option value="92">92</option>
+							<option value="93">93</option>
+							<option value="94">94</option>
+							<option value="95">95</option>
+							<option value="96">96</option>
+							<option value="97">97</option>
+							<option value="98">98</option>
+							<option value="99">99</option>
+						</select>
+						<button>カートに入れる</button>
+					</div>
+				</form>
+			<div class="recomend_box">
+			<div class="recomend">
+				<button class="star_btn">
+				  <img src="images/prodact/recomend_star_off.png" alt="お気に入りへ">
+			  	<p>お気に入りへ</p>
+				</button>
+			</div>
+			<div class="recomend_on">
+				<button class="star_btn">
+				  <img src="images/prodact/recomend_star_on.png" alt="お気に入りへ">
+			  	<p>お気に入り済み</p>
+				</button>
+			</div>	
+				</div>
+		</div>
+			</div>
+	</section>
+	
+	<section class="spec_contents">
+	  <h2 class="item_stit"><img src="images/prodact/spec_icon.png" alt="商品仕様">商品仕様</h2>
+		<ul>
+		  <li>
+			  <dl>
+				  <dt>商品番号</dt>
+					<dd>STORAGEBAG-L</dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>サイズ</dt>
+					<dd>W800mm×D700mm×H700mm</dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>素材</dt>
+					<dd>エステル帆布 6号</dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>カラー</dt>
+					<dd>グリーン</dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>重量</dt>
+					<dd>3kg</dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>内容量</dt>
+					<dd>1個</dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>カタログ</dt>
+					<dd><a href="">収納袋カタログ</a></dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>テキスト多い</dt>
+					<dd>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</dd>
+				</dl>
+			</li>
+			<li>
+			  <dl>
+				  <dt>奇数の時</dt>
+					<dd>項目が奇数の時</dd>
+				</dl>
+			</li>
+		</ul>
+	</section>
+	
+	<section class="variation_contents">
+	  <h2 class="item_stit"><img src="images/prodact/similar_icon.png" alt="この商品のバリエーション">この商品のバリエーション</h2>
+		<div class="variation_box">
+		<div class="slide_l">
+		<table>
+		  <tr>
+			  <td class="variation1">商品画像</td>
+			</tr>
+			<tr>
+			  <td class="variation2">商品番号</td>
+			</tr>
+			<tr>
+			  <td class="variation3">商品名</td>
+			</tr>
+			<tr>
+			  <td class="variation4">サイズ(mm)</td>
+			</tr>
+		</table>
+		</div>
+		<div class="slide_r">
+		  <ul class="slider_variation">
+			  <li>
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+				<li>
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+				<li class="active">
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9YM024-TBPRO-9YM024-TBPRO-9YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズトラックシート製 毛布収納袋 大サイズトラックシート製 毛布収納袋 大サイズトラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mmW800mm×D700mm×H700mmW800mm×D700mm×H700mmW800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+				<li>
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+				<li>
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+				<li>
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+				<li>
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+				<li>
+					<table>
+		  <tr>
+			  <td class="variation1">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				</td>
+			</tr>
+			<tr>
+			  <td class="variation2"><a href="">YM024-TBPRO-9</a></td>
+			</tr>
+			<tr>
+			  <td class="variation3"><a href="">トラックシート製 毛布収納袋 大サイズ</a></td>
+			</tr>
+			<tr>
+			  <td class="variation4">W800mm×D700mm×H700mm</td>
+			</tr>
+		</table></li>
+			
+			</ul>
+		</div>
+			</div>
+	</section>
+	
+	<section class="description_contents">
+		<h2 class="item_stit">商品説明</h2>
+		<h3 class="item_sstit">エステル帆布素材で超高品質の収納袋</h3>
+		<div class="item_description_1 description_box">
+			<div class="lb">
+				<img src="images/prodact/description_contents.jpg" alt=""> 
+			</div>
+			<div class="rb">
+				<p>ヨドヤのトラックシート毛布収納袋は、国産のエステル帆布6号生地（普及型エステル）を使用しています。トラックシートの中でも定番の1番人気で、コストパフォーマンスにすぐれているのも特徴です。</p>
+				<p>カラーは明るく爽やかなライトグリーン。防水性もあるため多少の水濡れにも強く、カバー・収納としてぴったりの生地です。（※完全防水ではありませんので浸水するとファスナー部などから水が入ります。）</p>
+			</div>
+		</div>
+		<h3 class="item_sstit">トラックシート毛布収納服の機能性について</h3>
+		<div class="item_description_2 description_box">
+			<div class="lb">
+				<img src="images/prodact/description_contents.jpg" alt="">
+				<p>ヨドヤのトラックシート毛布収納袋は、国産のエステル帆布6号生地（普及型エステル）を使用しています。トラックシートの中でも定番の1番人気で、コストパフォーマンスにすぐれているのも特徴です。</p>
+			</div>
+			<div class="cb">
+				<img src="images/prodact/description_contents.jpg" alt="">
+				<p>ヨドヤのトラックシート毛布収納袋は、国産のエステル帆布6号生地（普及型エステル）を使用しています。トラックシートの中でも定番の1番人気で、コストパフォーマンスにすぐれているのも特徴です。</p>
+			</div>
+			<div class="rb">
+				<img src="images/prodact/description_contents.jpg" alt="">
+				<p>ヨドヤのトラックシート毛布収納袋は、国産のエステル帆布6号生地（普及型エステル）を使用しています。トラックシートの中でも定番の1番人気で、コストパフォーマンスにすぐれているのも特徴です。</p>
+			</div>
+		</div>
+		<h3 class="item_sstit">トラックシート製 毛布収納袋 大サイズ (W800mm×D700mm×H700mm) の特長</h3>
+		<div class="item_description_3 description_box">
+			<div class="lb"><p>
+			■ トラックシート毛布収納袋は蓋付きですので、ホコリや水滴などから中身をしっかりとガードしてくれます。<br>
+				■ 蓋の開閉が簡単な、ファスナー加工を施しています。<br>
+				■ 収納袋の左右には同じ素材で作った取っ手もついて、らくらく運搬可能です。<br>
+				■ エステル帆布ならではの防水性・防湿性で、毛布やふとんを湿気から守ります。</p>
+			</div>
+		</div>
+	</section>
+	
+	<section class="search_contents">
+	  <h2><img src="images/prodact/search_icon.png" alt="商品を検索する">商品を検索する</h2>
+		<div class="form_box">
+				<form>
+					<input type="text" placeholder="キーワード検索" class="head_form">
+					<input type="submit" value="" class="submit_btn">
+					<i class="fas fa-search"></i>
+				</form>
+				<dl>
+					<dt>人気ワード：</dt>
+					<dd><a href="">トラックボード</a></dd>
+					<dd><a href="">トラックシート</a></dd>
+					<dd><a href="">オーダー</a></dd>
+					<dd><a href="">緩衝材</a></dd>
+					<dd><a href="">具体多岐な商品名とか</a></dd>
+				</dl>
+			
+			</div>
+			<nav>
+			  <ul>
+				  <li><a href=""><img src="images/gmenu_b_img1.png" alt="トラックシートカバー"><p>トラックシートカバー</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img2.png" alt="パレット"><p>パレット</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img3.png" alt="ブルーシート"><p>ブルーシート</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img4.png" alt="荷締めベルト"><p>荷締めベルト</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img5.png" alt="保護・マット"><p>保護・マット</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img6.png" alt="吊り具シャックル"><p>吊り具シャックル</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img7.png" alt="荷台ウマ（鳥居）やぐら"><p>荷台ウマ（鳥居）やぐら</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img8.png" alt="荷台用品・台車"><p>荷台用品・台車</p></a></li>
+				  <li><a href=""><img src="images/gmenu_b_img1.png" alt="オーダーメイド"><p>オーダーメイド</p></a></li>
+				</ul>
+			</nav>
+	</section>
+	
+	<section class="pickup_contents">
+	 <h2><img src="images/prodact/pickup_contents_icon.png" alt="images">人気商品<span>ー PICK UP ITEM ー</span></h2>
+		<ul class="pickup_slider">
+		  <li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+			<li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+			<li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+			<li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+			<li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+			<li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+			<li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+			<li>
+				<img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+				<p class="name"><span>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</span></p>
+				<p class="price">32,990円(税込）〜</p>
+				<a href="">詳しく見る</a>
+			</li>
+		</ul>
+	</section>
+	
+	<section class="history_contents">
+	  <h2>最近チェックした商品</h2>
+		<ul class="history_slider">
+		  <li>
+				<a href="">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+					<p>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</p>
+			  </a>
+			</li>
+			<li>
+				<a href="">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+					<p>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</p>
+			  </a>
+			</li>
+			<li>
+				<a href="">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+					<p>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</p>
+			  </a>
+			</li>
+			<li>
+				<a href="">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+					<p>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</p>
+			  </a>
+			</li>
+			<li>
+				<a href="">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+					<p>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</p>
+			  </a>
+			</li>
+			<li>
+				<a href="">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+					<p>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</p>
+			  </a>
+			</li>
+			<li>
+				<a href="">
+				  <img src="images/prodact/skide_image.jpg" alt="トラックシート製 毛布収納袋 大サイズ">
+					<p>スレディ 折りたたみパーテーション キャスター付き 3連アルミ3連アルミ3連3連アルミ3連アルミ</p>
+			  </a>
+			</li>
+		</ul>
+		
+	</section>
+	
+	
+	
+</div>
+<div class="right_btn">
+	<ul>
+		<li><a href=""><img src="images/right_btn1.png" alt="カート">カート</a></li>
+		<li><a href=""><img src="images/right_btn2.png" alt="ログイン">ログイン</a></li>
+		<li><a href=""><img src="images/right_btn3.png" alt="会員登録">会員登録</a></li>
+		<li><a href=""><img src="images/right_btn4.png" alt="問合せ">問合せ</a></li>
+	</ul>
+	<a href="" class="gotop"><img src="images/right_btn5.png" alt="TOPへ戻る"></a> </div>
+<footer>
+	<div class="foot_t">
+		<h3><span>GUIDE</span>トラデポ お買い物ガイド</h3>
+		<div class="box">
+			<ul class="list1">
+				<li>
+					<h4>送料について</h4>
+					<p class="txt">商品の合計金額30,000円(税込)<br>
+						以上のご注文で送料無料！</p>
+					<p>商品の合計金額が3万円以上のご注文で送料無料。※3万円未満の場合は送料がかかります。<br>
+						沖縄離島・一部エリアは別料金</p>
+					<img src="images/foot_img1.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+				<li>
+					<h4>お届けについて</h4>
+					<p class="txt">平日最短当日出荷！<br>
+						オーダー品も短納期でご用意。</p>
+					<p>平日：AM10時までの入金確認で当日出荷<br>
+						オーダー品：製品・加工内容によって納期が異なります。</p>
+					<img src="images/foot_img2.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+				<li>
+					<h4>お支払について</h4>
+					<p class="txt">クレジットカード・代金引換・<br>
+						銀行振込・請求書払いに対応</p>
+					<p>オンラインでの決済はもちろん、銀行振り込みや代引きにも対応。法人・個人事業主の方は締め払い（後払い）にも対応。</p>
+					<img src="images/foot_img3.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+				<li>
+					<h4>帳簿類について</h4>
+					<p class="txt">商品の合計金額30,000円(税込)<br>
+						以上のご注文で送料無料！</p>
+					<p>商品の合計金額が3万円以上のご注文で送料無料。※3万円未満の場合は送料がかかります。<br>
+						沖縄離島・一部エリアは別料金</p>
+					<img src="images/foot_img4.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+			</ul>
+			<div class="box2">
+				<h4>カスタマーサポート</h4>
+				<p class="txt">問い合わせフォーム・お電話・FAXに対応しております。お気軽にご相談ください。</p>
+				<ul class="list2">
+					<li>
+						<h5><img src="images/foot_box2_img1.png" alt="images">お問い合わせフォーム</h5>
+						<p>見積り、問合せはフォームで24H受付中。<br>
+							担当よりご連絡させていただきます。</p>
+						<a href="" class="btn">お問い合わせフォーム</a> </li>
+					<li>
+						<h5><img src="images/foot_box2_img2.png" alt="images">FAX</h5>
+						<p>専用用紙に記入し 052-766-6960へ<br>
+							FAXをお送りください。</p>
+						<a href="" class="btn">FAX用紙ダウンロードへ</a> </li>
+					<li>
+						<h5><img src="images/foot_box2_img3.png" alt="images">お電話</h5>
+						<div class="tel_text">通話料無料<span>（固定電話・携帯・PHS）</span></div>
+						<p class="tel">0120-441-723</p>
+						<p>【受付時間】平日9:00〜17:30</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="foot_b">
+		<div class="foot_b_l">
+			<h3>製品一覧</h3>
+			<div class="box1">
+				<div class="lb">
+					<div class="lb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">トラックシート・カバー</a><span class="spon">トラックシート・カバー</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">小型・中型トラックシート</a></li>
+									<li><a href="">軽トラックシート</a></li>
+									<li><a href="">飛散防止ネット</a></li>
+									<li><a href="">荷台収納袋</a></li>
+									<li><a href="">アオリシート（コボレーン）</a></li>
+									<li><a href="">ビニール・シートカバー</a></li>
+									<li><a href="">泥除け</a></li>
+									<li><a href="">補修テープ</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">ブルーシート</a><span class="spon">ブルーシート</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">ブルーシートカバー</a></li>
+									<li><a href="">ブルーシート（既製品）</a></li>
+									<li><a href="">ブルーシート（反物）</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="rb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">保護・マット</a><span class="spon">保護・マット</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">荷台ゴムマット</a></li>
+									<li><a href="">ウレタン・スポンジ</a></li>
+									<li><a href="">ドラム缶マット</a></li>
+									<li><a href="">トラックボード（緩衝材）</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">荷締め・ベルト</a><span class="spon">荷締め・ベルト</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">スリング・ベルト</a></li>
+									<li><a href="">ワイヤー</a></li>
+									<li><a href="">チェーン</a></li>
+									<li><a href="">レバー・ホイスト</a></li>
+									<li><a href="">ロープ・ゴムバンド</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="rb">
+					<div class="lb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">パレット</a><span class="spon">パレット</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">メッシュパレット</a></li>
+									<li><a href="">プラスチックパレット</a></li>
+									<li><a href="">パレットハンガー</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">吊り具・シャックル</a><span class="spon">吊り具・シャックル</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">ワイヤモッコ</a></li>
+									<li><a href="">スリング・ベルトモッコ</a></li>
+									<li><a href="">ワイヤーロープ</a></li>
+									<li><a href="">玉掛用保護具</a></li>
+									<li><a href="">シャックル</a></li>
+									<li><a href="">フック・リング</a></li>
+									<li><a href="">吊り具ボルト</a></li>
+									<li><a href="">吊天秤</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="rb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">荷台ウマ(鳥居)・やぐら</a><span class="spon">荷台ウマ(鳥居)・やぐら</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">ウマ（既製品）</a></li>
+									<li><a href="">やぐら・ウマ(オーダー製作)</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">荷台用品・台車</a><span class="spon">荷台用品・台車</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">アルミステップ</a></li>
+									<li><a href="">運搬台車</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="foot_link"><a href="">オーダー製作</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="box2">
+				<div>
+					<h3>ご利用案内</h3>
+					<ul>
+						<li><a href="">ご利用ガイド</a></li>
+						<li><a href="">決済方法について</a></li>
+						<li><a href="">納期・お届けについて</a></li>
+						<li><a href="">送料について</a></li>
+						<li><a href="">返品・交換について</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>ご注文・問合せ</h3>
+					<ul>
+						<li><a href="">お問い合わせフォーム</a></li>
+						<li><a href="">電話で問い合わせる</a></li>
+						<li><a href="">FAXで問い合わせる</a></li>
+						<li><a href="">よくあるご質問</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>トラデポについて</h3>
+					<ul>
+						<li><a href="">ニュース、お知らせ</a></li>
+						<li><a href="">会社概要、運営会社</a></li>
+						<li><a href="">プライバシーポリシー</a></li>
+						<li><a href="">特定商取引法表示</a></li>
+						<li><a href="">お問い合わせフォーム</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_b_r">
+			<div class="wrap">
+				<div class="box1"><img src="images/foot_logo.png" alt="トラデポ　トラック用品の激安専門店">
+					<p class="info">運営会社：株式会社チームライク<br>
+						本社：神奈川県海老名市中央2-9-50 海老名プライムタワー7F<br>
+						電話番号：0120-441-723<br>
+						FAX番号：052-766-6960</p>
+					<ul>
+						<li><a href="">お問い合わせフォームへ</a></li>
+						<li><a href="">FAX用紙ダウンロードへ</a></li>
+					</ul>
+				</div>
+				<div class="box2"> <strong>トラデポとは…？</strong>
+					<p>トラデポは、トラック用品をお得な料金で注文できる通販サイトです。既成商品もちろん、オーダー品も工場直送の卸売価格！</p>
+					<p>施工・製造のプロが在籍しており、高品質・丁寧な説明で対応いたします。<br>
+						不明点はお気軽にご相談ください。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cr">Copyright(c) TORADEPO. All rights reserved.</div>
+</footer>
+<script type="text/javascript" src="js/slick/slick.min.js"></script> 
+<script type="text/javascript" src="js/matchheight/jquery.matchHeight-min.js"></script> 	
+<script>
+$(document).ready(function(){
+    //デフォルトで表示する要素を指定
+    $('.recomend').show();
+    $('.recomend_on').hide();
+
+    //buttonがクリックされたら処理を実行
+    $('.star_btn').click(function () {
+
+         //toggleClassでshowのclassを追加または削除
+        $('.recomend_box').toggleClass('show');
+
+        //#appがshowのclassをを持っていれば
+        if($('.recomend_box').hasClass('show')){
+
+             //要素の表示を切り替える
+            $('.recomend').hide();
+            $('.recomend_on').show();
+        }else{
+
+             //要素の表示を切り替える
+            $('.recomend').show();
+            $('.recomend_on').hide();
+        }
+    });
+});
+</script>
+	
+<script>
+	$(function() {
+	$('.variation1').matchHeight();
+});
+	
+	$(function() {
+	$('.variation2').matchHeight();
+});
+	
+	$(function() {
+	$('.variation3').matchHeight();
+});
+	
+	$(function() {
+	$('.variation4').matchHeight();
+});
+	$(function() {
+	$('.pickup_slider .name').matchHeight();
+});
+</script>
+	
+	
+	
+	<script>
+		$('.slider_variation').slick({
+slidesToShow: 6, // サムネイルの表示数
+			slidesToScroll: 6,
+		dots:true,
+		arrows:true,
+			responsive: [
+		{
+				breakpoint: 599, 
+        settings: {
+        slidesToShow: 2,
+				slidesToScroll: 2,
+        },
+      },
+				
+      
+				
+				
+    ],
+		prevArrow: '<img src="images/slider_arrow_left.png" class="prev-arrow">',
+		nextArrow: '<img src="images/slider_arrow_right.png" class="next-arrow">'
+  });
+		
+		
+
+
+	</script> 
+	
+<script>
+		$('.item_slider').slick({
+
+		dots:false,
+		arrows:true,
+		prevArrow: '<img src="images/slider_arrow_left.png" class="prev-arrow">',
+		nextArrow: '<img src="images/slider_arrow_right.png" class="next-arrow">',
+			responsive: [
+		{
+				breakpoint: 599, 
+        settings: {
+					arrows:false,
+        },
+      },],
+  });
+	$(".thumbnail").slick({
+    slidesToShow: 5, // サムネイルの表示数
+    asNavFor: ".item_slider", // メイン画像と同期
+    focusOnSelect: true,
+		// サムネイルクリックを有効化
+		
+  });
+
+	</script> 
+	
+	
+	
+	<script>
+		$('.pickup_slider').slick({
+slidesToShow: 5,
+  slidesToScroll: 5,
+			
+			responsive: [
+		{
+				breakpoint: 599, 
+        settings: {
+        slidesToShow: 2,
+				slidesToScroll: 2,
+        },
+      },
+				
+      {
+				breakpoint: 1024, 
+        settings: {
+        slidesToShow: 3,
+				slidesToScroll: 3,
+        },
+      },
+				{
+				breakpoint: 1480, 
+        settings: {
+        slidesToShow: 4,
+				slidesToScroll: 4,
+        },
+      },
+				
+    ],
+		prevArrow: '<div class="slide-arrow prev-arrow"><img src="images/slider_arrow_left.png"></div>',
+		nextArrow: '<div class="slide-arrow next-arrow"><img src="images/slider_arrow_right.png"></div>'
+  });
+	</script> 
+	
+		<script>
+		$('.history_slider').slick({
+slidesToShow: 5,
+  slidesToScroll: 5,
+			
+			responsive: [
+		{
+				breakpoint: 599, 
+        settings: {
+        slidesToShow: 2,
+				slidesToScroll: 2,
+        },
+      },
+				
+      {
+				breakpoint: 1024, 
+        settings: {
+        slidesToShow: 3,
+				slidesToScroll: 3,
+        },
+      },
+				{
+				breakpoint: 1480, 
+        settings: {
+        slidesToShow: 4,
+				slidesToScroll: 4,
+        },
+      },
+				
+    ],
+		prevArrow: '<div class="slide-arrow prev-arrow"><img src="images/slider_arrow_left.png"></div>',
+		nextArrow: '<div class="slide-arrow next-arrow"><img src="images/slider_arrow_right.png"></div>'
+  });
+	</script> 
+	
+	
+	
+<script>
+	$(window).scroll(function () {           /* スクロールされた時 */
+  var pos = $('.ptit').offset();          /* mvを過ぎたmainタグの高さを取得して変数[pos]に格納 */
+  if ($(this).scrollTop() > pos.top) {   /* 変数[pos]より、スクロールされていたら */
+    $('.right_btn').fadeIn();                /* ヘッダーをふわっと表示 */
+  } else {                               /* それ以外の場合 */
+    $('.right_btn').fadeOut();               /* ヘッダーをふわっと非表示 */
+  }
+});
+	
+		</script> 
+<script>
+		
+if (window.matchMedia( "(max-width: 599px)" ).matches) {
+		$(function () {
+  $('.ac-parent').on('click', function () {
+    $(this).next().slideToggle();
+    //openクラスをつける
+    $(this).toggleClass("open");
+    //クリックされていないac-parentのopenクラスを取る
+    $('.ac-parent').not(this).removeClass('open');
+
+    // 一つ開くと他は閉じるように
+    $('.ac-parent').not($(this)).next('.ac-child').slideUp();
+  });
+});} else {
+/* ウィンドウサイズが 768px以上の場合のコードをここに */
+}
+	</script>
+</body>
+</html>

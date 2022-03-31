@@ -1,0 +1,59 @@
+<div class="top_info_box">
+    <section id="news">
+        <h2>
+            <div>{{ 'top_news_icon_c103d737-9f0c-48fe-9443-aa95378c579a.png' | file_img_url | img_tag: 'images' }}トラデポ 新着情報 / NEWS</div>
+            <a href="{{ shop.secure_url }}{{ blogs['news'].url }}">新着情報一覧へ</a></h2>
+        <div class="news_bg">
+            <ul class="scrollArea">
+            {% assign articles = blogs['news'].articles | sort: 'created_at' | reverse %}
+            {% for article in articles %}
+                <li>
+                    <a href="{{ article.url }}">
+                        <div>
+                        {% for tag in article.tags %}
+                        {% if tag == '新商品' %}
+                            {% assign style = 'background: #e1617c; color: #fff;' %}
+                        {% elsif tag == 'キャンペーン' %}
+                            {% assign style = 'background: #e27933; color: #fff;' %}
+                        {% elsif tag == 'INFO' %}
+                            {% assign style = 'background: #8bb153; color: #fff;' %}
+                        {% elsif tag == 'その他' %}
+                            {% assign style = 'background: #fff; color: #656565; border: 1px solid #656565' %}
+                        {% endif %}
+                            <span class="new_item" style="{{ style }}">{{ tag }}</span>
+                        {% endfor %}
+                            <p class="data">{{ article.created_at | date: "%Y.%m.%d" }}</p>
+                        </div>
+                        <p class="txt">{{ article.title }}</p>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+            <div class="more_btn spon"><a href="{{ shop.secure_url }}{{ blogs['news'].url }}">お知らせ情報一覧へ</a></div>
+        </div>
+    </section>
+    <div id="calender">
+        <h3>営業日カレンダー</h3>
+        <div class="ly_calenderCnt">
+            {{ 'calendar.png' | file_img_url: 'medium' | img_tag }}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "インフォメーション",
+        "settings": [],
+        "presets": [
+            {
+            "name": "インフォメーション"
+            }
+        ]
+    }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

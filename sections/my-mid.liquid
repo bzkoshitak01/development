@@ -1,0 +1,238 @@
+{{ 'template-collection.css' | asset_url | stylesheet_tag }}
+{{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+<link rel="preload" href="{{ 'component-rte.css' | asset_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<script src="{{ 'add-to-cart.js' | asset_url }}" defer="defer"></script>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+    <h1 class="prodact_tit">{{ collection.title | escape }} 価格・商品一覧</h1>
+    <section>
+        {{ collection.description }}
+        <ul class="action_box">
+            <li class="go_item_list"><a href="#ProductGridContainer">商品一覧を見る</a></li>
+            <li class="go_om"><a href="{{ collections['ordermade'].url }}">オーダーメイドでの<br>ご検討の方はコチラ</a></li>
+        </ul>
+    </section>
+    <section>
+        {{ collection.metafields.global.lower-html }}
+    </section>
+  {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
+    <script src="{{ 'facets.js' | asset_url }}" defer="defer"></script>
+  
+    <div class="page-width" id="main-collection-filters" data-id="{{ section.id }}">
+      {% render 'my-facets-collection', results: collection, enable_filtering: section.settings.enable_filtering, enable_sorting: section.settings.enable_sorting, collapse_on_larger_devices: section.settings.collapse_on_larger_devices %}
+    </div>
+  {%- endif -%}
+  
+  <div id="ProductGridContainer">
+    {%- paginate collection.products by section.settings.products_per_page -%}
+      {%- if collection.products.size == 0 -%}
+        <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
+          <div class="loading-overlay gradient"></div>
+          <div class="title-wrapper center">
+            <h2 class="title title--primary">
+              {{ 'sections.collection_template.empty' | t }}<br>
+              {{ 'sections.collection_template.use_fewer_filters_html' | t: link: collection.url, class: "underlined-link link" }}
+            </h2>
+          </div>
+        </div>
+      {%- else -%}
+        <div class="collection page-width">
+          <div class="loading-overlay gradient"></div>
+  
+          <div id="product-grid" data-id="{{ section.id }}" class="
+            grid grid--2-col product-grid
+            grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max
+            ">
+            {%- for product in collection.products -%}
+              {% assign lazy_load = false %}
+              {%- if forloop.index > 2 -%}
+                {%- assign lazy_load = true -%}
+              {%- endif -%}
+            <div class="grid__item">
+                <div>
+                    {% render 'card-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load
+                    %}
+                </div>
+                {% comment %} カートに入れるボタン {% endcomment %}
+                <button
+                    type="button"
+                    id="bl_addBtn__{{ product.selected_or_first_available_variant.id }}"
+                    class="bl_addBtn"
+                    onclick="buttonClick({{ product.selected_or_first_available_variant.id }})"
+                    {% if product.selected_or_first_available_variant.available == false %} disabled {% endif %}
+                >
+                    <span>
+                        {% if product.selected_or_first_available_variant.available == false %}
+                        売り切れ
+                        {% else %}
+                        カートに追加
+                        {% endif %}
+                    </span>
+                </button>
+            </div>
+            {%- endfor -%}
+          </div>
+  
+        {%- if paginate.pages > 1 -%}
+
+            {%- if paginate.parts.size > 0 -%}
+            <div class="pagination-wrapper">
+                <nav class="pagination pager" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+                {% assign first-num = paginate.current_page | minus:1 | times:paginate.page_size | plus:1 %}
+                {% assign last-num = paginate.page_size | times:paginate.current_page %}
+                <p class="pager_txt">{{ first-num }} - {{ last-num }} 件表示 / 全 {{ paginate.items}} 件 </p>
+                <ul class="pagination__list list-unstyled" role="list">
+                    <li class="pg_prev">
+                {%- if paginate.current_page==1 -%}
+                    <a href="javascript:void(0)" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce pg_prevLink__unactive" aria-label="{{ 'general.pagination.previous' | t }}">
+                {%- else -%}
+                    <a href="{{ paginate.previous.url }}{{ anchor }}" class="pagination__item pagination__item--next pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.previous' | t }}">
+                {%- endif -%}
+                        &lt;　前へ
+                    </a>
+                    </li>
+
+                {%- for part in paginate.parts -%}
+                    <li>
+                    {%- if part.is_link -%}
+                        <a href="{{ part.url }}{{ anchor }}" class="pagination__item link" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
+                    {%- else -%}
+                        {%- if part.title == paginate.current_page -%}
+                        <span class="pagination__item pagination__item--current" aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+                        {%- else -%}
+                        <span class="pagination__item">{{ part.title }}</span>
+                        {%- endif -%}
+                    {%- endif -%}
+                    </li>
+                {%- endfor -%}
+
+                    <li class="pg_next">
+                {%- if paginate.current_page==paginate.pages -%}
+                    <a href="javascript:void(0)" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce pg_nextLink__unactive" aria-label="{{ 'general.pagination.next' | t }}" >
+                {%- else -%}
+                    <a href="{{ paginate.next.url }}{{ anchor }}" class="pagination__item pagination__item--prev pagination__item-arrow link motion-reduce" aria-label="{{ 'general.pagination.next' | t }}" >
+                {%- endif -%}
+                        次へ　&gt;
+                    </a>
+                    </li>
+                </ul>
+                </nav>
+            </div>
+            {%- endif -%}
+        {%- endif -%}
+        </div>
+      {%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.main-collection-product-grid.name",
+  "class": "section",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__3.content"
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "options": [
+        {
+          "value": "adapt",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__1.label"
+        },
+        {
+          "value": "portrait",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__2.label"
+        },
+        {
+          "value": "square",
+          "label": "t:sections.main-collection-product-grid.settings.image_ratio.options__3.label"
+        }
+      ],
+      "default": "adapt",
+      "label": "t:sections.main-collection-product-grid.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_secondary_image",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_secondary_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_vendor",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.show_rating.label",
+      "info": "t:sections.main-collection-product-grid.settings.show_rating.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.main-collection-product-grid.settings.header__1.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_filtering.label",
+      "info": "t:sections.main-collection-product-grid.settings.enable_filtering.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "default": true,
+      "label": "t:sections.main-collection-product-grid.settings.enable_sorting.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "collapse_on_larger_devices",
+      "default": false,
+      "label": "t:sections.main-collection-product-grid.settings.collapse_on_larger_devices.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    }
+  ]
+}
+{% endschema %}

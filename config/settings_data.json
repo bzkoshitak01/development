@@ -1,0 +1,301 @@
+{
+  "current": {
+    "sections": {
+      "announcement-bar": {
+        "type": "announcement-bar",
+        "settings": {}
+      },
+      "header": {
+        "type": "header",
+        "blocks": {
+          "da5780ff-c2d7-4369-907e-c1dac800bcb3": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "トラックシート<br>カバー",
+              "cat_collection": "trackshirt-cover"
+            }
+          },
+          "41bcb5ef-fc8c-4a74-a3ac-b10872fff568": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "ブルーシート",
+              "cat_collection": "blue-shirt"
+            }
+          },
+          "383012aa-84e0-4cf9-9cef-b4bf84d6b358": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "保護・マット",
+              "cat_collection": "protective-mat"
+            }
+          },
+          "fdfb849b-72f6-4e36-80b0-9520a5966bf9": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "荷締め・ベルト",
+              "cat_collection": "tightening-belt"
+            }
+          },
+          "4362d39c-54fe-490b-88aa-c27abcca3b32": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "パレット",
+              "cat_collection": "palette"
+            }
+          },
+          "0f5bf6c2-13f0-408b-ae0f-81f20545c04a": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "吊り具<br>シャックル",
+              "cat_collection": "hanger-shackle"
+            }
+          },
+          "4797d022-7786-4175-b754-47a8b30d2ef3": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "荷台ウマ(鳥居)<br>やぐら",
+              "cat_collection": "tray-horse-torii-yagura"
+            }
+          },
+          "5bd4a012-42c8-4e81-bd53-36b0a792f621": {
+            "type": "cat",
+            "settings": {
+              "cat_txt": "荷台用品・台車",
+              "cat_collection": "carrying-item-car"
+            }
+          }
+        },
+        "block_order": [
+          "da5780ff-c2d7-4369-907e-c1dac800bcb3",
+          "41bcb5ef-fc8c-4a74-a3ac-b10872fff568",
+          "383012aa-84e0-4cf9-9cef-b4bf84d6b358",
+          "fdfb849b-72f6-4e36-80b0-9520a5966bf9",
+          "4362d39c-54fe-490b-88aa-c27abcca3b32",
+          "0f5bf6c2-13f0-408b-ae0f-81f20545c04a",
+          "4797d022-7786-4175-b754-47a8b30d2ef3",
+          "5bd4a012-42c8-4e81-bd53-36b0a792f621"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "logo_width": 90,
+          "logo_position": "middle-left",
+          "menu": "main-menu",
+          "show_line_separator": true,
+          "enable_sticky_header": false,
+          "margin_bottom": 0
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Quick links",
+              "menu": "footer"
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "heading": "Info",
+              "menu": "footer"
+            }
+          },
+          "footer-2": {
+            "type": "text",
+            "settings": {
+              "heading": "Our mission",
+              "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "footer-2"
+        ],
+        "settings": {
+          "color_scheme": "background-1",
+          "newsletter_enable": true,
+          "newsletter_heading": "Subscribe to our emails",
+          "show_social": true,
+          "enable_country_selector": false,
+          "enable_language_selector": false,
+          "payment_enable": true,
+          "margin_top": 48,
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "main-password-header": {
+        "type": "main-password-header",
+        "settings": {}
+      },
+      "main-password-footer": {
+        "type": "main-password-footer",
+        "settings": {}
+      },
+      "mv": {
+        "type": "mv",
+        "blocks": {
+          "29821c6e-29e4-4d6a-90cf-63c8e547b867": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/top_bnr1.jpg",
+              "slide_url": ""
+            }
+          },
+          "a0d42614-3019-4563-a565-98153f36c81c": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/top_bnr1.jpg",
+              "slide_url": ""
+            }
+          },
+          "9ddc785f-6285-4e3c-a25e-e4cee29eb644": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/top_bnr1.jpg",
+              "slide_url": ""
+            }
+          },
+          "96dc15cd-852b-4b2e-9de2-7d7fc82ed8e3": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/top_bnr1.jpg",
+              "slide_url": ""
+            }
+          },
+          "1623cdd2-540b-4a96-9978-f25413d059ff": {
+            "type": "slide",
+            "settings": {
+              "slide_img": "shopify:\/\/shop_images\/top_bnr1.jpg",
+              "slide_url": ""
+            }
+          }
+        },
+        "block_order": [
+          "29821c6e-29e4-4d6a-90cf-63c8e547b867",
+          "a0d42614-3019-4563-a565-98153f36c81c",
+          "9ddc785f-6285-4e3c-a25e-e4cee29eb644",
+          "96dc15cd-852b-4b2e-9de2-7d7fc82ed8e3",
+          "1623cdd2-540b-4a96-9978-f25413d059ff"
+        ],
+        "settings": {}
+      },
+      "aside": {
+        "type": "aside",
+        "blocks": {
+          "afd7f319-8f3a-455c-a1f6-36dc0bea484c": {
+            "type": "banner",
+            "settings": {
+              "banner_img": "shopify:\/\/shop_images\/sidebar_bnr1.jpg",
+              "banner_url": "",
+              "banner_alt": "オーダー制作　大口・大量注文　お問い合わせ"
+            }
+          },
+          "50a879fc-daea-4d21-a8f8-c596bee353a7": {
+            "type": "cat-menu",
+            "settings": {}
+          },
+          "8f710a81-db3b-4620-9826-e21da7229c21": {
+            "type": "flexible-menu",
+            "settings": {
+              "flexible-menu_title": "オーダーメイド製作のご案内",
+              "flexible-menu_url": "shopify:\/\/collections\/オーダーメイド製作"
+            }
+          },
+          "43670a9e-c58c-424d-ae69-025115180ea6": {
+            "type": "page-menu",
+            "settings": {}
+          },
+          "71449e2e-f63b-4d9d-9282-163699047d11": {
+            "type": "banner",
+            "settings": {
+              "banner_img": "shopify:\/\/shop_images\/sidebar_bnr2.jpg",
+              "banner_url": "",
+              "banner_alt": "累計販売数20万枚突破!!トラックボードL　6枚セット"
+            }
+          }
+        },
+        "block_order": [
+          "afd7f319-8f3a-455c-a1f6-36dc0bea484c",
+          "50a879fc-daea-4d21-a8f8-c596bee353a7",
+          "8f710a81-db3b-4620-9826-e21da7229c21",
+          "43670a9e-c58c-424d-ae69-025115180ea6",
+          "71449e2e-f63b-4d9d-9282-163699047d11"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": []
+  },
+  "presets": {
+    "Default": {
+      "sections": {
+        "announcement-bar": {
+          "type": "announcement-bar",
+          "blocks": {
+            "announcement-bar-0": {
+              "type": "announcement",
+              "settings": {
+                "color_scheme": "background-1"
+              }
+            }
+          },
+          "block_order": [
+            "announcement-bar-0"
+          ],
+          "settings": {}
+        },
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo_width": 90
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "footer-0": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "footer-1": {
+              "type": "link_list",
+              "settings": {
+                "heading": "Info"
+              }
+            },
+            "footer-2": {
+              "type": "text",
+              "settings": {
+                "heading": "Our mission"
+              }
+            }
+          },
+          "block_order": [
+            "footer-0",
+            "footer-1",
+            "footer-2"
+          ],
+          "settings": {
+            "show_social": true,
+            "enable_country_selector": false,
+            "enable_language_selector": false,
+            "margin_top": 48
+          }
+        },
+        "main-password-header": {
+          "type": "main-password-header",
+          "settings": {}
+        },
+        "main-password-footer": {
+          "type": "main-password-footer",
+          "settings": {}
+        }
+      }
+    }
+  }
+}

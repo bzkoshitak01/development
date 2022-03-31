@@ -1,0 +1,793 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<title>トラデポ</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.js"></script>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/guide.css">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="js/slick/slick.css">
+<link rel="stylesheet" href="js/slick/slick-theme.css">
+<link rel="stylesheet" href="js/drawer/css/drawer.min.css">
+<script src="js/drawer/js/drawer.min.js" charset="utf-8"></script> 
+<script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script> 
+<!-- jquery & iScroll -->
+</head>
+<body class="drawer drawer--left">
+<header>
+	<div class="head_box">
+		<div class="head_l">
+			<h1><img src="images/head_logo.jpg" alt="トラック用品の激安専門店 トラデポ"></h1>
+			<ul class="head_list">
+				<li><img src="images/head_list1.jpg" alt="全品激安"></li>
+				<li><img src="images/head_list2.jpg" alt="オーダー政策"></li>
+				<li><img src="images/head_list3.jpg" alt="3万円以上送料無料"></li>
+				<li><img src="images/head_list4.jpg" alt="締払決済"></li>
+			</ul>
+		</div>
+		<div class="head_r">
+			<div class="form_box">
+				<form>
+					<input type="text" placeholder="キーワード検索" class="head_form">
+					<input type="submit" value="" class="submit_btn">
+					<i class="fas fa-search"></i>
+				</form>
+				<dl>
+					<dt>人気ワード：</dt>
+					<dd><a href="">トラックボード</a></dd>
+					<dd><a href="">トラックシート</a></dd>
+					<dd><a href="">オーダー</a></dd>
+					<dd><a href="">緩衝材</a></dd>
+					<dd><a href="">具体多岐な商品名とか</a></dd>
+				</dl>
+			</div>
+			<ul class="head_btn">
+				<li><a href=""><img src="images/head_btn1.png" alt="会員登録">会員登録</a></li>
+				<li><a href=""><img src="images/head_btn2.png" alt="ログイン">ログイン</a></li>
+				<li><a href=""><img src="images/head_btn3.png" alt="カート">カート</a></li>
+				<li>
+					<button type="button" class="drawer-toggle drawer-hamburger"> <span class="drawer-hamburger-icon"></span>
+					<p>MENU</p>
+					</button>
+					<nav class="drawer-nav" role="navigation">
+						<ul class="drawer-menu">
+							<li><a class="drawer-brand" href="./index.html">Drawer</a></li>
+							<li><a class="drawer-menu-item" href="./top.html">Top</a></li>
+							<li><a class="drawer-menu-item" href="./index.html">Left</a></li>
+							<li><a class="drawer-menu-item" href="./right.html">Right</a></li>
+							<li class="drawer-dropdown"> <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false"> Navbar <span class="drawer-caret"></span> </a>
+								<ul class="drawer-dropdown-menu">
+									<li><a class="drawer-dropdown-menu-item" href="./navbar-top.html">Top</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./navbar-left.html">Left</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./navbar-right.html">Right</a></li>
+								</ul>
+							</li>
+							<li class="drawer-dropdown"> <a class="drawer-menu-item" data-target="#" href="#" data-toggle="dropdown" role="button" aria-expanded="false"> Fixed navbar <span class="drawer-caret"></span> </a>
+								<ul class="drawer-dropdown-menu">
+									<li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-top.html">Top</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-left.html">Left</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./fixed-navbar-right.html">Right</a></li>
+								</ul>
+							</li>
+							<li class="drawer-dropdown"> <a class="drawer-menu-item" href="#" data-toggle="dropdown" role="button" aria-expanded="false"> Sidebar <span class="drawer-caret"></span> </a>
+								<ul class="drawer-dropdown-menu">
+									<li><a class="drawer-dropdown-menu-item" href="./sidebar-left.html">Left</a></li>
+									<li><a class="drawer-dropdown-menu-item" href="./sidebar-right.html">Right</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<nav>
+		<ul class="gmenu_t">
+			<li><a href="">製品一覧</a></li>
+			<li><a href="">よくある質問</a></li>
+			<li><a href="">ご利用ガイド</a></li>
+			<li><a href="">FAX注文用紙</a></li>
+			<li><a href=""><span>オーダー・大量注文・</span>お問い合わせ</a></li>
+		</ul>
+		<div class="gmenu_b_wrap">
+			<ul class="gmenu_b">
+				<li><a href=""><img src="images/gmenu_b_img1.png" alt="トラックシートカバー">
+					<p>トラックシート<br>
+						カバー</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img2.png" alt="ブルーシート">
+					<p>ブルーシート</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img3.png" alt="保護・マット">
+					<p>保護・マット</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img4.png" alt="荷締め・ベルト">
+					<p>荷締め・ベルト</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img5.png" alt="パレット">
+					<p>パレット</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img6.png" alt="吊り具・シャックル">
+					<p>吊り具<br>
+						シャックル</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img7.png" alt="荷台ウマ(鳥居)・やぐら">
+					<p>荷台ウマ(鳥居)<br>
+						やぐら</p>
+					</a></li>
+				<li><a href=""><img src="images/gmenu_b_img8.png" alt="荷台用品・台車">
+					<p>荷台用品・台車</p>
+					</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
+<div class="page_mainbox col2">
+	<div class="sub_contents">
+		<div class="blead_list">
+			<ul>
+				<li><a href="index.html">トップ</a></li>
+				<li><a href="">お役立ち情報</a></li>
+				<li>お役立ち情報タイトルお役立ち情報タイトル</li>
+			</ul>
+		</div>
+		<h1 class="stit"><img src="images/top/top_qa_icon.png" alt="">ご利用ガイド</h1>
+		<nav>
+			<ul class="guide_nav">
+			  <li><a href="#sec1">決済方法について</a></li>
+			  <li><a href="#sec2">引き渡し・<br>
+					お届けについて</a></li>
+			  <li><a href="#sec3">配送・送料について</a></li>
+			  <li><a href="#sec4">返品・交換について</a></li>
+				
+			</ul>
+		</nav>
+		<div class="guide_contents">
+		<section id="sec1">
+			<h2 class="sstit">決済方法について</h2>
+			<h3 class="shtit">クレジットカード決済</h3>
+			<img src="images/guide/c_card.png" alt="クレジットカード">
+			<p>上記ブランドのクレジットカード（VISA, MasterCard, JCB, AMERICAN EXPRESS, Diners Club International）で決済手続きいただけます。ご注文（決済）の確認後に、商品を手配いたします。</p>
+			<ul class="list">
+			  <li>分割払い、リボ払いの分割手数料は、ご利用のカード会社にお問い合わせいただけますようお願いいたします。</li>
+				<li>お支払い回数は1回払い・分割払い・リボ払いからお選びいただけます。分割払いをご利用の場合、カード会社やお客様のご契約内容に利用可能な分割回数が異なります。</li>
+			</ul>
+			<ul class="notes mgnB40">
+				<li>決済手数料は無料です。</li>
+				<li>決済代行会社は、SBペイメントサービス株式会社です。</li>
+				<li>当社ではお客様のカード情報を保持いたしませんのでご安心ください。会員登録されている方のみクレジットカードの登録機能が利用いただけますが、決済代行会社のSBペイメントサービス株式会社がカード情報を保管しております。</li>
+			</ul>
+			
+			<h3 class="shtit">銀行振込</h3>
+			<p>当社指定の「銀行口座」へお振込みをお願いします。ご入金の確認後に、商品を手配いたします。</p>
+			<ul class="list">
+			  <li>振込口座はご注文後、当社より送付する「注文確認メール」にてご案内をしております。</li>
+				<li>入金確認後に当社より入金確認のご連絡をいたしますが、ご入金後2営業日を過ぎてもご連絡がない場合はトラデポまでお知らせください。</li>
+				<li>ご注文後、<strong>「1週間以内」にお振込み</strong>ください。期間内にご入金いただけない場合、自動的にキャンセルとさせていただきます。</li>
+			</ul>
+			<ul class="notes mgnB60">
+				<li>ご利用金融機関所定の振込手数料はお客様のご負担となります。</li>
+				<li>ご注文者名と異なるお名前・振込名義の場合は必ずトラデポまでお知らせください。</li>
+				<li>土日祝日や年末年始など、銀行休業日はご入金の確認ができません。</li>
+				<li>領収書、納品書をご希望の場合は「<a href="">トラデポお客様サポート</a>」までお申し付けください。</li>
+			</ul>
+		</section>
+			
+		<section id="sec2">
+		  <h2 class="sstit">引き渡し・お届けについて</h2>
+			<h3 class="shtit">商品の出荷およびお届け目安</h3>
+			<p class="mgnB40">メーカーから直送出荷となり、在庫状況によって納期は異なりますが、通常はご注文後3日営業日で出荷となります。商品ページの「発送」が出荷目安となりますが、納期が7営業日以上かかる場合、メーカー欠品中・廃盤等の場合、お客様にEメール、またはお電話等でご連絡いたします。</p>
+			
+			<h3 class="shtit">配送業者について</h3>
+			<p class="mgnB40">配送業者のご指定はお受けできません。営業所止めや局留めの指定もお受けできません。予めご了承ください。</p>
+			
+			<h3 class="shtit">配送業者について</h3>
+			<p>大型荷物（長尺商品）は、基本的に運送会社での荷の預かり、再配達はできません。</p>
+		</section>
+			
+			<section id="sec3">
+			  <h2 class="sstit">配送・送料について</h2>
+				<h3 class="shtit">送料について</h3>
+				<p>送料は通常送配送・長尺商品配送で異なります。<br>
+					長さ1.8mを超えるレール・ポール部材を1点でも含む場合「長尺商品配送」が適用となります。</p>
+				<p class="mgnB40">ご注文合計金額が、¥35,000 (税別) 以上で注文送料無料となります。(個別配送、離島エリアを除く)</p>
+				
+				
+				<h3 class="shtit">配送料金表</h3>
+				<table class="common_table">
+				  <tr>
+					  <th></th>
+					  <th>通常配送</th>
+					  <th>長尺商品配送</th>
+					</tr>
+					
+					<tr>
+					  <td>北海道</td>
+					  <td>￥2,000</td>
+					  <td>￥4,000</td>
+					</tr>
+					<tr>
+					  <td>東北</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>関東</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>北信越</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>中部</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>関西</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>中国</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>四国</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>九州</td>
+					  <td>￥1,200</td>
+					  <td>￥2,800</td>
+					</tr>
+					<tr>
+					  <td>沖縄</td>
+					  <td>￥2,000</td>
+					  <td>￥4,000</td>
+					</tr>
+				</table>
+				<p class="note mgnB40">上記料金表の価格はすべて税別です。</p>
+				
+				<h3 class="shtit">離島配送料金について</h3>
+				<p class="mgnB40">離島のお客様は、ご注文時の注文画面・ご注文確認メールでは送料が反映されていません。ご注文後、当社より配送料金を別途メールでご案内いたします。</p>
+				
+				<h3 class="shtit">複数商品の同時購入した場合の配送料金について</h3>
+				<p class="mgnB40">1回のご注文で複数の商品をご注文いただいた場合でも配送料金は同一です。</p>
+				
+				<h3 class="shtit">異なるメーカー商品の同梱発送について</h3>
+				<p class="mgnB40">発送元が異なるため、同梱発送いただけません。<br>
+					また、各メーカー直送となるため、着日なども同一になるとは限りません。</p>
+				
+				<h3 class="shtit">配送業者について</h3>
+				<p class="mgnB40">配送業者のご指定はお受けできません。営業所止めや局留めの指定もお受けできません。予めご了承ください。</p>
+				
+				<h3 class="shtit">チャーター便について</h3>
+				<p>一部の長尺商品は、チャーター便でのお届けとなる場合があります。<br>
+					チャーター便の場合は、別途運賃が必要です。また、納期も通常と異なりますので、あわせてトラデポよりご案内いたします。</p>
+			</section>
+			
+			<section id="sec4">
+			<h2 class="sstit">返品・交換について</h2>
+			<h3 class="shtit">返品・交換の可否</h3>
+				<p class=" mgnB10">「返品・交換が可能な条件」を満たす場合、商品到着後7日以内にご連絡いただいた場合、返品・交換の手続きが可能です。お客様都合による返品・交換はお受けいたしかねますので、予めご了承ください。</p>
+				<p class="note mgnB40">ご連絡がなく無断返送された場合は、返品・交換の手続きができません。</p>
+				<h4>トラデポ お客様お問合せ窓口</h4>
+				<table class="common_table">
+					<tr>
+					  <td>電話番号</td>
+						<td>
+						  <p>お客様専用ダイヤル (通話無料)<br>0120-441-723</p>
+							<p>携帯・PHSからでも無料でお電話いただけます。<br>お問い合わせの際は、電話番号をお確かめのうえ、お間違いのないようお願いいたします。</p>
+						</td>
+					</tr>
+					<tr>
+					  <td>営業時間</td>
+						<td>平日10:00〜17:00</td>
+					</tr>
+					<tr>
+					  <td>メールアドレス</td>
+						<td>
+						  info@ｘｘｘｘｘ.jp
+						</td>
+					</tr>
+				</table>
+				
+				
+			<h3 class="shtit">返品・交換が可能な条件</h3>
+				<p>下記の場合のみ返品・交換を受け付けています。</p>
+				<ul class="list">
+				  <li>商品が破損・損傷している場合（初期不良）</li>
+					<li>ご注文商品と届いた商品が異なっている場合</li>
+					<li>商品が汚れている場合</li>
+				</ul>
+				<p class="mgnB40">但し、お客様都合の場合やお客様のもとで傷、損傷が生じた商品の場合には返品等はお受けできません。</p>
+				
+				<h3 class="shtit">返品に係る送料負担の有無</h3>
+				<p class="mgnB40">当該商品の返送及び再送に要する送料等は、当社にて負担させていただきます。</p>
+				
+				<h3 class="shtit">不良品の取扱</h3>
+				<p class=" mgnB10">商品到着時に必ず商品をご確認ください。無償で至急交換手配をさせていただきます。<br>不良返品・交換の際は、商品到着後7日以内に必ず当社まで連絡いただけますようお願いいたします。</p>
+				<p class="note mgnB40">ご連絡がなく無断返送された場合は、返送手続きができません。</p>
+				
+				<h3 class="shtit">返品・交換の方法</h3>
+				<p class="mgnB40">メーカーおよび商品毎に異なるため、ご連絡いただいた場合に当社から返品先や方法をご案内させていただきます。<br>
+					ご迷惑おかけし申し訳ございませんが、無断返送などされないようお願い申し上げます。</p>
+				
+				<h3 class="shtit">キャンセルについて</h3>
+				<p class="mgnB40">ご注文確定後のお客様都合によるキャンセルは承っておりませんのでご了承ください。<br>
+					ご入金前（決済前）のご注文内容につきましては、一部キャンセル可能な場合がございますので、当社までお問合せいただけますようお願いいたします。</p>
+				
+			</section>
+		</div>
+		
+		
+
+		
+	
+
+		
+		
+		
+		
+		
+
+		<div class="go_top_btn">
+		  <a href="">TOPへ戻る</a>
+		</div>
+		
+		
+		
+		
+		
+	</div>
+	<div class="sidebar"> <a href=""><img src="images/sidebar_bnr1.jpg" alt="オーダー制作　大口・大量注文　お問い合わせ"></a>
+		<nav>
+			<h3>カテゴリから探す</h3>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img1.png" alt="トラックシートカバー">トラックシート・カバー</a></dt>
+				<dd><a href="">小型・中型トラックシート</a></dd>
+				<dd><a href="">軽トラックシート</a></dd>
+				<dd><a href="">飛散防止ネット</a></dd>
+				<dd><a href="">荷台収納袋</a></dd>
+				<dd><a href="">アオリシート（コボレーン）</a></dd>
+				<dd><a href="">ビニール・シートカバー</a></dd>
+				<dd><a href="">泥除け</a></dd>
+				<dd><a href="">補修テープ</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img2.png" alt="ブルーシート">ブルーシート</a></dt>
+				<dd><a href="">ブルーシートカバー</a></dd>
+				<dd><a href="">ブルーシート（既製品）</a></dd>
+				<dd><a href="">ブルーシート（反物）</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img3.png" alt="保護・マット">保護・マット</a></dt>
+				<dd><a href="">荷台ゴムマット</a></dd>
+				<dd><a href="">ウレタン・スポンジ</a></dd>
+				<dd><a href="">ドラム缶マット</a></dd>
+				<dd><a href="">トラックボード（緩衝材）</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img4.png" alt="荷締め・ベルト">荷締め・ベルト</a></dt>
+				<dd><a href="">スリング・ベルト</a></dd>
+				<dd><a href="">ワイヤー</a></dd>
+				<dd><a href="">チェーン</a></dd>
+				<dd><a href="">レバー・ホイスト</a></dd>
+				<dd><a href="">ロープ・ゴムバンド</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img5.png" alt="パレット">パレット</a></dt>
+				<dd><a href="">メッシュパレット</a></dd>
+				<dd><a href="">プラスチックパレット</a></dd>
+				<dd><a href="">パレットハンガー</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img6.png" alt="吊り具・シャックル">吊り具・シャックル</a></dt>
+				<dd><a href="">ワイヤモッコ</a></dd>
+				<dd><a href="">スリング・ベルトモッコ</a></dd>
+				<dd><a href="">ワイヤーロープ</a></dd>
+				<dd><a href="">玉掛用保護具</a></dd>
+				<dd><a href="">シャックル</a></dd>
+				<dd><a href="">フック・リング</a></dd>
+				<dd><a href="">吊り具ボルト</a></dd>
+				<dd><a href="">吊天秤</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img7.png" alt="荷台ウマ(鳥居)・やぐら">荷台ウマ(鳥居)・やぐら</a></dt>
+				<dd><a href="">ウマ（既製品）</a></dd>
+				<dd><a href="">やぐら・ウマ（オーダー製作）</a></dd>
+			</dl>
+			<dl>
+				<dt><a href=""><img src="images/gmenu_b_img8.png" alt="荷台用品・台車">荷台用品・台車</a></dt>
+				<dd><a href="">アルミステップ</a></dd>
+				<dd><a href="">運搬台車</a></dd>
+			</dl>
+			<ul class="sidebar_btn">
+				<li><a href="">オーダーメイド制作のご案内</a></li>
+			</ul>
+			<h3>ご利用案内・会社概要</h3>
+			<ul class="sideber_info">
+				<li><a href="">ご利用ガイド</a></li>
+				<li><a href="">決済方法について</a></li>
+				<li><a href="">引き渡し・お届けについて</a></li>
+				<li><a href="">送料について</a></li>
+				<li><a href="">返品・交換について</a></li>
+				<li><a href="">運営会社</a></li>
+				<li><a href="">特定商取引法表示</a></li>
+				<li><a href="">プライバシーポリシー</a></li>
+				<li><a href="">お問い合わせフォーム</a></li>
+			</ul>
+			<a href=""><img src="images/sidebar_bnr2.jpg" alt="累計販売数20万枚突破!!トラックボードL　6枚セット"></a> </nav>
+	</div>
+</div>
+<div class="right_btn">
+	<ul>
+		<li><a href=""><img src="images/right_btn1.png" alt="カート">カート</a></li>
+		<li><a href=""><img src="images/right_btn2.png" alt="ログイン">ログイン</a></li>
+		<li><a href=""><img src="images/right_btn3.png" alt="会員登録">会員登録</a></li>
+		<li><a href=""><img src="images/right_btn4.png" alt="問合せ">問合せ</a></li>
+	</ul>
+	<a href="" class="gotop"><img src="images/right_btn5.png" alt="TOPへ戻る"></a> </div>
+<footer>
+	<div class="foot_t">
+		<h3><span>GUIDE</span>トラデポ お買い物ガイド</h3>
+		<div class="box">
+			<ul class="list1">
+				<li>
+					<h4>送料について</h4>
+					<p class="txt">商品の合計金額30,000円(税込)<br>
+						以上のご注文で送料無料！</p>
+					<p>商品の合計金額が3万円以上のご注文で送料無料。※3万円未満の場合は送料がかかります。<br>
+						沖縄離島・一部エリアは別料金</p>
+					<img src="images/foot_img1.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+				<li>
+					<h4>お届けについて</h4>
+					<p class="txt">平日最短当日出荷！<br>
+						オーダー品も短納期でご用意。</p>
+					<p>平日：AM10時までの入金確認で当日出荷<br>
+						オーダー品：製品・加工内容によって納期が異なります。</p>
+					<img src="images/foot_img2.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+				<li>
+					<h4>お支払について</h4>
+					<p class="txt">クレジットカード・代金引換・<br>
+						銀行振込・請求書払いに対応</p>
+					<p>オンラインでの決済はもちろん、銀行振り込みや代引きにも対応。法人・個人事業主の方は締め払い（後払い）にも対応。</p>
+					<img src="images/foot_img3.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+				<li>
+					<h4>帳簿類について</h4>
+					<p class="txt">商品の合計金額30,000円(税込)<br>
+						以上のご注文で送料無料！</p>
+					<p>商品の合計金額が3万円以上のご注文で送料無料。※3万円未満の場合は送料がかかります。<br>
+						沖縄離島・一部エリアは別料金</p>
+					<img src="images/foot_img4.png" alt="images"> <a href="">詳しくはこちら</a> </li>
+			</ul>
+			<div class="box2">
+				<h4>カスタマーサポート</h4>
+				<p class="txt">問い合わせフォーム・お電話・FAXに対応しております。お気軽にご相談ください。</p>
+				<ul class="list2">
+					<li>
+						<h5><img src="images/foot_box2_img1.png" alt="images">お問い合わせフォーム</h5>
+						<p>見積り、問合せはフォームで24H受付中。<br>
+							担当よりご連絡させていただきます。</p>
+						<a href="" class="btn">お問い合わせフォーム</a> </li>
+					<li>
+						<h5><img src="images/foot_box2_img2.png" alt="images">FAX</h5>
+						<p>専用用紙に記入し 052-766-6960へ<br>
+							FAXをお送りください。</p>
+						<a href="" class="btn">FAX用紙ダウンロードへ</a> </li>
+					<li>
+						<h5><img src="images/foot_box2_img3.png" alt="images">お電話</h5>
+						<div class="tel_text">通話料無料<span>（固定電話・携帯・PHS）</span></div>
+						<p class="tel">0120-441-723</p>
+						<p>【受付時間】平日9:00〜17:30</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="foot_b">
+		<div class="foot_b_l">
+			<h3>製品一覧</h3>
+			<div class="box1">
+				<div class="lb">
+					<div class="lb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">トラックシート・カバー</a><span class="spon">トラックシート・カバー</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">小型・中型トラックシート</a></li>
+									<li><a href="">軽トラックシート</a></li>
+									<li><a href="">飛散防止ネット</a></li>
+									<li><a href="">荷台収納袋</a></li>
+									<li><a href="">アオリシート（コボレーン）</a></li>
+									<li><a href="">ビニール・シートカバー</a></li>
+									<li><a href="">泥除け</a></li>
+									<li><a href="">補修テープ</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">ブルーシート</a><span class="spon">ブルーシート</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">ブルーシートカバー</a></li>
+									<li><a href="">ブルーシート（既製品）</a></li>
+									<li><a href="">ブルーシート（反物）</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="rb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">保護・マット</a><span class="spon">保護・マット</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">荷台ゴムマット</a></li>
+									<li><a href="">ウレタン・スポンジ</a></li>
+									<li><a href="">ドラム缶マット</a></li>
+									<li><a href="">トラックボード（緩衝材）</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">荷締め・ベルト</a><span class="spon">荷締め・ベルト</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">スリング・ベルト</a></li>
+									<li><a href="">ワイヤー</a></li>
+									<li><a href="">チェーン</a></li>
+									<li><a href="">レバー・ホイスト</a></li>
+									<li><a href="">ロープ・ゴムバンド</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="rb">
+					<div class="lb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">パレット</a><span class="spon">パレット</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">メッシュパレット</a></li>
+									<li><a href="">プラスチックパレット</a></li>
+									<li><a href="">パレットハンガー</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">吊り具・シャックル</a><span class="spon">吊り具・シャックル</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">ワイヤモッコ</a></li>
+									<li><a href="">スリング・ベルトモッコ</a></li>
+									<li><a href="">ワイヤーロープ</a></li>
+									<li><a href="">玉掛用保護具</a></li>
+									<li><a href="">シャックル</a></li>
+									<li><a href="">フック・リング</a></li>
+									<li><a href="">吊り具ボルト</a></li>
+									<li><a href="">吊天秤</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+					<div class="rb2">
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">荷台ウマ(鳥居)・やぐら</a><span class="spon">荷台ウマ(鳥居)・やぐら</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">ウマ（既製品）</a></li>
+									<li><a href="">やぐら・ウマ(オーダー製作)</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl class="ac">
+							<dt class="ac-parent"><a href="" class="pcon">荷台用品・台車</a><span class="spon">荷台用品・台車</span></dt>
+							<dd class="ac-child">
+								<ul>
+									<li><a href="">アルミステップ</a></li>
+									<li><a href="">運搬台車</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<div class="foot_link"><a href="">オーダー製作</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="box2">
+				<div>
+					<h3>ご利用案内</h3>
+					<ul>
+						<li><a href="">ご利用ガイド</a></li>
+						<li><a href="">決済方法について</a></li>
+						<li><a href="">納期・お届けについて</a></li>
+						<li><a href="">送料について</a></li>
+						<li><a href="">返品・交換について</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>ご注文・問合せ</h3>
+					<ul>
+						<li><a href="">お問い合わせフォーム</a></li>
+						<li><a href="">電話で問い合わせる</a></li>
+						<li><a href="">FAXで問い合わせる</a></li>
+						<li><a href="">よくあるご質問</a></li>
+					</ul>
+				</div>
+				<div>
+					<h3>トラデポについて</h3>
+					<ul>
+						<li><a href="">ニュース、お知らせ</a></li>
+						<li><a href="">会社概要、運営会社</a></li>
+						<li><a href="">プライバシーポリシー</a></li>
+						<li><a href="">特定商取引法表示</a></li>
+						<li><a href="">お問い合わせフォーム</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="foot_b_r">
+			<div class="wrap">
+				<div class="box1"><img src="images/foot_logo.png" alt="トラデポ　トラック用品の激安専門店">
+					<p class="info">運営会社：株式会社チームライク<br>
+						本社：神奈川県海老名市中央2-9-50 海老名プライムタワー7F<br>
+						電話番号：0120-441-723<br>
+						FAX番号：052-766-6960</p>
+					<ul>
+						<li><a href="">お問い合わせフォームへ</a></li>
+						<li><a href="">FAX用紙ダウンロードへ</a></li>
+					</ul>
+				</div>
+				<div class="box2"> <strong>トラデポとは…？</strong>
+					<p>トラデポは、トラック用品をお得な料金で注文できる通販サイトです。既成商品もちろん、オーダー品も工場直送の卸売価格！</p>
+					<p>施工・製造のプロが在籍しており、高品質・丁寧な説明で対応いたします。<br>
+						不明点はお気軽にご相談ください。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cr">Copyright(c) TORADEPO. All rights reserved.</div>
+</footer>
+<script type="text/javascript" src="js/slick/slick.min.js"></script> 
+<script>
+		$('.top_slider').slick({
+    centerMode: true,
+		dots:true,
+		arrows:true,
+		variableWidth: true,
+		prevArrow: '<div class="top_slider_arrowbox"><div class="top_slider_arrowposition"><div class="slide-arrow prev-arrow"><img src="images/slider_arrow_left.png"></div></div></div>',
+		nextArrow: '<div class="top_slider_arrowbox"><div class="top_slider_arrowposition"><div class="slide-arrow next-arrow"><img src="images/slider_arrow_right.png"></div></div></div>'
+  });
+		
+		
+	</script> 
+<script>
+		$('.rank_slider').slick({
+slidesToShow: 5,
+  slidesToScroll: 5,
+			responsive: [
+				{
+				breakpoint: 599, 
+        settings: {
+        slidesToShow: 2,
+				slidesToScroll: 2,
+        },
+      },
+				
+      {
+				breakpoint: 1024, 
+        settings: {
+        slidesToShow: 3,
+				slidesToScroll: 3,
+        },
+      },
+				{
+				breakpoint: 1480, 
+        settings: {
+        slidesToShow: 4,
+				slidesToScroll: 4,
+        },
+      },
+    ],
+		prevArrow: '<div class="slide-arrow prev-arrow"><img src="images/slider_arrow_left.png"></div>',
+		nextArrow: '<div class="slide-arrow next-arrow"><img src="images/slider_arrow_right.png"></div>'
+  });
+	</script> 
+<script>
+		$('.order_slider').slick({
+slidesToShow: 5,
+  slidesToScroll: 5,
+			responsive: [
+		{
+				breakpoint: 599, 
+        settings: {
+        slidesToShow: 2,
+				slidesToScroll: 2,
+        },
+      },
+				
+      {
+				breakpoint: 1024, 
+        settings: {
+        slidesToShow: 3,
+				slidesToScroll: 3,
+        },
+      },
+				{
+				breakpoint: 1480, 
+        settings: {
+        slidesToShow: 4,
+				slidesToScroll: 4,
+        },
+      },
+    ],
+		prevArrow: '<div class="slide-arrow prev-arrow"><img src="images/slider_arrow_left.png"></div>',
+		nextArrow: '<div class="slide-arrow next-arrow"><img src="images/slider_arrow_right.png"></div>'
+  });
+	</script> 
+<script>
+function sliderSetting(){
+  var width = $(window).width();
+  if(width <= 599){
+    $('.showcase_slide').not('.slick-initialized').slick({
+arrows:false,
+			centerMode: true,
+　　//処理
+　});
+   }else{
+      $('.showcase_slide').slick('unslick');
+   }
+}
+ 
+// 初期表示の実行
+sliderSetting();
+ 
+// リサイズの実行
+$(window).resize( function() {
+  sliderSetting();
+});
+		</script> 
+<script>
+	$(window).scroll(function () {           /* スクロールされた時 */
+  var pos = $('header').offset();          /* mvを過ぎたmainタグの高さを取得して変数[pos]に格納 */
+  if ($(this).scrollTop() > pos.top) {   /* 変数[pos]より、スクロールされていたら */
+    $('.right_btn').fadeIn();                /* ヘッダーをふわっと表示 */
+  } else {                               /* それ以外の場合 */
+    $('.right_btn').fadeOut();               /* ヘッダーをふわっと非表示 */
+  }
+});
+		</script> 
+<script>
+		
+if (window.matchMedia( "(max-width: 599px)" ).matches) {
+		$(function () {
+  $('.ac-parent').on('click', function () {
+    $(this).next().slideToggle();
+    //openクラスをつける
+    $(this).toggleClass("open");
+    //クリックされていないac-parentのopenクラスを取る
+    $('.ac-parent').not(this).removeClass('open');
+
+    // 一つ開くと他は閉じるように
+    $('.ac-parent').not($(this)).next('.ac-child').slideUp();
+  });
+});} else {
+/* ウィンドウサイズが 768px以上の場合のコードをここに */
+}
+	</script>
+</body>
+</html>

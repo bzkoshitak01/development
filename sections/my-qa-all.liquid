@@ -1,0 +1,144 @@
+<div class="sub_contents">
+    <h1 class="stit">
+        {{ 'top_qa_icon_a76eed36-9e8c-40a2-a390-dafff88efb98.png?v=1646967149.png' | file_img_url: 'medium' | img_tag }}
+        よくある質問
+    </h1>
+    <div class="search_box">
+        <div class="search_lb">
+            <form id="js_qForm">
+                <div class="keyword">
+                    <label for="name">キーワードで検索</label>
+                    <input value="" id="js_qSearch" type="text" placeholder="質問キーワードを入力してください">
+                </div>
+                <div class="category">
+                    <label for="name">カテゴリで絞り込み</label>
+                    <div class="">
+                        <select id="js_qSelect" name="cat">
+                            <option value="All">全てのカテゴリ</option>
+
+                            {% assign i = 0 %}
+                            {% for link in linklists.use-faq.links %}
+                            {% assign i = i | plus:1 %}
+                            <option value="1-{{ i }}">{{ link.title }}</option>
+                            {% endfor %}
+
+                            {% assign j = 0 %}
+                            {% for link in linklists.product-faq.links %}
+                            {% assign j = j | plus:1 %}
+                            <option value="2-{{ j }}">{{ link.title }}</option>
+                            {% endfor %}
+                        </select>
+                        <button id="js_qSubmit" type="button" class="submit_btn">検 索</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="search_rb">
+            <p>人気のキーワードから検索</p>
+            <ul>
+                <li><a class="js_qSuggest" href="javascript:void(0)">サンプル</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">キャンセル</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">再注文</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">送料</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">配送状況</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">1枚</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">見積り</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">領収書</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">請求書発行</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">数量変更</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">サンプル</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">キャンセル</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">再注文</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">送料</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">配送状況</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">1枚</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">見積り</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">領収書</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">請求書発行</a></li>
+                <li><a class="js_qSuggest" href="javascript:void(0)">数量変更</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="ly_result">
+        <h2 id="js_resultHeading" class="sstit">検索結果</h2>
+        <p id="js_noResultTxt">申し訳ありません。検索結果はございません。</p>
+        <ul class="js_faqList">
+        {% assign i = 0 %}
+        {% for link in linklists.use-faq.links %}
+        {% assign i = i | plus:1 %}
+        {% for sub_link in link.links %}
+            <li class="js_faq js_faq__none js_faqCat1-{{ i }}">
+                <a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+            </li>
+        {% endfor %}
+        {% endfor %}
+        {% assign j = 0 %}
+        {% for link in linklists.product-faq.links %}
+        {% assign j = j | plus:1 %}
+        {% for sub_link in link.links %}
+            <li class="js_faq js_faq__none js_faqCat2-{{ j }}">
+                <a href="{{ sub_link.url }}">{{ sub_link.title }}</a>
+            </li>
+        {% endfor %}
+        {% endfor %}
+        </ul>
+    </section>
+    <section class="pickup">
+        <h2 class="sstit">人気のご質問</h2>
+        <ul>
+        {%- for block in section.blocks -%}
+            <li><a href="{{ block.settings.frequent-faq_page.url }}">{{ block.settings.frequent-faq_page.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </section>
+    
+    <section class="category">
+        <h2 class="sstit">ご利用についてのご質問</h2>
+        <ul>
+            {% for link in linklists.use-faq.links %}
+            <li>
+                <dl>
+                    <dt><a href="{{ link.url }}">{{ link.title }}</a></dt>
+                    {% for sub_link in link.links limit:3%}
+                    <dd><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></dd>
+                    {% endfor %}
+                </dl>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    
+    <section class="category">
+        <h2 class="sstit">製品についてのご質問</h2>
+        <ul>
+            {% for link in linklists.product-faq.links %}
+            <li>
+                <dl>
+                    <dt><a href="{{ link.url }}">{{ link.title }}</a></dt>
+                    {% for sub_link in link.links limit:3%}
+                    <dd><a href="{{ sub_link.url }}">{{ sub_link.title }}</a></dd>
+                    {% endfor %}
+                </dl>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+</div>
+{% schema %}
+{
+"name": "よくある質問【ホーム】",
+"blocks": [
+    {
+        "type": "frequent-faq",
+        "name": "frequent-faq",
+        "settings":[
+            {
+                "type": "page",
+                "id": "frequent-faq_page",
+                "label": "質問ページを選択する"
+            }
+        ]
+    }
+]
+}
+{% endschema %}
