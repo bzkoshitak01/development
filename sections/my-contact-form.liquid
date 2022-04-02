@@ -267,26 +267,6 @@
 
     // エンターによる送信を無効化
 
-    // 電話番号のオートコンプリートを無効化
-    inputPhone1.addEventListener("mousedown", function(e){
-    setTimeout(function(){
-            inputPhone1.focus();
-    }, 1);
-        e.preventDefault();
-    });
-    inputPhone2.addEventListener("mousedown", function(e){
-    setTimeout(function(){
-            inputPhone2.focus();
-    }, 1);
-        e.preventDefault();
-    });
-    inputPhone3.addEventListener("mousedown", function(e){
-    setTimeout(function(){
-            inputPhone3.focus();
-    }, 1);
-        e.preventDefault();
-    });
-
     function validater() {
         for(let i=0; i<validate.length; i++){
             validate[i].classList.remove('js_validate__active');
@@ -322,10 +302,10 @@
         if(inputPhone.value === ''){
             validate4_1.classList.add('js_validate__active');
             confirmFlag.push(false);
-        }else if(!(inputPhone1.value.match(/^[0-9]+$/))){
+        }else if(!(inputPhone.value.match(/^[0-9]+$/))){
             validate4_2.classList.add('js_validate__active');
             confirmFlag.push(false);
-        }else if(!(inputPhone1.value.match(/^[0-9]{11}$/))){
+        }else if(!(inputPhone.value.match(/^[0-9]{11}$/))){
             validate4_3.classList.add('js_validate__active');
             confirmFlag.push(false);
         }else{
@@ -342,7 +322,6 @@
         console.log(confirmFlag);
         if(!(confirmFlag.includes(false))){
             inputName.value = inputFamilyName.value + ' ' + inputGivenName.value;
-            inputPhone.value = inputPhone1.value + '-' + inputPhone2.value + '-' + inputPhone3.value;
 
             inputSect.classList.remove('js_input__active');
             confirmSect.classList.add('js_confirm__active');
