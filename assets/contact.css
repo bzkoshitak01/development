@@ -165,14 +165,6 @@ h1.main-page-title:before {
   align-items: flex-start;
 }
 
-.ly_fieldCnt.ly_fieldCnt__phone input {
-  width: 60px;
-}
-
-.ly_fieldCnt.ly_fieldCnt__phone .el_hyphen {
-  margin: 0 0.5em;
-}
-
 .el_fieldTtl {
   width: 200px;
 }
