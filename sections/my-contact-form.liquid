@@ -349,33 +349,24 @@
         statusCircle3.classList.add('js_statusCircle__orange');
     }
 
-    // 自動応答
-    btnSubmit.addEventListener('click', function(){
-        Email.send({
-            Host : "smtp.elasticemail.com",
-            Username : "bzkoshitak01@gmail.com",
-            Password : "D73916B7983DD1875EB77B0DC622F7AA5E79",
-            To : inputEmail.value,
-            From : "bzkoshitak01@gmail.com",
-            Subject : "test件名",
-            Body : "【トラデポ】お問い合わせありがとうございます。\n\
+    const response = "【トラデポ】お問い合わせありがとうございます。\n\
             ———————————————————————-\n\
             ※このメールはシステムからの自動返信です。\n\
             このメールに対して返信できません。\n\
             ———————————————————————-\n"+
-            inputName+"　様\n\
+            inputName.value+"　様\n\
             この度はトラデポより、お問い合わせ頂き誠にありがとうございます。\n\
             以下の内容でお問い合わせを受付いたしました。\n\
             お送りいただきました内容を確認の上、数営業日以内に折り返しご連絡させていただきます。\n\
             ━━━ お問い合わせ内容 ━━━━━━━━━━━━━━━━━━━\n\
             ◆氏名\n"+
-            inputName+"\n\
+            inputName.value+"\n\
             ◆会社名\n"+
-            inputCompany+"\n\
+            inputCompany.value+"\n\
             ◆メールアドレス\n"+
-            inputEmail+"\n\
+            inputEmail.value+"\n\
             ◆お問い合わせ内容\n"+
-            inputEmail+"\n\
+            inputBody.value+"\n\
             ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\
             この度はトラデポをご利用いただきまして誠にありがとうございます。\n\
             今後ともトラデポをよろしくお願いいたします。\n\
@@ -387,6 +378,17 @@
             電話：0120-441-723\n\
             メールアドレス：△△@△△.co.jp\n\
             ———————————————————————"
+
+    // 自動応答
+    btnSubmit.addEventListener('click', function(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "bzkoshitak01@gmail.com",
+            Password : "D73916B7983DD1875EB77B0DC622F7AA5E79",
+            To : inputEmail.value,
+            From : "bzkoshitak01@gmail.com",
+            Subject : "test件名",
+            Body : response
         }).then(
             message=>{
                 //alert(message);
