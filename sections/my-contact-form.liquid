@@ -100,11 +100,11 @@
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
                         <label for="ContactForm-phone">電話番号</label>
-                        <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-                        <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
-                        <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
-                        <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
                     </div>
+                    <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+                    <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
+                    <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
+                    <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
                 </div>
                 <div class="ly_fieldCnt ly_fieldCnt__msg">
                     <div class="el_fieldTtl">
