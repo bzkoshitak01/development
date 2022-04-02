@@ -100,16 +100,7 @@
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
                         <label for="ContactForm-phone">電話番号</label>
-                        <input type="hidden" name="contact[電話番号]" id="ContactForm-phone">
-                    </div>
-                    <div>
-                        <div>
-                            <input id="ContactForm-phone1" autocomplete="off" value="{% if form.phone %}{{ form.phone | slice: 0,2 }}{% elsif customer %}{{ customer.phone | slice: 0,2 }}{% endif %}" placeholder="" required>
-                            <span class="el_hyphen">-</span>
-                            <input id="ContactForm-phone2" autocomplete="off" value="{% if form.phone %}{{ form.phone | slice: 3,6 }}{% elsif customer %}{{ customer.phone | slice: 3,6 }}{% endif %}" placeholder="" required>
-                            <span class="el_hyphen">-</span>
-                            <input id="ContactForm-phone3" autocomplete="off" value="{% if form.phone %}{{ form.phone | slice: 7,10 }}{% elsif customer %}{{ customer.phone | slice: 7,10 }}{% endif %}" placeholder="" required>                   
-                        </div>
+                        <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
                         <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
                         <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
                         <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
@@ -248,9 +239,6 @@
     const inputCompany = document.getElementById('ContactForm-company');
     const inputEmail = document.getElementById('ContactForm-email');
     const inputPhone = document.getElementById('ContactForm-phone');
-    const inputPhone1 = document.getElementById('ContactForm-phone1');
-    const inputPhone2 = document.getElementById('ContactForm-phone2');
-    const inputPhone3 = document.getElementById('ContactForm-phone3');
     const inputBody = document.getElementById('ContactForm-body');
 
     const confirmName = document.getElementById('js_confirmName');
@@ -331,39 +319,13 @@
         }
 
         // validation phone
-        if(inputPhone1.value === ''){
+        if(inputPhone.value === ''){
             validate4_1.classList.add('js_validate__active');
             confirmFlag.push(false);
         }else if(!(inputPhone1.value.match(/^[0-9]+$/))){
             validate4_2.classList.add('js_validate__active');
             confirmFlag.push(false);
-        }else if(!(inputPhone1.value.match(/^[0-9]{3}$/))){
-            validate4_3.classList.add('js_validate__active');
-            confirmFlag.push(false);
-        }else{
-            confirmFlag.push(true);
-        }
-
-        if(inputPhone2.value === ''){
-            validate4_1.classList.add('js_validate__active');
-            confirmFlag.push(false);
-        }else if(!(inputPhone2.value.match(/^[0-9]+$/))){
-            validate4_2.classList.add('js_validate__active');
-            confirmFlag.push(false);
-        }else if(!(inputPhone2.value.match(/^[0-9]{4}$/))){
-            validate4_3.classList.add('js_validate__active');
-            confirmFlag.push(false);
-        }else{
-            confirmFlag.push(true);
-        }
-
-        if(inputPhone3.value === ''){
-            validate4_1.classList.add('js_validate__active');
-            confirmFlag.push(false);
-        }else if(!(inputPhone3.value.match(/^[0-9]+$/))){
-            validate4_2.classList.add('js_validate__active');
-            confirmFlag.push(false);
-        }else if(!(inputPhone3.value.match(/^[0-9]{4}$/))){
+        }else if(!(inputPhone1.value.match(/^[0-9]{11}$/))){
             validate4_3.classList.add('js_validate__active');
             confirmFlag.push(false);
         }else{
