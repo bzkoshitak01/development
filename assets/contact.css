@@ -30,7 +30,7 @@ h1.main-page-title:before {
 }
 
 .ly_status {
-  width: 100px;
+  width: 160px;
   display: flex;
   flex-direction: column;
   align-items: center;
