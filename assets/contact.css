@@ -48,7 +48,7 @@ h1.main-page-title:before {
   position: absolute;
   z-index: -1;
   left: 50%;
-  top: 15px;
+  top: 25px;
   transform: translateY(-50%);
   height: 5px;
   width: 50%;
@@ -60,7 +60,7 @@ h1.main-page-title:before {
   position: absolute;
   z-index: -1;
   right: 50%;
-  top: 15px;
+  top: 25px;
   transform: translateY(-50%);
   height: 5px;
   width: 50%;
@@ -72,7 +72,7 @@ h1.main-page-title:before {
   position: absolute;
   z-index: -1;
   left: 50%;
-  top: 15px;
+  top: 25px;
   transform: translateY(-50%);
   height: 5px;
   width: 50%;
@@ -84,7 +84,7 @@ h1.main-page-title:before {
   position: absolute;
   z-index: -1;
   right: 50%;
-  top: 15px;
+  top: 25px;
   transform: translateY(-50%);
   height: 5px;
   width: 50%;
@@ -94,13 +94,14 @@ h1.main-page-title:before {
 .js_statusCircle {
   color: #fff;
   font-weight: bold;
-  width: 30px;
-  height: 30px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ccc;
+  font-size: 1.6rem;
 }
 
 .js_statusCircle.js_statusCircle__orange {
