@@ -129,7 +129,7 @@ h1.main-page-title:before {
   display: flex;
   align-items: center;
   padding: 30px 0;
-  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
 }
 
 .ly_fieldCnt label {
@@ -137,9 +137,15 @@ h1.main-page-title:before {
   font-weight: bold;
 }
 
-.ly_fieldCnt input,
-.ly_fieldCnt textarea {
+.ly_fieldCnt input {
   width: 250px;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  padding: 0.5em 0;
+}
+
+.ly_fieldCnt textarea {
+  width: calc(100% - 200px);
   border: solid 1px #ccc;
   border-radius: 3px;
   padding: 0.5em 0;
@@ -147,14 +153,34 @@ h1.main-page-title:before {
 
 .ly_fieldCnt input[type=radio] {
   width: auto;
+  margin-top: 0;
 }
 
-.ly_fieldCnt:first-of-type {
-  border-top: none;
+.ly_fieldCnt.ly_fieldCnt__docType label {
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  padding: 1em 5em;
+  position: relative;
+}
+
+.ly_fieldCnt.ly_fieldCnt__docType label:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1em;
+  border-radius: 50%;
+  width: 1em;
+  height: 1em;
+  border: solid 1px #ccc;
+}
+
+.ly_fieldCnt.ly_fieldCnt__docType input {
+  display: none;
 }
 
 .ly_fieldCnt.ly_fieldCnt__name input {
-  width: 100px;
+  margin-top: 0;
 }
 
 .ly_fieldCnt.ly_fieldCnt__name input:first-of-type {
@@ -174,6 +200,10 @@ h1.main-page-title:before {
   width: 200px;
   display: flex;
   align-items: center;
+}
+
+.el_fieldTtl label {
+  display: block;
 }
 
 .el_fieldTtl_annotate {
@@ -353,6 +383,7 @@ h2.el_lv2heading {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 20px;
+  background: #f6f6f6;
 }
 
 .ly_fieldCnt label span {
@@ -376,6 +407,11 @@ fieldset {
   color: red;
 }
 
+.ly_fileOperation {
+  display: flex;
+  flex-direction: column;
+}
+
 .ly_fileAttachment {
   display: flex;
   padding: 2rem 4rem;
@@ -397,4 +433,23 @@ fieldset {
   margin-left: 1em;
   border-radius: 3px;
   border: solid 1px #ccc;
+}
+
+h3 {
+  color: #e27933;
+  font-size: 1.4rem;
+  margin-bottom: 1em;
+}
+
+.ly_deadline {
+  margin-bottom: 2rem;
+}
+
+.ly_deadline ul {
+  padding: 1em;
+  background: #fcfed5;
+}
+
+.ly_deadline li:not(:last-child) {
+  margin-bottom: 1em;
 }

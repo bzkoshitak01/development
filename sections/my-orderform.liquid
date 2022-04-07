@@ -40,7 +40,7 @@
         <section class="ly_input js_input js_input__active">
             <h2 class="el_lv2heading">見積書または請求書のどちらをご希望がお選びください</h2>
             <div class="ly_inputForm">
-                <div class="ly_fieldCnt ly_fieldCnt__name">
+                <div class="ly_fieldCnt ly_fieldCnt__docType">
                     <label><input type="radio" name="contact[ドキュメントの種類]" value="見積書">見積書</label>
                     <label><input type="radio" name="contact[ドキュメントの種類]" value="請求書">請求書</label>
                 </div>
@@ -74,7 +74,7 @@
                             <span class="el_supplement">営業電話はいたしません</span>
                         </p>
                     </div>
-                    <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+                    <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="例）0312345678">
                     <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
                     <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
                     <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
@@ -98,7 +98,7 @@
                             aria-invalid="true"
                             aria-describedby="ContactForm-email-error"
                             {% endif %}
-                            placeholder=""
+                            placeholder="例）example@toradepo.com"
                             required
                         >
                         <p id="js_validate3-1" class="el_validate js_validate">※メールアドレスを入力してください</p>
@@ -210,24 +210,26 @@
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
                         <label for="ContactForm-attachment">ファイル添付</span></label>
                     </div>
-                    <div id="js_fileAttachment" class="ly_fileAttachment">
-                        <div class="ly_fileAttachment_imgCnt">
-                            <img src="">
+                    <div class="ly_fileOperation">
+                        <div id="js_fileAttachment" class="ly_fileAttachment">
+                            <div class="ly_fileAttachment_imgCnt">
+                                <img src="">
+                            </div>
+                            <div class="ly_fileAttachment_txtCnt">
+                                <p>ここにファイルをドラッグ</p>
+                                <p>または<span>ファイルを選択</span></p>
+                            </div>
                         </div>
-                        <div class="ly_fileAttachment_txtCnt">
-                            <p>ここにファイルをドラッグ</p>
-                            <p>または<span>ファイルを選択</span></p>
-                        </div>
+                        <div id="js_fileDisplay"></div>
+                        <p class="el_supplement">
+                            1ファイル最大10MB、5ファイルまで送信できます。<br>
+                            容量または枚数を超える場合は、お手数ですが下記のメールアドレスまで直接お送りください。<br>
+                            ◯◯◯◯◯@toradepo.com
+                        </p>                   
                     </div>
-                    <div id="js_fileDisplay"></div>
-                    <p class="el_supplement">
-                        1ファイル最大10MB、5ファイルまで送信できます。<br>
-                        容量または枚数を超える場合は、お手数ですが下記のメールアドレスまで直接お送りください。<br>
-                        ◯◯◯◯◯@toradepo.com
-                    </p>
                 </div>
             </div>
-            <div>
+            <div class="ly_deadline">
                 <h3>納期について</h3>
                 <ul>
                     <li>お急ぎの場合は備考欄にご希望の納品日を誤入力のうえ担当者にご相談ください。なお、お問い合わせの状況によってはご対応が難しい場合もございます。</li>

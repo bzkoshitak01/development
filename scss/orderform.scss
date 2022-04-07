@@ -121,27 +121,52 @@ h1.main-page-title {
     display: flex;
     align-items: center;
     padding: 30px 0;
-    border-top: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
     label {
         font-size: 1.2rem;
         font-weight: bold;
     }
-    input,
-    textarea {
+    input {
         width: 250px;
+        border: solid 1px #ccc;
+        border-radius: 3px;
+        padding: 0.5em 0;
+    }
+    textarea {
+        width: calc(100% - 200px);
         border: solid 1px #ccc;
         border-radius: 3px;
         padding: 0.5em 0;
     }
     input[type=radio] {
         width: auto;
+        margin-top: 0;
     }
-    &:first-of-type {
-        border-top: none;
+    &.ly_fieldCnt__docType {
+        label {
+            border: solid 1px #ccc;
+            border-radius: 3px;
+            padding: 1em 5em;
+            position: relative;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 1em;
+                border-radius: 50%;
+                width: 1em;
+                height: 1em;
+                border: solid 1px #ccc;
+            }
+        }
+        input {
+            display: none;
+        }
     }
     &.ly_fieldCnt__name {
         input {
-            width: 100px;
+            margin-top: 0;
             &:first-of-type {
                 margin-right: 0.5em;
             }
@@ -159,6 +184,9 @@ h1.main-page-title {
     width: 200px;
     display: flex;
     align-items: center;
+    label {
+        display: block;
+    }
 }
 .el_fieldTtl_annotate {
     white-space: nowrap;
@@ -313,6 +341,7 @@ h2.el_lv2heading {
 	font-size: 1.8rem;
 	font-weight: bold;
 	margin-bottom: 20px;
+    background: rgb(246, 246, 246);
 }
 .ly_fieldCnt {
     label {
@@ -335,7 +364,10 @@ fieldset {
     margin: 0.2em 0;
     color: red;
 }
-
+.ly_fileOperation {
+    display: flex;
+    flex-direction: column;
+}
 .ly_fileAttachment {
     display: flex;
     padding: 2rem 4rem;
@@ -357,5 +389,20 @@ fieldset {
         margin-left: 1em;
         border-radius: 3px;
         border: solid 1px #ccc;
+    }
+}
+h3 {
+    color: #e27933;
+    font-size: 1.4rem;
+    margin-bottom: 1em;
+}
+.ly_deadline {
+    margin-bottom: 2rem;
+    ul {
+        padding: 1em;
+        background: rgb(252, 254, 213);
+    }
+    li:not(:last-child) {
+        margin-bottom: 1em;
     }
 }
