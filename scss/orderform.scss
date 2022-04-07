@@ -169,6 +169,7 @@ h1.main-page-title {
             display: none;
         }
         input:checked + label {
+            color: #fff;
             border: solid 1px #e27933;
             background: #e27933;
             &:before {
@@ -388,6 +389,7 @@ legend {
 }
 fieldset {
     display: flex;
+    flex-wrap: wrap;
 }
 .el_supplement {
     display: inline-block;
