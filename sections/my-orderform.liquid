@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="ly_fieldCnt ly_fieldCnt__name">
-                    <div class="el_fieldTtl"><span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                    <div class="el_fieldTtl"><span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
                         <label for="ContactForm-company">お名前/ご担当者名</label>
                         <input type="hidden" name="contact[お名前/ご担当者名]" id="ContactForm-name">
                     </div>
@@ -71,7 +71,7 @@
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
                         <p>
                             <label for="ContactForm-phone">電話番号</label>
-                            <span>営業電話はいたしません</span>
+                            <span class="el_supplement">営業電話はいたしません</span>
                         </p>
                     </div>
                     <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
@@ -174,8 +174,8 @@
                             <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
                             <legend>ご希望の決済方法</legend>
                         </div>
-                        <input type="radio" name="contact[ご希望の決済方法]" id="ContactForm-payment1" value="銀行振り込み">
-                        <input type="radio" name="contact[ご希望の決済方法]" id="ContactForm-payment2" value="クレジットカード決済">
+                        <label><input type="radio" name="contact[ご希望の決済方法]" id="ContactForm-payment1" value="銀行振り込み">銀行振り込み</label>
+                        <label><input type="radio" name="contact[ご希望の決済方法]" id="ContactForm-payment2" value="クレジットカード決済">クレジットカード決済</label>
                         <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
                         <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
                         <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
@@ -185,7 +185,10 @@
                 <div class="ly_fieldCnt ly_fieldCnt__msg">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <label for="ContactForm-body">お見積り・発注内容・ご質問<br><span>担当者より返信いたします</span></label>
+                        <p>
+                            <label for="ContactForm-body">お見積り・発注内容・ご質問</label>
+                            <span class="el_supplement">担当者より返信いたします</span>
+                        </p>
                     </div>
                     <div>
                         <textarea
@@ -207,24 +210,31 @@
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
                         <label for="ContactForm-attachment">ファイル添付</span></label>
                     </div>
-                    <div id="inputFile">
-                        <div>
+                    <div id="js_fileAttachment" class="ly_fileAttachment">
+                        <div class="ly_fileAttachment_imgCnt">
                             <img src="">
                         </div>
-                        <div>
-                            <!-- ドラッグ&ドロップエリア -->
-                            <p id="dropArea">ここにファイルをドラッグ<br>または</p>
-
-                            <!-- 通常のinput[type=file] -->
-                            <div id="inputFileWrap">
-                                <input type="file" name="uploadFile" id="uploadFile">
-                                <div id="btnInputFile"><span>ファイルを選択</span></div>
-                                <div id="btnChangeFile"><span>ファイルを変更する</span></div>
-                            </div>                      
+                        <div class="ly_fileAttachment_txtCnt">
+                            <p>ここにファイルをドラッグ</p>
+                            <p>または<span>ファイルを選択</span></p>
                         </div>
                     </div>
+                    <div id="js_fileDisplay"></div>
+                    <p class="el_supplement">
+                        1ファイル最大10MB、5ファイルまで送信できます。<br>
+                        容量または枚数を超える場合は、お手数ですが下記のメールアドレスまで直接お送りください。<br>
+                        ◯◯◯◯◯@toradepo.com
+                    </p>
                 </div>
-
+            </div>
+            <div>
+                <h3>納期について</h3>
+                <ul>
+                    <li>お急ぎの場合は備考欄にご希望の納品日を誤入力のうえ担当者にご相談ください。なお、お問い合わせの状況によってはご対応が難しい場合もございます。</li>
+                    <li>混雑期（年末年始、年度末、長期休業前後など）は通常よりもお届けまでにお時間を頂戴いたします。</li>
+                    <li>ご発注の際は、余裕を持ったスケジュールにてご依頼いただきますようお願いいたします。</li>
+                    <li>オーダー品は、原則返品・交換不可となります。ご発注前のサイズ確認や不明点など、お気軽にお問い合わせください。</li>
+                </ul>            
             </div>
             <div class="ly_formBtnCnt">
                 <button type="button" id="js_formBtn__confirm" class="bl_formBtn bl_formBtn__confirm">
@@ -232,15 +242,6 @@
                     確認画面へ
                 </button>
             </div>
-        </section>
-        <section>
-            <h3>納期について</h3>
-            <ul>
-                <li>お急ぎの場合は備考欄にご希望の納品日を誤入力のうえ担当者にご相談ください。なお、お問い合わせの状況によってはご対応が難しい場合もございます。</li>
-                <li>混雑期（年末年始、年度末、長期休業前後など）は通常よりもお届けまでにお時間を頂戴いたします。</li>
-                <li>ご発注の際は、余裕を持ったスケジュールにてご依頼いただきますようお願いいたします。</li>
-                <li>オーダー品は、原則返品・交換不可となります。ご発注前のサイズ確認や不明点など、お気軽にお問い合わせください。</li>
-            </ul>
         </section>
 
         {% comment %} 確認画面へ {% endcomment %}
@@ -251,14 +252,14 @@
             <div class="ly_confirmForm">
                 <div class="ly_fieldCnt ly_fieldCnt__company">
                     <div class="el_fieldTtl">
-                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
                         <span class="el_confirmLabel">会社名/屋号</span>
                     </div>
                     <span id="js_confirmCompany"></span>
                 </div>
                 <div class="ly_fieldCnt ly_fieldCnt__name">
                     <div class="el_fieldTtl">
-                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
                         <span class="el_confirmName">お名前/ご担当者名</span>
                     </div>
                     <span id="js_confirmName"></span>

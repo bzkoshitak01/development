@@ -154,8 +154,11 @@ h1.main-page-title {
 }
 .el_fieldTtl {
     width: 200px;
+    display: flex;
+    align-items: center;
 }
 .el_fieldTtl_annotate {
+    white-space: nowrap;
     padding: 0.2em 0.5em;
     font-size: 1.2rem;
     margin-right: 0.5em;
@@ -330,65 +333,26 @@ fieldset {
     color: red;
 }
 
-#inputFile {
+.ly_fileAttachment {
     display: flex;
-}
-
-#dropArea {
-
-}
-
-#dropArea.dragover {
-    border: 2px solid #16a5bf;
-    background: rgba(22, 165, 191, 0.6);
-}
-
-#uploadFile {
-    display: inline-block;
-    padding: 0.5em 1em;
+    padding: 2rem 4rem;
     border-radius: 3px;
-    border: solid 1px #494949;
-    margin-left: 1em;
+    border: dashed 2px #ccc;
+    justify-content: center;
 }
-
-#inputFileWrap {
-    position: relative;
-    display: inline-block;
+.ly_fileAttachment_imgCnt {
+    margin-right: 2rem;
 }
-
-#btnInputFile,
-#btnChangeFile {
-    display: table;
-    width: 300px;
-}
-
-#btnChangeFile {
-    display: none;
-}
-
-
-#btnInputFile span,
-#btnChangeFile span {
-    position: relative;
-    z-index: 2;
-    display: table-cell;
-    width: 300px;
-    height: 80px;
-    border: 1px solid #333;
-    border-radius: 4px;
-    background: #333;
-    text-decoration: none;
-    color: #fff;
-    font-size: 26px;
-    line-height: 1;
-    font-weight: bold;
-    vertical-align: middle;
-}
-
-#upFileWrap.selected #btnInputFile {
-    display: none;
-}
-
-#upFileWrap.selected #btnChangeFile {
-    display: table;
+.ly_fileAttachment_txtCnt {
+    p {
+       &:first-of-type {
+           margin-bottom: 1em;
+       } 
+    }
+    span {
+        padding: .5em 1em;
+        margin-left: 1em;
+        border-radius: 3px;
+        border: solid 1px #ccc;
+    }
 }
