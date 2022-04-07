@@ -421,6 +421,7 @@ fieldset {
 }
 
 .el_supplement {
+  display: inline-block;
   margin: 0.5em 0;
   color: red;
 }
@@ -456,6 +457,7 @@ fieldset {
 h3 {
   color: #e27933;
   font-size: 1.4rem;
+  margin-top: 3rem;
   margin-bottom: 1em;
 }
 
@@ -466,6 +468,10 @@ h3 {
 .ly_deadline ul {
   padding: 1em;
   background: #fcfed5;
+  list-style-type: disc;
+}
+
+.ly_deadline li {
   list-style-type: disc;
 }
 

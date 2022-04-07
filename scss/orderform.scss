@@ -375,6 +375,7 @@ fieldset {
     display: flex;
 }
 .el_supplement {
+    display: inline-block;
     margin: 0.5em 0;
     color: red;
 }
@@ -408,6 +409,7 @@ fieldset {
 h3 {
     color: #e27933;
     font-size: 1.4rem;
+    margin-top: 3rem;
     margin-bottom: 1em;
 }
 .ly_deadline {
@@ -415,6 +417,9 @@ h3 {
     ul {
         padding: 1em;
         background: rgb(252, 254, 213);
+        list-style-type: disc;
+    }
+    li {
         list-style-type: disc;
     }
     li:not(:last-child) {
