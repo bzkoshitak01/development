@@ -169,6 +169,7 @@ h1.main-page-title:before {
 
 .ly_fieldCnt.ly_fieldCnt__docType label:not(:last-child) {
   margin-right: 2rem;
+  margin-bottom: 1rem;
 }
 
 .ly_fieldCnt.ly_fieldCnt__docType label:before {
@@ -185,6 +186,15 @@ h1.main-page-title:before {
 
 .ly_fieldCnt.ly_fieldCnt__docType input {
   display: none;
+}
+
+.ly_fieldCnt.ly_fieldCnt__docType input:checked + label {
+  border: solid 1px #e27933;
+  background: #e27933;
+}
+
+.ly_fieldCnt.ly_fieldCnt__docType input:checked + label:before {
+  border: solid 2px #fff;
 }
 
 .ly_fieldCnt.ly_fieldCnt__name input {
@@ -395,6 +405,9 @@ h1.main-page-title:before {
   .el_fieldTtl {
     width: 100%;
     margin-bottom: 2em;
+  }
+  .ly_textarea {
+    width: 100%;
   }
 }
 

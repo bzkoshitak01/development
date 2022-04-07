@@ -151,6 +151,7 @@ h1.main-page-title {
             position: relative;
             &:not(:last-child) {
                 margin-right: 2rem;
+                margin-bottom: 1rem;
             }
             &:before {
                 content: "";
@@ -166,6 +167,13 @@ h1.main-page-title {
         }
         input {
             display: none;
+        }
+        input:checked + label {
+            border: solid 1px #e27933;
+            background: #e27933;
+            &:before {
+                border: solid 2px #fff;
+            }
         }
     }
     &.ly_fieldCnt__name {
@@ -348,6 +356,9 @@ h1.main-page-title {
     .el_fieldTtl {
         width: 100%;
         margin-bottom: 2em;
+    }
+    .ly_textarea {
+        width: 100%;
     }
 }
 
