@@ -410,6 +410,9 @@ h1.main-page-title:before {
   div.ly_textarea {
     width: 100%;
   }
+  div.ly_fileOperation {
+    width: 100%;
+  }
 }
 
 h2.el_lv2heading {
@@ -449,6 +452,7 @@ fieldset {
 .ly_fileOperation {
   display: flex;
   flex-direction: column;
+  width: calc(100% - 200px);
 }
 
 .ly_fileAttachment {
