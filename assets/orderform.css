@@ -145,6 +145,10 @@ h1.main-page-title:before {
   padding: 0.5em 0;
 }
 
+.ly_fieldCnt input[type=radio] {
+  width: auto;
+}
+
 .ly_fieldCnt:first-of-type {
   border-top: none;
 }

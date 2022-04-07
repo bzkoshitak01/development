@@ -133,6 +133,9 @@ h1.main-page-title {
         border-radius: 3px;
         padding: 0.5em 0;
     }
+    input[type=radio] {
+        width: auto;
+    }
     &:first-of-type {
         border-top: none;
     }
