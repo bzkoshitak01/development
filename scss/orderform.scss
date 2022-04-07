@@ -149,9 +149,9 @@ h1.main-page-title {
             border-radius: 3px;
             padding: 1em 5em;
             position: relative;
+            margin-bottom: 1rem;
             &:not(:last-child) {
                 margin-right: 2rem;
-                margin-bottom: 1rem;
             }
             &:before {
                 content: "";

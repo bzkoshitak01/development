@@ -165,11 +165,11 @@ h1.main-page-title:before {
   border-radius: 3px;
   padding: 1em 5em;
   position: relative;
+  margin-bottom: 1rem;
 }
 
 .ly_fieldCnt.ly_fieldCnt__docType label:not(:last-child) {
   margin-right: 2rem;
-  margin-bottom: 1rem;
 }
 
 .ly_fieldCnt.ly_fieldCnt__docType label:before {
