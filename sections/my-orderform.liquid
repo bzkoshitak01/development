@@ -69,10 +69,10 @@
                 <div class="ly_fieldCnt ly_fieldCnt__phone">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
-                        <p>
+                        <div>
                             <label for="ContactForm-phone">電話番号</label>
                             <span class="el_supplement">営業電話はいたしません</span>
-                        </p>
+                        </div>
                     </div>
                     <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="例）0312345678">
                     <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
@@ -182,15 +182,15 @@
                     </fieldset>
                 </div>
 
-                <div class="ly_fieldCnt ly_fieldCnt__msg">
+                <div class="ly_fieldCnt ly_fieldCnt__body">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <p>
+                        <div>
                             <label for="ContactForm-body">お見積り・発注内容・ご質問</label>
                             <span class="el_supplement">担当者より返信いたします</span>
-                        </p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="ly_textarea">
                         <textarea
                         rows="5"
                         id="ContactForm-body"

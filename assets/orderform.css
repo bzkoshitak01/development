@@ -145,7 +145,7 @@ h1.main-page-title:before {
 }
 
 .ly_fieldCnt textarea {
-  width: calc(100% - 200px);
+  width: 100%;
   border: solid 1px #ccc;
   border-radius: 3px;
   padding: 0.5em 0;
@@ -161,6 +161,10 @@ h1.main-page-title:before {
   border-radius: 3px;
   padding: 1em 5em;
   position: relative;
+}
+
+.ly_fieldCnt.ly_fieldCnt__docType label :not(:last-child) {
+  margin-right: 2rem;
 }
 
 .ly_fieldCnt.ly_fieldCnt__docType label:before {
@@ -192,8 +196,17 @@ h1.main-page-title:before {
   font-weight: normal;
 }
 
-.ly_fieldCnt.ly_fieldCnt__msg {
+.ly_fieldCnt.ly_fieldCnt__body {
   align-items: flex-start;
+}
+
+.ly_fieldCnt.ly_fieldCnt__payment label {
+  display: flex;
+  font-weight: normal;
+}
+
+.ly_fieldCnt.ly_fieldCnt__payment label :not(:last-child) {
+  margin-right: 2rem;
 }
 
 .el_fieldTtl {
@@ -378,11 +391,12 @@ h1.main-page-title:before {
 
 h2.el_lv2heading {
   border-left: 7px solid #e27933;
+  padding-top: 1em;
+  padding-bottom: 1em;
   padding-left: 10px;
   line-height: 1.5;
   font-size: 1.8rem;
   font-weight: bold;
-  margin-bottom: 20px;
   background: #f6f6f6;
 }
 
@@ -403,7 +417,7 @@ fieldset {
 }
 
 .el_supplement {
-  margin: 0.2em 0;
+  margin: 0.5em 0;
   color: red;
 }
 
@@ -448,8 +462,13 @@ h3 {
 .ly_deadline ul {
   padding: 1em;
   background: #fcfed5;
+  list-style-type: disc;
 }
 
 .ly_deadline li:not(:last-child) {
   margin-bottom: 1em;
+}
+
+.ly_textarea {
+  width: calc(100% - 200px);
 }

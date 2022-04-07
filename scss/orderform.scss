@@ -133,7 +133,7 @@ h1.main-page-title {
         padding: 0.5em 0;
     }
     textarea {
-        width: calc(100% - 200px);
+        width: 100%;
         border: solid 1px #ccc;
         border-radius: 3px;
         padding: 0.5em 0;
@@ -148,6 +148,9 @@ h1.main-page-title {
             border-radius: 3px;
             padding: 1em 5em;
             position: relative;
+            :not(:last-child) {
+                margin-right: 2rem;
+            }
             &:before {
                 content: "";
                 position: absolute;
@@ -176,8 +179,17 @@ h1.main-page-title {
             font-weight: normal;
         }
     }
-    &.ly_fieldCnt__msg {
+    &.ly_fieldCnt__body {
         align-items: flex-start;
+    }
+    &.ly_fieldCnt__payment {
+        label {
+            display: flex;
+            font-weight: normal;
+            :not(:last-child) {
+                margin-right: 2rem;
+            }
+        }
     }
 }
 .el_fieldTtl {
@@ -336,11 +348,12 @@ h1.main-page-title {
 
 h2.el_lv2heading {
 	border-left: 7px solid #e27933;
+    padding-top: 1em;
+    padding-bottom: 1em;
 	padding-left: 10px;
 	line-height: 1.5;
 	font-size: 1.8rem;
 	font-weight: bold;
-	margin-bottom: 20px;
     background: rgb(246, 246, 246);
 }
 .ly_fieldCnt {
@@ -361,7 +374,7 @@ fieldset {
     display: flex;
 }
 .el_supplement {
-    margin: 0.2em 0;
+    margin: 0.5em 0;
     color: red;
 }
 .ly_fileOperation {
@@ -401,8 +414,12 @@ h3 {
     ul {
         padding: 1em;
         background: rgb(252, 254, 213);
+        list-style-type: disc;
     }
     li:not(:last-child) {
         margin-bottom: 1em;
     }
+}
+.ly_textarea {
+    width: calc(100% - 200px);
 }
