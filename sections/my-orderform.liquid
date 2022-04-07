@@ -16,7 +16,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient">
   <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
-    <h2 class="title title-wrapper--no-top-margin">{{ section.settings.heading | escape }}</h2>
+    {% comment %} <h2 class="title title-wrapper--no-top-margin">{{ section.settings.heading | escape }}</h2> {% endcomment %}
     <div class="ly_statusCnt">
         <div class=ly_status>
             <div id="js_statusCircle1" class="js_statusCircle js_statusCircle__orange">1</div>
@@ -38,18 +38,24 @@
             <p>送信時に問題が発生しました。入力内容をご確認のうえ、再度お試しください。</p>
         {%- endif -%}
         <section class="ly_input js_input js_input__active">
+            <h2 class="el_lv2heading">見積書または請求書のどちらをご希望がお選びください</h2>
             <div class="ly_inputForm">
                 <div class="ly_fieldCnt ly_fieldCnt__name">
-                    <div class="el_fieldTtl"><span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <label for="ContactForm-name">氏名</label>
-                        <input type="hidden" name="contact[氏名]" id="ContactForm-name">
+                    <input type="radio" name="contact[ドキュメントの種類]" value="見積書">
+                    <input type="radio" name="contact[ドキュメントの種類]" value="請求書">
+                <div>
+            </div>
+            <h2 class="el_lv2heading">見積書または請求書のどちらをご希望がお選びください</h2>
+            <div class="ly_inputForm">
+                <div class="ly_fieldCnt ly_fieldCnt__name">
+                    <div class="el_fieldTtl"><span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                        <label for="ContactForm-company">会社名/屋号</label>
+                        <input type="hidden" name="contact[会社名/屋号]" id="ContactForm-company">
                     </div>
                     <div>
-                        <label for="ContactForm-familyName" class="el_subLabel">姓</label>
-                        <input autocomplete="family-name" type="text" id="ContactForm-familyName" value="{% if form.last_name %}{{ form.name }}{% elsif customer %}{{ customer.last_name }}{% endif %}" placeholder="" required>
-                        <label for="ContactForm-givenName" class="el_subLabel">名</label>
-                        <input autocomplete="given-name" type="text" id="ContactForm-givenName" value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}" placeholder="" required>
-                        <p id="js_validate1-1" class="el_validate js_validate">※氏名を入力してください</p>                
+                        <label for="ContactForm-Name" class="el_subLabel">お名前/ご担当者名</label>
+                        <input autocomplete="name" type="text" id="ContactForm-Name" value="{% if form.last_name %}{{ form.first_name }} {{ form.last_name }}{% elsif customer %}{{ customer.name }}{% endif %}" placeholder="" required>
+                        <p id="js_validate1-1" class="el_validate js_validate">※お名前/ご担当者名を入力してください</p>                
                     </div>
                 </div>
                 <div class="ly_fieldCnt ly_fieldCnt__company">
@@ -61,6 +67,16 @@
                         <input autocomplete="organization" type="text" id="ContactForm-company" name="contact[会社名]" value="{% if form.company %}{{ form.company }}{% elsif customer %}{{ customer.company }}{% endif %}" placeholder="">
                         <p id="js_validate2-1" class="el_validate js_validate">※半角数字で入力してください</p>                
                     </div>
+                </div>
+                <div class="ly_fieldCnt ly_fieldCnt__phone">
+                    <div class="el_fieldTtl">
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                        <label for="ContactForm-phone">電話番号<br><span>営業電話はいたしません</span></label>
+                    </div>
+                    <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+                    <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
+                    <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
+                    <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
                 </div>
                 <div class="field--with-error ly_fieldCnt ly_fieldCnt__email">
                     <div class="el_fieldTtl">
@@ -96,20 +112,79 @@
                     </small>
                 {%- endif -%}
                 </div>
-                <div class="ly_fieldCnt ly_fieldCnt__phone">
-                    <div class="el_fieldTtl">
-                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <label for="ContactForm-phone">電話番号</label>
+                <div class="ly_fieldCnt ly_fieldCnt__prefecture">
+                    <div class="el_fieldTtl"><span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                        <label for="ContactForm-prefecture">納品先の都道府県</label>
+                        <select name="contact[納品先の都道府県]" id="ContactForm-prefecture">
+                            <option value="" selected>▼  選択してください</option>
+                            <option value="北海道">北海道</option>
+                            <option value="青森県">青森県</option>
+                            <option value="岩手県">岩手県</option>
+                            <option value="宮城県">宮城県</option>
+                            <option value="秋田県">秋田県</option>
+                            <option value="山形県">山形県</option>
+                            <option value="福島県">福島県</option>
+                            <option value="茨城県">茨城県</option>
+                            <option value="栃木県">栃木県</option>
+                            <option value="群馬県">群馬県</option>
+                            <option value="埼玉県">埼玉県</option>
+                            <option value="千葉県">千葉県</option>
+                            <option value="東京都">東京都</option>
+                            <option value="神奈川県">神奈川県</option>
+                            <option value="新潟県">新潟県</option>
+                            <option value="富山県">富山県</option>
+                            <option value="石川県">石川県</option>
+                            <option value="福井県">福井県</option>
+                            <option value="山梨県">山梨県</option>
+                            <option value="長野県">長野県</option>
+                            <option value="岐阜県">岐阜県</option>
+                            <option value="静岡県">静岡県</option>
+                            <option value="愛知県">愛知県</option>
+                            <option value="三重県">三重県</option>
+                            <option value="滋賀県">滋賀県</option>
+                            <option value="京都府">京都府</option>
+                            <option value="大阪府">大阪府</option>
+                            <option value="兵庫県">兵庫県</option>
+                            <option value="奈良県">奈良県</option>
+                            <option value="和歌山県">和歌山県</option>
+                            <option value="鳥取県">鳥取県</option>
+                            <option value="島根県">島根県</option>
+                            <option value="岡山県">岡山県</option>
+                            <option value="広島県">広島県</option>
+                            <option value="山口県">山口県</option>
+                            <option value="徳島県">徳島県</option>
+                            <option value="香川県">香川県</option>
+                            <option value="愛媛県">愛媛県</option>
+                            <option value="高知県">高知県</option>
+                            <option value="福岡県">福岡県</option>
+                            <option value="佐賀県">佐賀県</option>
+                            <option value="長崎県">長崎県</option>
+                            <option value="熊本県">熊本県</option>
+                            <option value="大分県">大分県</option>
+                            <option value="宮崎県">宮崎県</option>
+                            <option value="鹿児島県">鹿児島県</option>
+                            <option value="沖縄県">沖縄県</option>                      
+                        </select>
                     </div>
-                    <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-                    <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
-                    <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
-                    <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
                 </div>
+                <div class="ly_fieldCnt ly_fieldCnt__payment">
+                    <fieldset>
+                        <div class="el_fieldTtl">
+                            <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
+                            <legend>ご希望の決済方法</legend>
+                        </div>
+                        <input type="radio" name="contact[ご希望の決済方法]" id="ContactForm-payment1" value="銀行振り込み">
+                        <input type="radio" name="contact[ご希望の決済方法]" id="ContactForm-payment2" value="クレジットカード決済">
+                        <p id="js_validate4-1" class="el_validate js_validate">※電話番号を入力してください</p>
+                        <p id="js_validate4-2" class="el_validate js_validate">※半角数字で入力してください</p>
+                        <p id="js_validate4-3" class="el_validate js_validate">※桁数が適切ではありません。</p>
+                    </fieldset>
+                </div>
+
                 <div class="ly_fieldCnt ly_fieldCnt__msg">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <label for="ContactForm-body">お問い合わせ内容</label>
+                        <label for="ContactForm-body">お見積り・発注内容・ご質問<br><span>担当者より返信いたします</span></label>
                     </div>
                     <div>
                         <textarea
@@ -122,9 +197,29 @@
                         >
                         {{- form.body -}}
                         </textarea>
+                        <p>ご検討中の商品がございましたら品番もご記入ください</p>
                         <p id="js_validate5-1" class="el_validate js_validate">※お問い合わせ内容を入力してください</p>                
                     </div>
                 </div>
+                <div class="ly_fieldCnt ly_fieldCnt__attachment">
+                    <div class="el_fieldTtl">
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                        <label for="ContactForm-attachment">ファイル添付</span></label>
+                    </div>
+                    <div id="inputFile">
+                        <!-- ドラッグ&ドロップエリア -->
+                        <p id="dropArea">ここにファイルをドロップしてください<br>または</p>
+
+                        <!-- 通常のinput[type=file] -->
+                        <div id="inputFileWrap">
+                            <input type="file" name="uploadFile" id="uploadFile">
+                            <div id="btnInputFile"><span>ファイルを選択する</span></div>
+                            <div id="btnChangeFile"><span>ファイルを変更する</span></div>
+                        </div>
+                    </div>
+                    <input type="tel" name="contact[電話番号]" id="ContactForm-phone" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+                </div>
+
             </div>
             <div class="ly_formBtnCnt">
                 <button type="button" id="js_formBtn__confirm" class="bl_formBtn bl_formBtn__confirm">
@@ -133,44 +228,77 @@
                 </button>
             </div>
         </section>
+        <section>
+            <h3>納期について</h3>
+            <ul>
+                <li>お急ぎの場合は備考欄にご希望の納品日を誤入力のうえ担当者にご相談ください。なお、お問い合わせの状況によってはご対応が難しい場合もございます。</li>
+                <li>混雑期（年末年始、年度末、長期休業前後など）は通常よりもお届けまでにお時間を頂戴いたします。</li>
+                <li>ご発注の際は、余裕を持ったスケジュールにてご依頼いただきますようお願いいたします。</li>
+                <li>オーダー品は、原則返品・交換不可となります。ご発注前のサイズ確認や不明点など、お気軽にお問い合わせください。</li>
+            </ul>
+        </section>
 
         {% comment %} 確認画面へ {% endcomment %}
         <section class="ly_confirm js_confirm">
+            <h2 class="el_lv2heading">見積書または請求書のどちらをご希望がお選びください</h2>
+            <p id="js_confirmDocType"></p>
+            <h2 class="el_lv2heading">見積書または請求書のどちらをご希望がお選びください</h2>
             <div class="ly_confirmForm">
-                <div class="ly_fieldCnt ly_fieldCnt__name">
-                    <div class="el_fieldTtl">
-                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <span class="el_confirmLabel">氏名</span>
-                    </div>
-                    <span id="js_confirmName"></span>
-                </div>
                 <div class="ly_fieldCnt ly_fieldCnt__company">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
-                        <span class="el_confirmLabel">会社名</span>
+                        <span class="el_confirmLabel">会社名/屋号</span>
                     </div>
                     <span id="js_confirmCompany"></span>
                 </div>
-                <div class="field--with-error ly_fieldCnt ly_fieldCnt__email">
+                <div class="ly_fieldCnt ly_fieldCnt__name">
+                    <div class="el_fieldTtl">
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
+                        <span class="el_confirmName">お名前/ご担当者名</span>
+                    </div>
+                    <span id="js_confirmName"></span>
+                </div>
+                <div class="field--with-error ly_fieldCnt ly_fieldCnt__phone">
+                    <div class="el_fieldTtl">
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                        <span class="el_confirmLabel">電話番号</span>
+                    </div>
+                    <span id="js_confirmPhone"></span>
+                </div>
+                <div class="ly_fieldCnt ly_fieldCnt__email">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
                         <span class="el_confirmLabel">メールアドレス</span>
                     </div>
                     <span id="js_confirmEmail"></span>
                 </div>
-                <div class="ly_fieldCnt ly_fieldCnt__phone">
+                <div class="ly_fieldCnt ly_fieldCnt__prefecture">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <span class="el_confirmLabel">電話番号</span>
+                        <span class="el_confirmLabel">納品先の都道府県</span>
                     </div>
-                    <span id="js_confirmPhone"></span>
-                </div>
-                <div class="ly_fieldCnt ly_fieldCnt__msg">
+                    <p id="js_confirmPrefecture"></p>
+                </div>        
+                <div class="ly_fieldCnt ly_fieldCnt__payment">
                     <div class="el_fieldTtl">
                         <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
-                        <span class="el_confirmLabel">お問い合わせ内容</span>
+                        <span class="el_confirmLabel">ご希望の決済方法</span>
+                    </div>
+                    <p id="js_confirmPayment"></p>
+                </div>        
+                <div class="ly_fieldCnt ly_fieldCnt__body">
+                    <div class="el_fieldTtl">
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__must">必須</span>
+                        <span class="el_confirmLabel">お見積り・発注内容・ご質問</span>
                     </div>
                     <p id="js_confirmBody"></p>
+                </div>        
+                <div class="ly_fieldCnt ly_fieldCnt__attachment">
+                    <div class="el_fieldTtl">
+                        <span class="el_fieldTtl_annotate el_fieldTtl_annotate__any">任意</span>
+                        <span class="el_confirmLabel">ファイル添付</span>
+                    </div>
+                    <p id="js_confirmAttachment"></p>
                 </div>        
             </div>
             <div class="ly_formBtnCnt ly_formBtnCnt__confirm">
