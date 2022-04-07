@@ -335,15 +335,7 @@ fieldset {
 }
 
 #dropArea {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: 100px 0 0;
-    border: 2px dashed #494949;
-    background: rgba(22, 165, 191, 0);
-    transition: all 0.25s cubic-bezier(0.21, 0.51, 0.51, 1);
+
 }
 
 #dropArea.dragover {
