@@ -143,6 +143,7 @@ h1.main-page-title {
         margin-top: 0;
     }
     &.ly_fieldCnt__docType {
+        border-bottom: none;
         label {
             border: solid 1px #ccc;
             border-radius: 3px;
@@ -348,8 +349,8 @@ h1.main-page-title {
 
 h2.el_lv2heading {
 	border-left: 7px solid #e27933;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: .5em;
+    padding-bottom: .5em;
 	padding-left: 10px;
 	line-height: 1.5;
 	font-size: 1.8rem;
