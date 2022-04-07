@@ -467,6 +467,10 @@ fieldset {
   margin-right: 2rem;
 }
 
+.ly_fileAttachment_imgCnt img {
+  height: 30px;
+}
+
 .ly_fileAttachment_txtCnt p:first-of-type {
   margin-bottom: 1em;
 }

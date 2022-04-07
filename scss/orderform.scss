@@ -413,6 +413,9 @@ fieldset {
 }
 .ly_fileAttachment_imgCnt {
     margin-right: 2rem;
+    img {
+        height: 30px;
+    }
 }
 .ly_fileAttachment_txtCnt {
     p {
