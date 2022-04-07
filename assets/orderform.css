@@ -339,7 +339,7 @@ h1.main-page-title:before {
   }
 }
 
-h2.lv2heading {
+h2.el_lv2heading {
   border-left: 7px solid #e27933;
   padding-left: 10px;
   line-height: 1.5;
@@ -348,10 +348,29 @@ h2.lv2heading {
   margin-bottom: 20px;
 }
 
+.ly_fieldCnt label span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: red;
+}
+
+legend {
+  display: contents;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+fieldset {
+  display: flex;
+}
+
+.el_supplement {
+  margin: 0.2em 0;
+  color: red;
+}
+
 #inputFile {
-  position: relative;
-  padding: 180px 0 100px;
-  text-align: center;
+  display: flex;
 }
 
 #dropArea {
@@ -372,14 +391,11 @@ h2.lv2heading {
 }
 
 #uploadFile {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  display: block;
-  width: 300px;
-  height: 80px;
-  opacity: 0;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  border: solid 1px #494949;
+  margin-left: 1em;
 }
 
 #inputFileWrap {
