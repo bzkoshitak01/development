@@ -468,9 +468,9 @@ $(window).resize( function() {
 		</script> 
 <script>
 		
-if (window.matchMedia( "(max-width: 599px)" ).matches) {
-    $(function () {
-        $('.ac-parent').on('click', function () {
+$('.ac-parent').on('click', function () {
+    if (window.matchMedia( "(max-width: 599px)" ).matches) {
+        $(function () {
             $(this).next().slideToggle();
             //openクラスをつける
             $(this).toggleClass("open");
@@ -480,10 +480,8 @@ if (window.matchMedia( "(max-width: 599px)" ).matches) {
             // 一つ開くと他は閉じるように
             $('.ac-parent').not($(this)).next('.ac-child').slideUp();
         });
-    });
-} else {
-/* ウィンドウサイズが 768px以上の場合のコードをここに */
-}
+    }
+});
 </script>
 
 {% comment %} ヘッダー検索 {% endcomment %}
