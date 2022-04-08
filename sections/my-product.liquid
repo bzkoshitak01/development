@@ -1161,6 +1161,17 @@
     assign vManytext = vManytext | remove_first: ','
 -%}
 <script>
+    const addToCartBtn = document.querySelector('button[type=submit]');
+    const addToCartBtnSpan = document.querySelector('button[type=submit] span');
+    addToCartBtn.addEventListener('click',addToCartBtnTxt);
+    function addToCartBtnTxt(){
+        if(addToCartBtnSpan.innerText == 'Add to cart'){
+            addToCartBtnSpan.innerText == 'カートに入れる';
+        }else if(addToCartBtnSpan.innerText == 'Sold out'){
+            addToCartBtnSpan.innerText == '売り切れ';
+        }
+    }
+
     const vId = '{{ vId }}'.split(',');
     const vTitle = '{{ vTitle }}'.split(',');
     const vPrice = '{{ vPrice }}'.split('.');//ここだけ金額のカンマと区別するため、ピリオドでsplitしている
