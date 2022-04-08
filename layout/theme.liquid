@@ -469,7 +469,7 @@ $(window).resize( function() {
 <script>
 
 footerAccordion();
-window.addEventListener('click',footerAccordion);
+window.addEventListener('resize',footerAccordion);
 function footerAccordion(){
     if (window.matchMedia( "(max-width: 599px)" ).matches) {
         $(function () {
