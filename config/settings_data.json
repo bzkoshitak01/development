@@ -3,7 +3,8 @@
     "sections": {
       "announcement-bar": {
         "type": "announcement-bar",
-        "settings": {}
+        "settings": {
+        }
       },
       "header": {
         "type": "header",
@@ -130,11 +131,13 @@
       },
       "main-password-header": {
         "type": "main-password-header",
-        "settings": {}
+        "settings": {
+        }
       },
       "main-password-footer": {
         "type": "main-password-footer",
-        "settings": {}
+        "settings": {
+        }
       },
       "mv": {
         "type": "mv",
@@ -182,7 +185,8 @@
           "96dc15cd-852b-4b2e-9de2-7d7fc82ed8e3",
           "1623cdd2-540b-4a96-9978-f25413d059ff"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "aside": {
         "type": "aside",
@@ -197,7 +201,8 @@
           },
           "50a879fc-daea-4d21-a8f8-c596bee353a7": {
             "type": "cat-menu",
-            "settings": {}
+            "settings": {
+            }
           },
           "8f710a81-db3b-4620-9826-e21da7229c21": {
             "type": "flexible-menu",
@@ -208,7 +213,8 @@
           },
           "43670a9e-c58c-424d-ae69-025115180ea6": {
             "type": "page-menu",
-            "settings": {}
+            "settings": {
+            }
           },
           "71449e2e-f63b-4d9d-9282-163699047d11": {
             "type": "banner",
@@ -226,10 +232,21 @@
           "43670a9e-c58c-424d-ae69-025115180ea6",
           "71449e2e-f63b-4d9d-9282-163699047d11"
         ],
-        "settings": {}
+        "settings": {
+        }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "319724205969189013": {
+        "type": "shopify:\/\/apps\/form-builder-with-file-upload\/blocks\/app-embed\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+        "disabled": false,
+        "settings": {
+        }
+      }
+    }
   },
   "presets": {
     "Default": {
@@ -247,7 +264,8 @@
           "block_order": [
             "announcement-bar-0"
           ],
-          "settings": {}
+          "settings": {
+          }
         },
         "header": {
           "type": "header",
@@ -260,7 +278,8 @@
           "blocks": {
             "footer-0": {
               "type": "link_list",
-              "settings": {}
+              "settings": {
+              }
             },
             "footer-1": {
               "type": "link_list",
@@ -289,11 +308,13 @@
         },
         "main-password-header": {
           "type": "main-password-header",
-          "settings": {}
+          "settings": {
+          }
         },
         "main-password-footer": {
           "type": "main-password-footer",
-          "settings": {}
+          "settings": {
+          }
         }
       }
     }
