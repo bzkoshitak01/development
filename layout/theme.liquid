@@ -467,23 +467,27 @@ $(window).resize( function() {
     });
 		</script> 
 <script>
-		
-if (window.matchMedia( "(max-width: 599px)" ).matches) {
-    $(function () {
-        $('.ac-parent').on('click', function () {
-            $(this).next().slideToggle();
-            //openクラスをつける
-            $(this).toggleClass("open");
-            //クリックされていないac-parentのopenクラスを取る
-            $('.ac-parent').not(this).removeClass('open');
 
-            // 一つ開くと他は閉じるように
-            $('.ac-parent').not($(this)).next('.ac-child').slideUp();
+footerAccordion();
+window.addEventListener('click',footerAccordion);
+function footerAccordion(){
+    if (window.matchMedia( "(max-width: 599px)" ).matches) {
+        $(function () {
+            $('.ac-parent').on('click', function () {
+                $(this).next().slideToggle();
+                //openクラスをつける
+                $(this).toggleClass("open");
+                //クリックされていないac-parentのopenクラスを取る
+                $('.ac-parent').not(this).removeClass('open');
+
+                // 一つ開くと他は閉じるように
+                $('.ac-parent').not($(this)).next('.ac-child').slideUp();
+            });
         });
-    });
-} else {
-/* ウィンドウサイズが 768px以上の場合のコードをここに */
-}
+    } else {
+    /* ウィンドウサイズが 768px以上の場合のコードをここに */
+    }
+}	
 </script>
 
 {% comment %} ヘッダー検索 {% endcomment %}

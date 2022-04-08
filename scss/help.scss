@@ -975,3 +975,18 @@ product-form {
 .quantity__input {
     min-width: 50px;
 }
+
+button.product-form__submit {
+    span {
+        &:before {
+            content: 'カートに入れる';
+        }
+    }
+}
+button.product-form__submit[disabled=disabled] {
+    span {
+        &:before {
+            content: 'カートに入れる';
+        }
+    }
+}
