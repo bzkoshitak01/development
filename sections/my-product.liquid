@@ -1165,11 +1165,15 @@
     const addToCartBtnSpan = document.querySelector('button[type=submit] span');
     addToCartBtn.addEventListener('click',addToCartBtnTxt);
     function addToCartBtnTxt(){
-        if(addToCartBtnSpan.innerText == 'Add to cart'){
-            addToCartBtnSpan.innerText == 'カートに入れる';
-        }else if(addToCartBtnSpan.innerText == 'Sold out'){
-            addToCartBtnSpan.innerText == '売り切れ';
-        }
+        let intervalId1 = setInterval(function(){
+            if(addToCartBtnSpan.innerText == 'カートに入れる' || addToCartBtnSpan.innerText == '売り切れ'){
+                clearInterval(intervalId1);
+            }else if(addToCartBtnSpan.innerText == 'Add to cart'){
+                addToCartBtnSpan.innerText == 'カートに入れる';
+            }else if(addToCartBtnSpan.innerText == 'Sold out'){
+                addToCartBtnSpan.innerText == '売り切れ';
+            }
+        },200);
     }
 
     const vId = '{{ vId }}'.split(',');
