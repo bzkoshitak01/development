@@ -1065,16 +1065,6 @@
         assign vPriceCompFormat = variant.compare_at_price | money_with_currency
         assign vPrice = vPrice | append: '.' | append: vPriceFormat
         assign vPriceComp = vPriceComp | append: '.' | append: vPriceCompFormat
-        assign vNumber = vNumber | append: ',' | append: variant.metafields.global.number
-        assign vMaterial = vMaterial | append: ',' | append: variant.metafields.global.material
-        assign vWeight = vWeight | append: ',' | append: variant.weight
-        assign vCatalogLink = vCatalogLink | append: ',' | append: variant.metafields.global.catalogLink
-        assign vCatalogName = vCatalogName | append: ',' | append: variant.metafields.global.catalogName
-        assign vOdd = vOdd | append: ',' | append: variant.metafields.global.odd
-        assign vSize = vSize | append: ',' | append: variant.metafields.global.size
-        assign vColor = vColor | append: ',' | append: variant.metafields.global.color
-        assign vContent = vContent | append: ',' | append: variant.metafields.global.content
-        assign vManytext = vManytext | append: ',' | append: variant.metafields.global.manytext
 
         if vInitialId == variant.id
             assign vInitialNum = i
@@ -1085,16 +1075,7 @@
     assign vTitle = vTitle | remove_first: ','
     assign vPrice = vPrice | remove_first: '.'
     assign vPriceComp = vPriceComp | remove_first: '.'
-    assign vNumber = vNumber | remove_first: ','
-    assign vMaterial = vMaterial | remove_first: ','
-    assign vWeight = vWeight | remove_first: ','
-    assign vCatalogLink = vCatalogLink | remove_first: ','
-    assign vCatalogName = vCatalogName | remove_first: ','
-    assign vOdd = vOdd | remove_first: ','
-    assign vSize = vSize | remove_first: ','
-    assign vColor = vColor | remove_first: ','
-    assign vContent = vContent | remove_first: ','
-    assign vManytext = vManytext | remove_first: ','
+
 -%}
 <script>
 
@@ -1102,16 +1083,7 @@
     const vTitle = '{{ vTitle }}'.split(',');
     const vPrice = '{{ vPrice }}'.split('.');//ここだけ金額のカンマと区別するため、ピリオドでsplitしている
     const vPriceComp = '{{ vPriceComp }}'.split('.');//ここだけ金額のカンマと区別するため、ピリオドでsplitしている
-    const vNumber = '{{ vNumber }}'.split(',');
-    const vMaterial = '{{ vMaterial }}'.split(',');
-    const vWeight = '{{ vWeight }}'.split(',');
-    const vCatalogLink = '{{ vCatalogLink }}'.split(',');
-    const vCatalogName = '{{ vCatalogName }}'.split(',');
-    const vOdd = '{{ vOdd }}'.split(',');
-    const vSize = '{{ vSize }}'.split(',');
-    const vColor = '{{ vColor }}'.split(',');
-    const vContent = '{{ vContent }}'.split(',');
-    const vManytext = '{{ vManytext }}'.split(',');
+
     const vData = [];
 
     console.log('vPrice = '+vPrice);
@@ -1124,16 +1096,7 @@
             title: vTitle[i],
             price: vPrice[i],
             priceComp: vPriceComp[i],
-            number: vNumber[i],
-            material: vMaterial[i],
-            weight: vWeight[i],
-            catalogLink: vCatalogLink[i],
-            catalogName: vCatalogName[i],
-            odd: vOdd[i],
-            size: vSize[i],
-            color: vColor[i],
-            content: vContent[i],
-            manytext: vManytext[i]
+
         });
         i=i+1;
     });
