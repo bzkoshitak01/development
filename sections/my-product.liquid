@@ -1087,9 +1087,6 @@
 
     const vData = [];
 
-    console.log('vPrice = '+vPrice);
-    console.log('vPriceComp = '+vPriceComp);
-
     let i=0
     vTitle.forEach(() => {
         vData.push({
@@ -1139,8 +1136,7 @@
         selVarPrice.innerHTML=vData[num].price+'（税別)';
         selVarPriceComp.innerHTML='定価：'+vData[num].priceComp+'(税別)のところ';
         for(let i=0; i<vSpec.length; i++){
-            vSpec[i].classList.add('js_variantSpec__show');
-            console.log(vSpec[i]);
+            vSpec[i].classList.remove('js_variantSpec__show');
         }
         vSpec[num].classList.add('js_variantSpec__show');
         console.log(vSpec[num]);
