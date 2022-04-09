@@ -446,7 +446,7 @@
 	
 	<section class="spec_contents">
         {% for variant in product.variants %}
-            {% for key in variant.metafields.spec.spec.value %}
+            {% for key in variant.metafields.spec.spec.key %}
                 {{ key }}
             {% endfor %}
         {% endfor %}
