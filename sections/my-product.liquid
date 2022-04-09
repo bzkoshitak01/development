@@ -125,7 +125,16 @@
 
             {% comment %} 商品説明 {% endcomment %}
 			<p class="ybox">{{ product.metafields.global.outline }}</p>
-
+            
+<select id="product-select" name="id">
+  {% for variant in product.variants %}
+    <option value="{{ variant.id }}"
+      {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+    >
+      {{ variant.title }} - {{ variant.price | money }}
+    </option>
+  {% endfor %}
+</select>
             {% comment %} バリエーション {% endcomment %}
             {%- unless product.has_only_default_variant -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
@@ -1081,6 +1090,14 @@
 <script>
 var product = {{ product | json }}
 console.log(product);
+var selectCallback = function(variant, selector) {
+    console.log('this is test');
+}
+new Shopify.OptionSelectors('product-select', {
+    product: {{ product | json }},
+    onVariantSelected: selectCallback,
+    enableHistoryState: true
+});
 </script>
 <script>
     const vId = '{{ vId }}'.split(',');
