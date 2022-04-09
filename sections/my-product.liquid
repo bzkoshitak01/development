@@ -1077,6 +1077,8 @@
     assign vPriceComp = vPriceComp | remove_first: '.'
 
 -%}
+
+{{ 'my-variant-change.js' | shopify_asset_url | script_tag }}
 <script>
     const vId = '{{ vId }}'.split(',');
     const vTitle = '{{ vTitle }}'.split(',');
