@@ -446,9 +446,9 @@
 	
 	<section class="spec_contents">
         {% for variant in product.variants %}
-            {{variant.metafields.spec.spec.data}}
+            {{variant.metafields.spec.spec}}
             {% for spec in variant.metafields.spec.spec %}
-                {{ spec | first }}
+                {{ spec[0] }}
             {% endfor %}
         {% endfor %}
 	  <h2 class="item_stit">{{ 'spec_icon_b9bdfffd-0755-4d27-9f67-977496d5dd63.png' | file_img_url: 'small' | img_tag: '商品仕様' }}商品仕様</h2>
