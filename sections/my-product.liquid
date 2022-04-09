@@ -911,11 +911,6 @@
                       </option>
                     {%- endfor -%}
                   </select>
-                  {% render 'icon-caret' %}
-                </div>
-              </div>
-            </noscript>
-
             <select id="product-select" name="id">
             {% for variant in product.variants %}
                 <option value="{{ variant.id }}"
@@ -925,7 +920,12 @@
                 </option>
             {% endfor %}
             </select>
-            
+                  {% render 'icon-caret' %}
+                </div>
+              </div>
+            </noscript>
+
+
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
