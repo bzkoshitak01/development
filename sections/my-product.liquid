@@ -1140,8 +1140,10 @@
         selVarPriceComp.innerHTML='定価：'+vData[num].priceComp+'(税別)のところ';
         for(let i=0; i<vSpec.length; i++){
             vSpec[i].classList.add('js_variantSpec__show');
+            console.log(vSpec[i]);
         }
         vSpec[num].classList.add('js_variantSpec__show');
+        console.log(vSpec[num]);
 
         for(let i=0; i<varColumn.length; i++){
             varColumn[i].classList.remove('js_active');
