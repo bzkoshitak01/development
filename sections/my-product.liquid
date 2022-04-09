@@ -1144,16 +1144,6 @@
     const selVarPrice = document.querySelector('.js_selVarPrice');
     const selVarPriceComp = document.querySelector('.js_selVarPriceComp');
 
-    const selVarNumber = document.querySelector('.js_selVarNumber');
-    const selVarMaterial = document.querySelector('.js_selVarMaterial');
-    const selVarWeight = document.querySelector('.js_selVarWeight');
-    const selVarCatalog = document.querySelector('.js_selVarCatalog');
-    const selVarOdd = document.querySelector('.js_selVarOdd');
-    const selVarSize = document.querySelector('.js_selVarSize');
-    const selVarColor = document.querySelector('.js_selVarColor');
-    const selVarContent = document.querySelector('.js_selVarContent');
-    const selVarManytext = document.querySelector('.js_selVarManytext');
-
     const varColumn = document.querySelectorAll('.js_varColumn');
 
     priceLabeler();
@@ -1185,16 +1175,7 @@
         selVarTitle.innerHTML=vData[num].title;
         selVarPrice.innerHTML=vData[num].price+'（税別)';
         selVarPriceComp.innerHTML='定価：'+vData[num].priceComp+'(税別)のところ';
-        selVarNumber.innerHTML=vData[num].number;
-        selVarMaterial.innerHTML=vData[num].material;
-        selVarWeight.innerHTML=vData[num].weight;
-        selVarCatalog.setAttribute('href',vData[num].catalogLink);
-        selVarCatalog.innerHTML=vData[num].catalogName;
-        selVarOdd.innerHTML=vData[num].odd;
-        selVarSize.innerHTML=vData[num].size;
-        selVarColor.innerHTML=vData[num].color;
-        selVarContent.innerHTML=vData[num].content;
-        selVarManytext.innerHTML=vData[num].manytext;
+
 
         for(let i=0; i<varColumn.length; i++){
             varColumn[i].classList.remove('js_active');
