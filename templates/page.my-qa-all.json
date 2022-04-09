@@ -6,37 +6,37 @@
         "84c8c672-c6f1-4b13-8cde-d0d95012c6d5": {
           "type": "frequent-faq",
           "settings": {
-            "frequent-faq_page": "納期を教えてください-質問カテゴリ1-よくある質問1"
+            "frequent-faq_article": "faq-2\/sample-question-11"
           }
         },
         "e96fd789-c702-424d-8498-68657de5b205": {
           "type": "frequent-faq",
           "settings": {
-            "frequent-faq_page": "納期を教えてください-質問カテゴリ1-よくある質問2"
+            "frequent-faq_article": "faq-2\/sample-question-10"
           }
         },
         "c55ab0a9-c00f-40cd-9f17-c25b5c58dbc0": {
           "type": "frequent-faq",
           "settings": {
-            "frequent-faq_page": "納期を教えてください-質問カテゴリ1-よくある質問3"
+            "frequent-faq_article": "faq-3\/sample-question-09"
           }
         },
         "829309f8-a804-4eea-ab4b-0fcd6292a188": {
           "type": "frequent-faq",
           "settings": {
-            "frequent-faq_page": "納期を教えてください-質問カテゴリ2-よくある質問1"
+            "frequent-faq_article": "faq-2\/sample-question-08"
           }
         },
         "c161b618-abe1-4dc4-a66e-3c6978f4b4a9": {
           "type": "frequent-faq",
           "settings": {
-            "frequent-faq_page": "納期を教えてください-質問カテゴリ2-よくある質問2"
+            "frequent-faq_article": "faq-3\/sample-question-07"
           }
         },
         "34f12420-c198-47cb-8454-8e2736c0e576": {
           "type": "frequent-faq",
           "settings": {
-            "frequent-faq_page": "納期を教えてください-質問カテゴリ2-よくある質問3"
+            "frequent-faq_article": "faq-3\/sample-question-06"
           }
         }
       },
@@ -48,7 +48,8 @@
         "c161b618-abe1-4dc4-a66e-3c6978f4b4a9",
         "34f12420-c198-47cb-8454-8e2736c0e576"
       ],
-      "settings": {}
+      "settings": {
+      }
     }
   },
   "order": [
