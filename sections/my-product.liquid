@@ -152,17 +152,6 @@
                 </variant-radios>
             {%- endunless -%}
 
-            <select id="product-select" name="id">
-            {% for variant in product.variants %}
-                <option value="{{ variant.id }}"
-                {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
-                >
-                {{ variant.title }} - {{ variant.price | money }}
-                </option>
-            {% endfor %}
-            </select>
-
-
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
             <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
                 <label class="form__label" for="Variants-{{ section.id }}">{{ 'products.product.product_variants' | t }}</label>
@@ -1090,15 +1079,8 @@
 
 {% comment %} {{ 'my-variant-change.js' | asset_url | script_tag }} {% endcomment %}
 <script>
-console.log('this is my own judgement');
-var selectCallback = function(variant, selector) {
-    console.log('this is test');
-}
-new Shopify.OptionSelectors('product-select', {
-    product: {{ product | json }},
-    onVariantSelected: selectCallback,
-    enableHistoryState: true
-});
+var product = {{ product | json }}
+console.log(product);
 </script>
 <script>
     const vId = '{{ vId }}'.split(',');
