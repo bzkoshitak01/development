@@ -150,8 +150,18 @@
                     {{ product.variants | json }}
                 </script>
                 </variant-radios>
-
             {%- endunless -%}
+
+            <select id="product-select" name="id">
+            {% for variant in product.variants %}
+                <option value="{{ variant.id }}"
+                {% if variant == product.selected_or_first_available_variant %}selected="selected"{% endif %}
+                >
+                {{ variant.title }} - {{ variant.price | money }}
+                </option>
+            {% endfor %}
+            </select>
+
 
             <noscript class="product-form__noscript-wrapper-{{ section.id }}">
             <div class="product-form__input{% if product.has_only_default_variant %} hidden{% endif %}">
@@ -911,6 +921,7 @@
                       </option>
                     {%- endfor -%}
                   </select>
+<<<<<<< HEAD
             <select id="product-select" name="id">
             {% for variant in product.variants %}
                 <option value="{{ variant.id }}"
@@ -920,12 +931,18 @@
                 </option>
             {% endfor %}
             </select>
+=======
+>>>>>>> 1554a91 (test)
                   {% render 'icon-caret' %}
                 </div>
               </div>
             </noscript>
+<<<<<<< HEAD
 
 
+=======
+            
+>>>>>>> 1554a91 (test)
           {%- when 'buy_buttons' -%}
             <div {{ block.shopify_attributes }}>
               <product-form class="product-form">
