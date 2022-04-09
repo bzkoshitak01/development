@@ -269,7 +269,7 @@
             <div class="top_mainbox">
             
                 {% comment %} breadcrumbs {% endcomment %}
-                {%- if template != 'index' and template != 'product'-%}
+                {%- if template != 'index' and template != 'product' and template != 'page.my-qa-cat' -%}
                 <nav class="ly_breadcrumbs">
                     <span><a href="/">トップ</a></span>
                     {% for link in linklists.breadcrumbs-menu.links %}
@@ -467,10 +467,9 @@ $(window).resize( function() {
     });
 		</script> 
 <script>
-		
-$('.ac-parent').on('click', function () {
-    if (window.matchMedia( "(max-width: 599px)" ).matches) {
-        $(function () {
+if (window.matchMedia( "(max-width: 599px)" ).matches) {
+    $(function () {
+        $('.ac-parent').on('click', function () {
             $(this).next().slideToggle();
             //openクラスをつける
             $(this).toggleClass("open");
@@ -480,8 +479,10 @@ $('.ac-parent').on('click', function () {
             // 一つ開くと他は閉じるように
             $('.ac-parent').not($(this)).next('.ac-child').slideUp();
         });
-    }
-});
+    });
+} else {
+/* ウィンドウサイズが 768px以上の場合のコードをここに */
+}
 </script>
 
 {% comment %} ヘッダー検索 {% endcomment %}
