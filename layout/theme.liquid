@@ -293,6 +293,22 @@
                     {% endfor %}
                 </nav>
                 {%- endif -%}
+                {% comment %} 商品詳細ページ専用パンクズリスト {% endcomment %}
+                <nav class="ly_breadcrumbs">
+                    <span><a href="/">トップ</a></span>
+                    <span><a href="{{ pages['product-all'].url }}">{{ pages['product-all'].title }}</a></span>
+                    {% for link in linklists.breadcrumbs-menu.links %}
+                        {% for sub_link in link.links %}
+                            {% for collection in product.collections %}
+                                {% if sub_link.handle == collection.title %}
+                                    <span><a href="{{ sub_link.url }}">{{ sub_link.title }}の価格・商品一覧</a></span>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    {% endfor %}
+                    <span><a href="javascript:void(0)" class="bc_active">{{ product.title }}</a></span>
+                </nav>
+
 
             {{ content_for_layout }}
             </div>
