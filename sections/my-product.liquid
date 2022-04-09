@@ -449,7 +449,7 @@
         {% assign variantSpecCount = 0 %}
         {% for variant in product.variants %}
         {% assign variantSpecCount = variantSpecCount | plus:1 %}
-        <div class="js_variantSpec{{ variantSpecCount }}">
+        <div class="js_variantSpec js_variantSpec{{ variantSpecCount }}">
             {{ variant.metafields.spec.html }}
         </div>    
         {% endfor %}
@@ -1078,11 +1078,12 @@
 
 -%}
 <script>
-
     const vId = '{{ vId }}'.split(',');
     const vTitle = '{{ vTitle }}'.split(',');
     const vPrice = '{{ vPrice }}'.split('.');//ここだけ金額のカンマと区別するため、ピリオドでsplitしている
     const vPriceComp = '{{ vPriceComp }}'.split('.');//ここだけ金額のカンマと区別するため、ピリオドでsplitしている
+
+    const vSpec = document.querySelectorAll('.js_variantSpec');
 
     const vData = [];
 
@@ -1096,7 +1097,6 @@
             title: vTitle[i],
             price: vPrice[i],
             priceComp: vPriceComp[i],
-
         });
         i=i+1;
     });
@@ -1138,7 +1138,7 @@
         selVarTitle.innerHTML=vData[num].title;
         selVarPrice.innerHTML=vData[num].price+'（税別)';
         selVarPriceComp.innerHTML='定価：'+vData[num].priceComp+'(税別)のところ';
-
+        vSpec[num].classList.add('js_variantSpec__show');
 
         for(let i=0; i<varColumn.length; i++){
             varColumn[i].classList.remove('js_active');

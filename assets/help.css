@@ -1025,3 +1025,11 @@ product-form .product-form__submit {
 .quantity__input {
   min-width: 50px;
 }
+
+.js_variantSpec {
+  display: none;
+}
+
+.js_variantSpec.js_variantSpec__show {
+  display: block;
+}

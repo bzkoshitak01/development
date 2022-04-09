@@ -976,3 +976,9 @@ product-form {
     min-width: 50px;
 }
 
+.js_variantSpec {
+    display: none;
+    &.js_variantSpec__show {
+        display: block;
+    }
+}
