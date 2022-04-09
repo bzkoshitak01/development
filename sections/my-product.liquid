@@ -447,55 +447,58 @@
 	<section class="spec_contents">
         {% for variant in product.variants %}
             {{ variant.metafields.spec.spec }}
+            {% for value in variant.metafields.spec.spec.value %}
+                {{ value }}
+            {% endfor %}
         {% endfor %}
 	  <h2 class="item_stit">{{ 'spec_icon_b9bdfffd-0755-4d27-9f67-977496d5dd63.png' | file_img_url: 'small' | img_tag: '商品仕様' }}商品仕様</h2>
 		<ul>
-		  <li>
-			  <dl>
+            <li>
+                <dl>
 				  <dt>商品番号</dt>
 					<dd class="js_selVarNumber"></dd>
 				</dl>
 			</li>
 			<li>
-			  <dl>
+                <dl>
 				  <dt>サイズ</dt>
 					<dd class="js_selVarSize"></dd>
 				</dl>
 			</li>
 			<li>
-			  <dl>
+                <dl>
 				  <dt>素材</dt>
 					<dd class="js_selVarMaterial"></dd>
 				</dl>
 			</li>
 			<li>
-			  <dl>
-				  <dt>カラー</dt>
+                <dl>
+                    <dt>カラー</dt>
 					<dd class="js_selVarColor"></dd>
 				</dl>
 			</li>
 			<li>
-			  <dl>
-				  <dt>重量</dt>
+                <dl>
+                    <dt>重量</dt>
 					<dd class="js_selVarWeight"></dd>
 				</dl>
 			</li>
 			<li>
-			  <dl>
-				  <dt>内容量</dt>
+                <dl>
+                    <dt>内容量</dt>
 					<dd class="js_selVarContent"></dd>
 				</dl>
 			</li>
 			<li>
-			  <dl>
-				  <dt>カタログ</dt>
-					<dd><a class="js_selVarCatalog" target="_blank" rel="noopener noreferrer">カタログ</a></dd>
+                <dl>
+                    <dt>カタログ</dt>
+                    <dd><a class="js_selVarCatalog" target="_blank" rel="noopener noreferrer">カタログ</a></dd>
 				</dl>
 			</li>
 			<li>
-			  <dl>
-				  <dt>テキスト多い</dt>
-					<dd class="js_selVarManytext"></dd>
+                <dl>
+                    <dt>テキスト多い</dt>
+                    <dd class="js_selVarManytext"></dd>
 				</dl>
 			</li>
 			<li>
