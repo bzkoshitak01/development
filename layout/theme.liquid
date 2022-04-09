@@ -269,7 +269,7 @@
             <div class="top_mainbox">
             
                 {% comment %} breadcrumbs {% endcomment %}
-                {%- if template != 'index' and template != 'product' and template != 'page.my-qa-cat' -%}
+                {%- if template != 'index' and template != 'product' -%}
                 <nav class="ly_breadcrumbs">
                     <span><a href="/">トップ</a></span>
                     {% for link in linklists.breadcrumbs-menu.links %}
@@ -293,7 +293,9 @@
                     {% endfor %}
                 </nav>
                 {%- endif -%}
+
                 {% comment %} 商品詳細ページ専用パンクズリスト {% endcomment %}
+                {%- if template = 'product' -%}
                 <nav class="ly_breadcrumbs">
                     <span><a href="/">トップ</a></span>
                     <span><a href="{{ pages['product-all'].url }}">{{ pages['product-all'].title }}</a></span>
@@ -308,6 +310,8 @@
                     {% endfor %}
                     <span><a href="javascript:void(0)" class="bc_active">{{ product.title }}</a></span>
                 </nav>
+                {%- endif -%}
+
 
 
             {{ content_for_layout }}
