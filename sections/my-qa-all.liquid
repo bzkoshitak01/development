@@ -87,7 +87,7 @@
         <h2 class="sstit">人気のご質問</h2>
         <ul>
         {%- for block in section.blocks -%}
-            <li><a href="{{ block.settings.frequent-faq_page.url }}">{{ block.settings.frequent-faq_page.title }}</a></li>
+            <li><a href="{{ block.settings.frequent-faq_article.url }}">{{ block.settings.frequent-faq_article.title }}</a></li>
         {% endfor %}
         </ul>
     </section>
@@ -133,8 +133,8 @@
         "name": "frequent-faq",
         "settings":[
             {
-                "type": "page",
-                "id": "frequent-faq_page",
+                "type": "article",
+                "id": "frequent-faq_article",
                 "label": "質問ページを選択する"
             }
         ]
