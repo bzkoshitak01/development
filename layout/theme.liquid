@@ -295,7 +295,7 @@
                 {%- endif -%}
 
                 {% comment %} 商品詳細ページ専用パンクズリスト {% endcomment %}
-                {%- if template = 'product' -%}
+                {%- if template == 'product' -%}
                 <nav class="ly_breadcrumbs">
                     <span><a href="/">トップ</a></span>
                     <span><a href="{{ pages['product-all'].url }}">{{ pages['product-all'].title }}</a></span>
