@@ -35,7 +35,7 @@
         {% for link in linklists.cat-menu.links %}
         {% if link.active %}
         {% for sub_link in link.links %}
-        {{ sub_link.url | replace: 'https://xn-edkb8d2b.myshopify.com/collections/','' }}
+        {{ sub_link.url | replace: '/collections/','' }}
             <li>
                 <a href="{{ sub_link.url }}">
                     <div class="ly_mcatImgCnt">
