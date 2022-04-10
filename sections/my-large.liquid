@@ -35,9 +35,7 @@
         {% for link in linklists.cat-menu.links %}
         {% if link.active %}
         {% for sub_link in link.links %}
-        {{ sub_link.url | replace: '/collections/','' }}
         {% assign handle = sub_link.url | replace: '/collections/','' %}
-        {{ collections[handle].title }}
             <li>
                 <a href="{{ sub_link.url }}">
                     <div class="ly_mcatImgCnt">
