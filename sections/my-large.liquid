@@ -39,7 +39,7 @@
             <li>
                 <a href="{{ sub_link.url }}">
                     <div class="ly_mcatImgCnt">
-                        {{ collections[sub_link.handle].metafields.my_fields._thumb | img_url: 'medium' | img_tag: sub_link.title }}
+                        {{ sub_link.metafields.my_fields._thumb | img_url: 'medium' | img_tag: sub_link.title }}
                         <img class="un_subImg" src="{{ 'prodact_list_arrow.png' | file_img_url }}">
                     </div>
                     <p>{{ sub_link.title }}</p>
