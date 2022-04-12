@@ -114,7 +114,7 @@ h1.main-page-title:before {
 }
 
 .js_thanks h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   line-height: 2;
 }
@@ -141,6 +141,8 @@ h1.main-page-title:before {
   transition: all .2s;
   background: #fff;
   border: solid 1px #ccc;
+  text-decoration: none;
+  color: #000;
 }
 
 .bl_homeBtn img {
