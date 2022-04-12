@@ -38,6 +38,12 @@
           "settings": {
             "frequent-faq_article": "faq-3\/sample-question-06"
           }
+        },
+        "759999b2-faa9-4d23-aaa7-502d65a32f1f": {
+          "type": "frequent-faq",
+          "settings": {
+            "frequent-faq_article": "faq-1\/よくある質問佐藤テスト"
+          }
         }
       },
       "block_order": [
@@ -46,7 +52,8 @@
         "c55ab0a9-c00f-40cd-9f17-c25b5c58dbc0",
         "829309f8-a804-4eea-ab4b-0fcd6292a188",
         "c161b618-abe1-4dc4-a66e-3c6978f4b4a9",
-        "34f12420-c198-47cb-8454-8e2736c0e576"
+        "34f12420-c198-47cb-8454-8e2736c0e576",
+        "759999b2-faa9-4d23-aaa7-502d65a32f1f"
       ],
       "settings": {
       }
