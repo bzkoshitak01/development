@@ -1,0 +1,40 @@
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <div class="contact page-width page-width--narrow section-{{ section.id }}-padding">
+    <h2 class="title title-wrapper--no-top-margin">{{ section.settings.heading | escape }}</h2>
+
+    <div class="ly_statusCnt ly_statusCnt__thanks">
+        <div class=ly_status>
+            <div id="js_statusCircle1" class="js_statusCircle js_statusCircle__orange">1</div>
+            <span>お客様情報の入力</span>
+        </div>
+        <div class=ly_status>
+            <div id="js_statusCircle2" class="js_statusCircle">2</div>
+            <span>入力内容のご確認</span>
+        </div>
+        <div class=ly_status>
+            <div id="js_statusCircle3" class="js_statusCircle">3</div>
+            <span>送信完了</span>
+        </div>
+    </div>
+    <section class="js_thanks">
+        <h2>お問い合わせありがとうございます。</h2>
+        <p>
+            このたびは、お問い合わせいただき、誠にありがとうございました。<br><br>
+            お送りいただきました内容を確認の上、数営業日以内に折り返しご連絡させていただきます。<br>
+            また、ご記入いただきましたメールアドレスへ、自動返信の確認メールを送付しています。<br>
+            万が一、自動返信メールが届かない場合は、<br>
+            入力いただいたメールアドレスに間違いがあった可能性がございます。<br>
+            メールアドレスをご確認の上、もう一度フォームよりお問い合わせいただけますようお願い申し上げます。
+        </p>
+        <div>
+            <a class="bl_homeBtn" href="{{ shop.secure_url }}">
+                {{ 'foot_btn_ind.png' | file_img_url | img_tag }}
+                TOPに戻る
+            </a>            
+        </div>
+    </section>
+
+    </div>
+</div>
+
+
