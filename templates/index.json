@@ -90,11 +90,13 @@
         "13113077-27bc-4c4f-bd3b-75aa01d0babc",
         "011425fe-bc05-4bf5-814a-a0e0f64aabd0"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "1648428579a5ed8580": {
       "type": "my-ranking",
-      "settings": {}
+      "settings": {
+      }
     },
     "16484286153e6e102b": {
       "type": "my_pickup",
@@ -158,11 +160,13 @@
         "6528103a-3049-4c8e-8e60-72defcfcd05f",
         "9b573215-3e73-44b3-a2a8-f2c320a36058"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "16484286208e2c91d3": {
       "type": "my-ordermade",
-      "settings": {}
+      "settings": {
+      }
     },
     "164842867552cae49f": {
       "type": "my-banner",
@@ -188,19 +192,40 @@
         "4e97bc6c-38e2-453e-8e49-cd8a06bd08eb",
         "7d1e4ec8-ac1f-40af-a1ea-70bf1fc6dfe5"
       ],
-      "settings": {}
+      "settings": {
+      }
     },
     "1648529401b419dd3b": {
       "type": "my-case",
-      "settings": {}
+      "settings": {
+      }
     },
     "16484286955f4f373f": {
       "type": "my-tips",
-      "settings": {}
+      "settings": {
+      }
     },
     "16484287071d1f9702": {
       "type": "my-info",
-      "settings": {}
+      "settings": {
+      }
+    },
+    "16502638151714d915": {
+      "type": "apps",
+      "blocks": {
+        "66b010af-9825-4f3f-9660-87f65c247dde": {
+          "type": "shopify:\/\/apps\/form-builder-with-file-upload\/blocks\/form-block\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
+          "settings": {
+            "form_uuid": ""
+          }
+        }
+      },
+      "block_order": [
+        "66b010af-9825-4f3f-9660-87f65c247dde"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -211,6 +236,7 @@
     "164842867552cae49f",
     "1648529401b419dd3b",
     "16484286955f4f373f",
-    "16484287071d1f9702"
+    "16484287071d1f9702",
+    "16502638151714d915"
   ]
 }
