@@ -292,9 +292,18 @@
                             <span><a href={{sub_link.url}}>{{ sub_link.title }}</a></span>
                             {% endif %}
                             {% for sub_sub_link in sub_link.links %}
-                            {% if sub_sub_link.active %}
-                            <span><a href="javascript:void(0)" class="bc_active">{{ sub_sub_link.title }}</a></span>
-                            {% endif %}
+                                {% if sub_sub_link.active %}
+                                <span><a href="javascript:void(0)" class="bc_active">{{ sub_sub_link.title }}</a></span>
+                                {% elsif sub_sub_link.child_active %}
+                                <span><a href={{sub_sub_link.url}}>{{ sub_sub_link.title }}</a></span>
+                                {% endif %}
+                                {% for sub_sub_sub_link in sub_sub_link.links %}
+                                    {% if sub_sub_sub_link.active %}
+                                    <span><a href="javascript:void(0)" class="bc_active">{{ sub_sub_sub_link.title }}</a></span>
+                                    {% elsif sub_sub_sub_link.child_active %}
+                                    <span><a href={{sub_sub_sub_link.url}}>{{ sub_sub_sub_link.title }}</a></span>
+                                    {% endif %}
+                                {% endfor %}
                             {% endfor %}
                         {% endfor %}
                     {% endfor %}
