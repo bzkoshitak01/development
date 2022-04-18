@@ -15,28 +15,10 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "1650263361a219bb83": {
-      "type": "apps",
-      "blocks": {
-        "efa06d9f-aa4a-4a15-839a-720f47719f1e": {
-          "type": "shopify:\/\/apps\/form-builder-with-file-upload\/blocks\/form-block\/b6b8dd14-356b-4725-a4ed-77232212b3c3",
-          "settings": {
-            "form_uuid": "G5apRTeDE04swgIbf2NNfw"
-          }
-        }
-      },
-      "block_order": [
-        "efa06d9f-aa4a-4a15-839a-720f47719f1e"
-      ],
-      "settings": {
-        "include_margins": true
-      }
     }
   },
   "order": [
     "main",
-    "form",
-    "1650263361a219bb83"
+    "form"
   ]
 }
