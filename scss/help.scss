@@ -116,10 +116,12 @@ header .head_box {
     // max-width: 1200px;
     font-size: 1.2rem;
     margin-bottom: 2rem;
-    a.bc_active:last-of-type {
-        font-weight: bold;
-        text-decoration: none;
-        color: #000;
+    span:last-child {
+        a.bc_active {
+            font-weight: bold;
+            text-decoration: none;
+            color: #000;
+        }     
     }
     span:not(:last-child) {
         &:after {
