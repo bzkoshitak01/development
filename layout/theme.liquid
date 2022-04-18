@@ -204,7 +204,7 @@
     {{ 'all.css' | asset_url | stylesheet_tag }}
     {% comment %} クライアント用 {% endcomment %}
 
-    {%- if template == 'page.my-product-all' -%}
+    {%- if template == 'list-collections' -%}
         {{ 'my-product-all.css' | asset_url | stylesheet_tag }}
     {% endif %}
     {%- if template == 'page.my-qa-all' or 'blog.my-qa-cat' or 'article.my-qa' -%}
