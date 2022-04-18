@@ -200,10 +200,14 @@
 
         {{ 'top.css' | asset_url | stylesheet_tag }}
 
+    {% comment %} クライアント用 {% endcomment %}
+    {{ 'all.css' | asset_url | stylesheet_tag }}
+    {% comment %} クライアント用 {% endcomment %}
+
     {%- if template == 'page.my-product-all' -%}
         {{ 'my-product-all.css' | asset_url | stylesheet_tag }}
     {% endif %}
-    {%- if template == 'page.my-qa-all' or 'page.my-qa-cat' or 'article.my-qa' -%}
+    {%- if template == 'page.my-qa-all' or 'blog.my-qa-cat' or 'article.my-qa' -%}
         {{ 'qa.css' | asset_url | stylesheet_tag }}
     {% endif %}
     {%- if template == 'collection.my-large' -%}
