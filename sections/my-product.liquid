@@ -445,7 +445,7 @@
 	</section>
 	
 	<section class="spec_contents">
-	  <h2 class="item_stit">{{ 'spec_icon_b9bdfffd-0755-4d27-9f67-977496d5dd63.png' | file_img_url: 'small' | img_tag: '商品仕様' }}商品仕様</h2>
+	  {% comment %} <h2 class="item_stit">{{ 'spec_icon_b9bdfffd-0755-4d27-9f67-977496d5dd63.png' | file_img_url: 'small' | img_tag: '商品仕様' }}商品仕様</h2> {% endcomment %}
         {% assign variantSpecCount = 0 %}
         {% for variant in product.variants %}
         {% assign variantSpecCount = variantSpecCount | plus:1 %}
