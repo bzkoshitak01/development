@@ -5,7 +5,7 @@
       "settings": {}
     },
     "form": {
-      "type": "my-guide",
+      "type": "my-contactform-old",
       "settings": {
         "heading": ""
       }
