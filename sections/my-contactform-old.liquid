@@ -385,7 +385,8 @@
 
 
     // 自動応答
-    btnSubmit.addEventListener('click', function(){
+    btnSubmit.addEventListener('click', function(e){
+        e.preventDefault();
         Email.send({
             Host : "smtp.elasticemail.com",
             Username : "h-satou@teamwolf.co.jp",
@@ -429,9 +430,8 @@
                 //alert(message);
             }
         );
-    });
-    // 自動応答
-    btnSubmit.addEventListener('click', function(){
+
+        // サンクスページに遷移
         window.location.href='https://xn-edkb8d2b.myshopify.com/pages/thanks';
     });
     
