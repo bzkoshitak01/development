@@ -119,7 +119,7 @@ header .head_box {
   margin-bottom: 2rem;
 }
 
-.ly_breadcrumbs a.bc_active {
+.ly_breadcrumbs a.bc_active:last-of-type {
   font-weight: bold;
   text-decoration: none;
   color: #000;
