@@ -280,21 +280,14 @@
                 <nav class="ly_breadcrumbs">
                     <span><a href="/">トップ{{ template.name }}</a></span>
                     {% for link in linklists.breadcrumbs-menu.links %}
-                        {% if link.active and template.name != 'article' %}
+                        {% if link.active %}
                         <span><a href="javascript:void(0)" class="bc_active">{{ link.title }}</a></span>
-                        {% elsif link.active and template.name == 'blog' %}
-                            {% unless link.child_active %}
-                            <span><a href="javascript:void(0)" class="bc_active">{{ link.title }}</a></span>
-                            {% endunless %}
                         {% elsif link.child_active %}
                         <span><a href={{link.url}}>{{ link.title }}</a></span>
                         {% endif %}
                         {% for sub_link in link.links %}
-
                             {% if sub_link.active %}
-                                {% unless sub_link.child_active %}
                                 <span><a href="javascript:void(0)" class="bc_active">{{ sub_link.title }}</a></span>
-                                {% endunless %}
                             {% elsif sub_link.child_active %}
                             <span><a href={{sub_link.url}}>{{ sub_link.title }}</a></span>
                             {% endif %}
