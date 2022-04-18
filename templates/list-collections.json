@@ -1,13 +1,11 @@
 {
-  "sections": {
-    "main": {
-      "type": "main-list-collections",
-      "settings": {
-        "image_ratio": "square"
+    "sections": {
+      "main": {
+        "type": "my-product-all",
+        "settings": {}
       }
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+    },
+    "order": [
+      "main"
+    ]
+  }
