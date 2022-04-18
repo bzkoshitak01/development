@@ -288,10 +288,12 @@
                         {% for sub_link in link.links %}
                             {% if sub_link.active and template.name != 'blog' %}
                             <span><a href="javascript:void(0)" class="bc_active">{{ sub_link.title }}</a></span>
+                            {% elsif sub_link.active template.name == 'blog' %}
+                                {% unless sub_link.child_active %}
+                                <span><a href="javascript:void(0)" class="bc_active">{{ sub_link.title }}</a></span>
+                                {% endunless%}
                             {% elsif sub_link.child_active %}
                             <span><a href={{sub_link.url}}>{{ sub_link.title }}</a></span>
-                            {% else %}
-                            <span><a href="javascript:void(0)" class="bc_active">{{ sub_link.title }}</a></span>
                             {% endif %}
                             {% for sub_sub_link in sub_link.links %}
                                 {% if sub_sub_link.active %}
