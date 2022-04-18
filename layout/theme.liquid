@@ -278,7 +278,7 @@
                 {% comment %} breadcrumbs {% endcomment %}
                 {%- if template != 'index' and template != 'product' -%}
                 <nav class="ly_breadcrumbs">
-                    <span><a href="/">トップ</a></span>
+                    <span><a href="/">トップ{{ template.name }}</a></span>
                     {% for link in linklists.breadcrumbs-menu.links %}
                         {% if link.active %}
                         <span><a href="javascript:void(0)" class="bc_active">{{ link.title }}</a></span>
@@ -286,8 +286,10 @@
                         <span><a href={{link.url}}>{{ link.title }}</a></span>
                         {% endif %}
                         {% for sub_link in link.links %}
-                            {% if sub_link.active and sub_link.child_active %}
+                            {% if sub_link.active %}
                             <span><a href="javascript:void(0)" class="bc_active">{{ sub_link.title }}</a></span>
+                            {% elsif sub_link.child_active %}
+                            <span><a href={{sub_link.url}}>{{ sub_link.title }}</a></span>
                             {% endif %}
                             {% for sub_sub_link in sub_link.links %}
                                 {% if sub_sub_link.active %}
