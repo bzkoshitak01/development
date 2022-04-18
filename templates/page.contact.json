@@ -5,7 +5,7 @@
       "settings": {}
     },
     "form": {
-      "type": "my-contactform",
+      "type": "my-contactform-old",
       "settings": {
         "heading": ""
       }
