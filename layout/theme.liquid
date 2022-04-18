@@ -294,6 +294,7 @@
                                 {% unless sub_link.child_active %}
                                 <span><a href="javascript:void(0)" class="bc_active">{{ sub_link.title }}</a></span>
                                 {% endunless %}
+                            {% if sub_link.child_active %}
                             <span><a href={{sub_link.url}}>{{ sub_link.title }}</a></span>
                             {% endif %}
                             {% for sub_sub_link in sub_link.links %}
