@@ -300,3 +300,8 @@ cart-items .cart__items{
   transition: .2s cubic-bezier(.45,0,.55,1);
   cursor: pointer;
 }
+
+.cart__ctas button:hover{
+	opacity: 1;
+	box-shadow: 0 0 #9c1e1a;
+}
