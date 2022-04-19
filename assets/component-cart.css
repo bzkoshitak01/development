@@ -306,8 +306,8 @@ cart-items .cart__items{
 	box-shadow: 0 0 #9c1e1a;
 	margin-top: 4px;
 	margin-bottom: -4px;
-	color: #fff;
-	text-decoration: none;
+	color: #fff!important;
+	text-decoration: none!important;
 }
 
 
