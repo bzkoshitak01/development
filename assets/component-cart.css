@@ -222,7 +222,7 @@ cart-items {
   }
 }
 
-#shopify-section-aside{
+#shopify-section-aside,.right_btn{
 	display: none;
 }
 
