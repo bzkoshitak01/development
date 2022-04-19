@@ -233,3 +233,7 @@ cart-items {
 header .head_box .head_r{
 	display: none!important;
 }
+
+.ly_breadcrumbs{
+	display: none!important;
+}
