@@ -290,7 +290,7 @@ cart-items .cart__items{
 	color: #dd0011;
 }
 
-.cart__ctas button,.cart__warnings button{
+.cart__ctas button,.cart__warnings .button{
 	background: #dd0011;
 	border-radius: 4px;
 	font-size: 2rem;
@@ -301,7 +301,7 @@ cart-items .cart__items{
   cursor: pointer;
 }
 
-.cart__ctas button:hover,.cart__warnings button{
+.cart__ctas button:hover,.cart__warnings .button{
 	opacity: 1;
 	box-shadow: 0 0 #9c1e1a;
 	margin-top: 4px;
