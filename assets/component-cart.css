@@ -260,3 +260,8 @@ h1.title.title--primary{
 	display: block;
 	text-decoration: none;
 }
+
+.cart-items th{
+	font-weight: bold;
+	font-size: 1.6rem;
+}
