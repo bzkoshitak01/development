@@ -313,3 +313,7 @@ cart-items .cart__items{
 .is-empty .cart__empty-text{
 	font-size: 2rem;
 }
+
+.cart__warnings{
+	padding: 40px!important;
+}
