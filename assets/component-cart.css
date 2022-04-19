@@ -293,4 +293,7 @@ cart-items .cart__items{
 .cart__ctas button{
 	background: #dd0011;
 	border-radius: 4px;
+	font-size: 2rem;
+	padding: 10px 40px;
+	font-weight: bold;
 }
