@@ -308,3 +308,8 @@ cart-items .cart__items{
   
 	margin-bottom: -4px;
 }
+
+
+.is-empty .cart__empty-text{
+	font-size: 2rem;
+}
