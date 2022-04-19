@@ -318,3 +318,11 @@ cart-items .cart__items{
 .cart__warnings{
 	padding: 40px!important;
 }
+
+.cart__login-title{
+	font-size: 1.8rem;
+}
+
+.cart__login-paragraph{
+	font-size: 1.6rem;
+}
