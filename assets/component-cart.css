@@ -280,3 +280,7 @@ cart-items{
 cart-items .title-wrapper-with-link{
 	margin-top: 0;
 }
+
+cart-items .cart__items{
+	border-bottom: none;
+}
