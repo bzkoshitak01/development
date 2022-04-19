@@ -19,7 +19,7 @@ h1.main-page-title:before {
 }
 
 .rte {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
 }
 
@@ -39,6 +39,7 @@ h1.main-page-title:before {
 }
 
 .ly_status span {
+  font-size: 1.6rem;
   font-weight: bold;
   padding: 0.5em 0;
 }
@@ -133,7 +134,7 @@ h1.main-page-title:before {
 }
 
 .ly_fieldCnt label {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
