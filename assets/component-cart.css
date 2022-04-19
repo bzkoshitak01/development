@@ -296,4 +296,7 @@ cart-items .cart__items{
 	font-size: 2rem;
 	padding: 10px 40px;
 	font-weight: bold;
+	box-shadow: 0 4px #9c1e1a;
+  transition: .2s cubic-bezier(.45,0,.55,1);
+  cursor: pointer;
 }
