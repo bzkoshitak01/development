@@ -226,7 +226,7 @@ cart-items {
 	display: none;
 }
 
-.gmenu_t{
+.gmenu_t,.gmenu_b_wrap{
 	display: none!important;
 
 }
