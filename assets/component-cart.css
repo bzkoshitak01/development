@@ -237,3 +237,12 @@ header .head_box .head_r{
 .ly_breadcrumbs{
 	display: none!important;
 }
+
+.top_mainbox{
+	margin: auto!important;
+}
+
+h1.title.title--primary{
+	font-size: 2.4rem;
+	border-bottom: 1px solid #ccc;
+}
