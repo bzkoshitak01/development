@@ -228,5 +228,8 @@ cart-items {
 
 .gmenu_t,.gmenu_b_wrap{
 	display: none!important;
+}
 
+header .head_box .head_r{
+	display: none!important;
 }
