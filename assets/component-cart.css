@@ -249,11 +249,14 @@ h1.title.title--primary{
 
 .title-wrapper-with-link{
 	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
 }
 
 .title-wrapper-with-link .underlined-link{
 	font-size: 1.8rem;
-	border: 5px 10px;
+	padding: 5px 15px;
 	border: 1px solid #ccc;
-	border-radius: 20px
+	border-radius: 20px;
+	display: block;
+	text-decoration: none;
 }
