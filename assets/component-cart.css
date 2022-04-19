@@ -221,3 +221,8 @@ cart-items {
     gap: 1rem;
   }
 }
+
+#shopify-section-aside{
+	display: none;
+}
+
