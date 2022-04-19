@@ -237,3 +237,7 @@ header .head_box .head_r{
 .ly_breadcrumbs{
 	display: none!important;
 }
+
+#top_box{
+	margin: auto!important;
+}
