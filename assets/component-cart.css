@@ -285,3 +285,7 @@ cart-items .title-wrapper-with-link{
 cart-items .cart__items{
 	border-bottom: none;
 }
+
+.totals__subtotal-value{
+	color: #dd0011;
+}
