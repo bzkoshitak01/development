@@ -226,6 +226,7 @@ header .head_box {
 
 .shopify-policy__container td {
   border: solid 4px #e0e0e0 !important;
+  padding: 1.2rem;
 }
 
 .shopify-policy__container th {
