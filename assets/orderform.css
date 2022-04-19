@@ -33,3 +33,7 @@ h1.main-page-title:before {
   padding: 0;
   margin: 2rem 0;
 }
+
+.rte {
+  font-size: 1.6rem;
+}
