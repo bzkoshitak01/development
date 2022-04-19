@@ -168,7 +168,8 @@ h1.main-page-title:before {
 }
 
 .el_fieldTtl {
-  width: 220px;
+  width: 210px;
+  margin-right: 10px;
 }
 
 .el_fieldTtl_annotate {
