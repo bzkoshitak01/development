@@ -222,27 +222,3 @@ cart-items {
   }
 }
 
-#shopify-section-aside,.right_btn{
-	display: none;
-}
-
-.gmenu_t,.gmenu_b_wrap{
-	display: none!important;
-}
-
-header .head_box .head_r{
-	display: none!important;
-}
-
-.ly_breadcrumbs{
-	display: none!important;
-}
-
-.top_mainbox{
-	margin: auto!important;
-}
-
-h1.title.title--primary{
-	font-size: 2.4rem;
-	border-bottom: 1px solid #ccc;
-}
