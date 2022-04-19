@@ -250,3 +250,10 @@ h1.title.title--primary{
 .title-wrapper-with-link{
 	border-bottom: 1px solid #ccc;
 }
+
+.title-wrapper-with-link .underlined-link{
+	font-size: 1.8rem;
+	border: 5px 10px;
+	border: 1px solid #ccc;
+	border-radius: 20px
+}
