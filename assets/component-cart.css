@@ -252,6 +252,11 @@ h1.title.title--primary{
 	padding-bottom: 10px;
 }
 
+.title-wrapper-with-link:hover{
+	text-decoration: none;
+}
+
+
 .title-wrapper-with-link .underlined-link{
 	font-size: 1.8rem;
 	padding: 5px 15px;
