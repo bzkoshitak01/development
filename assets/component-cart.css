@@ -289,3 +289,8 @@ cart-items .cart__items{
 .totals__subtotal-value{
 	color: #dd0011;
 }
+
+.cart__ctas button{
+	background: #dd0011;
+	border-radius: 4px;
+}
