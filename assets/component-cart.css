@@ -305,4 +305,6 @@ cart-items .cart__items{
 	opacity: 1;
 	box-shadow: 0 0 #9c1e1a;
 	margin-top: 4px;
+  
+	margin-bottom: -4px;
 }
