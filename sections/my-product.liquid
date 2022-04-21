@@ -126,8 +126,23 @@
             {% comment %} 商品説明 {% endcomment %}
 			<p class="ybox">{{ product.metafields.global.outline }}</p>
             
+            {% comment %} temporary {% endcomment %}
+            {%- for variant in product.variants -%}
+            {{variant.title }}
+            {%- for option in variant.options -%}
+            {{ option }}
+            {%- for value in options.values -%}
+                <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
+                        name="{{ option.name }}"
+                        value="{{ value | escape }}"
+                        form="{{ product_form_id }}"
+                        {% if option.selected_value == value %}checked{% endif %}
+                >
+            {%- endfor -%}
+            {%- endfor -%}
+            {%- endfor -%}
 
-            {% comment %} バリエーション {% endcomment %}
+            {% comment %} 旧バリエーション（Amazon方式：バリアントごとに分離） {% endcomment %}
             {%- unless product.has_only_default_variant -%}
                 <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                 {%- for option in product.options_with_values -%}
